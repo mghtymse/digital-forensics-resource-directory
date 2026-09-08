@@ -1,0 +1,41 @@
+name: Autopsy
+
+type:
+  - Tool
+  - Forensic Suite
+
+description: >
+  Open-source digital forensics platform for analysing digital evidence.
+
+domains:
+  - Disk Forensics
+  - File Systems
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Disk Images
+  - File Systems
+
+artefacts:
+  - NTFS
+  - Registry
+  - Browser History
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+status: Active
+
+website: https://www.autopsy.com/
+
+repository: https://github.com/sleuthkit/autopsy
+
+last_verified: 2026-09-08
