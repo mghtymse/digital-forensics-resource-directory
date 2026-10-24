@@ -1,0 +1,249 @@
+# Initial controlled vocabulary for the Digital Forensics Resource Directory.
+# Lists in this file are the allowed exact values for structured fields.
+# Keep spelling and capitalisation consistent with this file.
+# Changes should be discussed, checked against existing resources, and documented.
+
+resource_types:
+  # Software and code
+  - Tool
+  - Tool Suite
+  - Script
+  - Library / Framework
+  - Plugin / Extension
+  - Repository
+  # Written material
+  - Website
+  - Blog
+  - Article
+  - Book
+  - Cheat Sheet
+  - Documentation
+  - Research Paper
+  - Report
+  - Whitepaper
+  # Training and media
+  - Course
+  - Training Platform
+  - Tutorial
+  - Workshop
+  - Video
+  - YouTube Channel
+  - Podcast
+  - Conference / Presentation
+  # Evidence and practice
+  - Dataset
+  - Sample Evidence
+  - CTF / Challenge
+  - Lab / Exercise
+  # Communities and references
+  - Community
+  - Organisation
+  - Directory / Index
+  - Reference
+
+domains:
+  # Operating system forensics
+  - Windows Forensics
+  - macOS Forensics
+  - Linux Forensics
+  - Unix Forensics
+  # Disk and filesystem
+  - Disk Forensics
+  - Filesystem Forensics
+  - File Carving
+  # Mobile
+  - iOS Forensics
+  - Android Forensics
+  - Mobile Application Forensics
+  # Memory and live response
+  - Memory Forensics
+  - Live Forensics
+  # Network
+  - Network Forensics
+  # Cloud and online
+  - Cloud Forensics
+  - Browser Forensics
+  - Email Forensics
+  - Web Application Forensics
+  - Social Media Forensics
+  # Malware and security
+  - Malware Analysis
+  - Reverse Engineering
+  - Threat Hunting
+  - Incident Response
+  # Investigation and analysis
+  - Timeline Analysis
+  - Triage
+  - OSINT
+  - Intelligence Analysis
+  # Data and application
+  - Database Forensics
+  - Application Forensics
+  - Log Analysis
+  # Specialist areas
+  - Multimedia Forensics
+  - Image Forensics
+  - Audio Forensics
+  - IoT Forensics
+  - Vehicle Forensics
+  - Cryptocurrency Forensics
+  # Foundations and practice
+  - Digital Forensics
+  - DFIR
+  - Forensic Methodology
+  - Evidence Handling
+  - Legal & Investigative Practice
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+  - Unix / BSD
+  - Android
+  - iOS / iPadOS
+  - ChromeOS
+  - Browser
+  - Cloud
+  - Container
+  - Virtual Machine
+
+analyses:
+  - Windows
+  - macOS
+  - Linux
+  - Unix / BSD
+  - Android
+  - iOS / iPadOS
+  - ChromeOS
+  - Cloud
+  - Web
+  - Containers
+  - Virtual Machines
+
+artefacts:
+  # Windows
+  - Windows Registry
+  - Windows Event Logs
+  - Prefetch
+  - Amcache
+  - Shimcache / AppCompatCache
+  - BAM / DAM
+  - LNK Files
+  - Jump Lists
+  - ShellBags
+  - Windows Search
+  - SRUM
+  - UserAssist
+  - Windows Services
+  - Scheduled Tasks
+  - Windows Defender
+  - Recycle Bin
+  - Windows Notifications
+  - Thumbnail Cache
+  # Filesystems and storage
+  - Master File Table (MFT)
+  - USN Journal
+  - Filesystem Metadata
+  - Filesystem Journals
+  - Deleted Files
+  - Volume Shadow Copies
+  - Alternate Data Streams
+  - Partition Tables
+  - Disk Images
+  # Browsers and web
+  - Browser History
+  - Browser Cookies
+  - Browser Cache
+  - Browser Downloads
+  - Browser Bookmarks
+  - Browser Sessions
+  - Autofill Data
+  - Saved Credentials
+  - Web Storage
+  - IndexedDB
+  - Browser Extensions
+  # Memory
+  - Memory Dumps
+  - Process Memory
+  - Kernel Memory
+  # Mobile
+  - Mobile App Data
+  - Mobile App Sandboxes
+  - SMS / Messages
+  - Call Logs
+  - Contacts
+  - Location Data
+  - Mobile Browser Data
+  - Device Backups
+  # Applications and databases
+  - SQLite Databases
+  - Application Databases
+  - Configuration Files
+  - Application Logs
+  - Application Cache
+  # Network
+  - PCAP
+  - Network Logs
+  - DNS Logs
+  - DHCP Logs
+  - Firewall Logs
+  - Proxy Logs
+  - Network Flow Data
+  # Cloud and online
+  - Cloud Audit Logs
+  - Cloud Access Logs
+  - Authentication Logs
+  - Identity / Sign-in Logs
+  - Cloud Storage Metadata
+  - Email
+  - Web Application Logs
+  # Multimedia and metadata
+  - File Metadata
+  - EXIF Metadata
+  - Image Metadata
+  - Video Metadata
+  - Audio Metadata
+  - Embedded Metadata
+
+# Keywords are flexible discovery tags, not a strictly enforced list.
+# Prefer domains, platforms and artefacts where a term belongs in those fields.
+suggested_keywords:
+  - Timeline
+  - Super Timeline
+  - Triage
+  - Correlation
+  - Attribution
+  - IoCs
+  - Persistence
+  - Threat Hunting
+  - Malware
+  - Ransomware
+  - Anti-Forensics
+  - Metadata
+  - Encryption
+  - Hashing
+  - File Signatures
+  - Volatile Data
+  - Deleted Data Recovery
+  - Forensic Acquisition
+  - Live Response
+  - Memory Acquisition
+  - Integrity Verification
+  - Automation
+  - Test Data
+  - Training
+  - Research
+  - Case Studies
+
+pricing_models:
+  - Free
+  - Paid
+  - Freemium
+  - Unknown
+
+statuses:
+  - Active
+  - Maintenance Uncertain
+  - Archived
+  - Discontinued
+  - Unavailable
