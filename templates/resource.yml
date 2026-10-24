@@ -1,0 +1,26 @@
+# Copy this file to resources/<short-resource-name>.yml.
+# Replace the example placeholders. Do not publish an unfinished template.
+# Field names and classification values are defined in taxonomy/vocabulary.yml.
+
+name: ""
+type: []                  # e.g. [Tool]; one type preferred, multiple if justified
+description: ""          # Describe what the resource offers in your own words
+website: ""              # Main public resource URL
+repository: ""           # Source repository URL, if relevant; otherwise leave blank
+author: ""               # Creator or maintaining organisation, if known
+
+domains: []               # Forensic disciplines, e.g. [Windows Forensics]
+runs_on: []               # Where software executes, e.g. [Windows, Linux, Browser]
+analyses: []              # What platform/environment it examines, e.g. [Windows]
+artefacts: []             # Evidence/data types, e.g. [Windows Registry]
+keywords: []              # Additional discovery terms; see suggested_keywords
+
+pricing:
+  model: Unknown          # Free | Paid | Freemium | Unknown
+  commercial_use: null    # true | false | null (unknown or not established)
+
+open_source: null         # true | false | null (unknown/not established)
+licence: ""               # e.g. MIT; blank if unknown/not applicable
+
+status: Active            # Active | Maintenance Uncertain | Archived | Discontinued | Unavailable
+last_verified: null      # YYYY-MM-DD quoted as a string when populated; required before publishing
