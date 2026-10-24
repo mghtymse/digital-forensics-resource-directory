@@ -1,0 +1,47 @@
+
+name: Volatility 3
+
+# A Python-based tool for examining memory images.
+type:
+  - Tool
+
+description: >
+  Open-source memory forensics framework for analysing captured memory images.
+  Provides plugins to examine processes, kernel structures, and other volatile
+  evidence from supported operating systems.
+
+website: https://volatilityfoundation.org/
+repository: https://github.com/volatilityfoundation/volatility3
+author: Volatility Foundation
+
+domains:
+  - Memory Forensics
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+  - Linux
+  - macOS
+
+artefacts:
+  - Memory Dumps
+  - Process Memory
+  - Kernel Memory
+
+keywords:
+  - Volatile Data
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: true
+licence: Volatility Software License 1.0
+
+status: Active
+last_verified: "2026-10-24"
+  
