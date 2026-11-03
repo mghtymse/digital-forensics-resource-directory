@@ -1,0 +1,266 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ======================================
+   DFIR DIRECTORY — VISUAL THEME
+   ====================================== */
+
+:root {
+  --ifm-color-primary: #087f78;
+  --ifm-color-primary-dark: #07726c;
+  --ifm-color-primary-darker: #066c66;
+  --ifm-color-primary-darkest: #055953;
+  --ifm-color-primary-light: #098c84;
+  --ifm-color-primary-lighter: #0a938b;
+  --ifm-color-primary-lightest: #0caca2;
+
+  --ifm-font-family-base: 'Segoe UI', Arial, sans-serif;
+  --ifm-heading-font-family: 'Segoe UI', Arial, sans-serif;
+  --ifm-global-radius: 8px;
+}
+
+/* Dark-mode colours */
+[data-theme='dark'] {
+  --ifm-color-primary: #42dbc8;
+  --ifm-color-primary-dark: #2ed5c0;
+  --ifm-color-primary-darker: #25ceba;
+  --ifm-color-primary-darkest: #1ca994;
+  --ifm-color-primary-light: #60e2d2;
+  --ifm-color-primary-lighter: #76e7d9;
+  --ifm-color-primary-lightest: #a4f0e7;
+
+  --ifm-background-color: #0b111a;
+  --ifm-background-surface-color: #141e2b;
+  --ifm-navbar-background-color: #101824;
+  --ifm-footer-background-color: #101824;
+  --ifm-font-color-base: #e5edf5;
+  --ifm-heading-color: #f3f7fc;
+}
+
+/* Navigation */
+.navbar {
+  border-bottom: 1px solid rgba(66, 219, 200, 0.2);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* Buttons */
+.button {
+  border-radius: 6px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .button--primary {
+  color: #081a20;
+}
+
+/* Form controls */
+[data-theme='dark'] input,
+[data-theme='dark'] select {
+  background: #141e2b;
+  color: #e5edf5;
+  border: 1px solid #35485a;
+  border-radius: 6px;
+}
+
+[data-theme='dark'] input:focus,
+[data-theme='dark'] select:focus {
+  outline: 2px solid #42dbc8;
+  outline-offset: 2px;
+}
+
+/* Subtle technical grid on the homepage header */
+[data-theme='dark'] main > header {
+  background-image:
+    linear-gradient(rgba(66, 219, 200, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 219, 200, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+}
+
+/* ======================================
+   DFIR DIRECTORY — RESOURCE CARDS
+   ====================================== */
+
+.dfir-resource-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dfir-resource-card:hover,
+.dfir-resource-card:focus-within {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dfir-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dfir-card-top h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.dfir-card-type {
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dfir-card-pricing {
+  flex-shrink: 0;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.dfir-card-description {
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.dfir-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dfir-resource-chip {
+  padding: 0.35rem 0.6rem;
+  border-radius: 5px;
+  background: var(--ifm-color-emphasis-200);
+  font-size: 0.75rem;
+}
+
+[data-theme='dark'] .dfir-resource-chip {
+  background: #1b3040;
+  color: #a8e6df;
+}
+
+.dfir-card-bottom {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.dfir-card-platforms {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.dfir-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.dfir-card-actions .button {
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dfir-resource-card {
+    transition: none;
+  }
+}
+.dfir-resource-chip--more {
+  border: 1px dashed var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Clickable domain chips */
+
+.dfir-resource-chip--link,
+a.dfir-resource-chip--more {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dfir-resource-chip--link:hover,
+.dfir-resource-chip--more:hover {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+  text-decoration: none;
+}
+
+.dfir-resource-chip--link:focus-visible,
+.dfir-resource-chip--more:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+/* Resource detail classification tags */
+
+.dfir-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
