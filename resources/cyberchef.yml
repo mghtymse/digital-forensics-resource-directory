@@ -1,0 +1,37 @@
+
+name: CyberChef
+type:
+  - Tool
+
+description: "Browser-based data transformation and analysis tool offering encoding, decoding, hashing, encryption and compression operations through reusable recipes."
+
+website: https://gchq.github.io/CyberChef/
+repository: https://github.com/gchq/CyberChef
+author: GCHQ
+
+domains:
+  - Digital Forensics
+
+runs_on:
+  - Browser
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - Encoding
+  - Decoding
+  - Hashing
+  - Encryption
+  - Data Transformation
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-04"
