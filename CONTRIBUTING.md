@@ -55,3 +55,135 @@ For beginners: open the repository, choose **Add file → Create new file**, and
 ## Project stage
 
 This is the first, deliberately small contribution standard. The website and automatic schema validation are still to come. We'll test the metadata against a small, varied set of real resources and refine the rules before scaling up.
+
+## Resource Verification Procedure
+
+All resources submitted to the Digital Forensics Resource Directory must undergo verification before inclusion.
+
+The purpose of verification is to maintain an accurate, consistent and useful catalogue of digital forensics resources.
+
+Verification confirms that the resource exists, is relevant, has been classified appropriately and contains reliable metadata. Inclusion does not constitute endorsement or independent validation of a resource's forensic accuracy.
+
+### 1. Resource eligibility
+
+Before adding a resource, confirm that:
+
+- [ ] The resource is relevant to digital forensics, incident response, forensic research, education or a related discipline.
+- [ ] The resource has a publicly accessible official website, repository or authoritative reference.
+- [ ] The resource is not already listed under another name.
+- [ ] The resource's purpose can be established from reliable information.
+- [ ] The resource is suitable for inclusion in a directory that prioritises free and publicly accessible resources.
+
+Preference should be given to official project websites, developer repositories, publisher pages and other authoritative sources.
+
+### 2. Source verification
+
+Verify the following information where applicable:
+
+- [ ] Resource name and official URL.
+- [ ] Author, developer, organisation or publisher.
+- [ ] Resource purpose and advertised functionality.
+- [ ] Supported operating systems or execution environments.
+- [ ] Supported forensic analyses, evidence types or artefacts.
+- [ ] Availability, maintenance status and relevant usage restrictions.
+- [ ] Pricing and licensing information.
+
+Do not infer functionality, compatibility or licensing permissions solely from a resource's name or category.
+
+Use official documentation wherever possible.
+
+### 3. Metadata and classification
+
+Resource records must follow `templates/resource.yml` and use values defined in `taxonomy/vocabulary.yml`.
+
+Check that:
+
+- [ ] `name` accurately identifies the resource.
+- [ ] `type` correctly describes the resource format or category.
+- [ ] `description` is concise, factual and neutral.
+- [ ] `domains` describes relevant forensic disciplines.
+- [ ] `runs_on` identifies where a tool executes, when applicable.
+- [ ] `analyses` identifies the evidence or environments a resource can analyse, when applicable.
+- [ ] `artefacts` identifies relevant forensic artefacts or evidence types.
+- [ ] Resource links and optional fields are appropriate to the resource type.
+
+Apply the following distinctions consistently:
+
+**Resource Type vs Domain:** Resource Type describes what the resource is (such as Tool, Website or Blog). Domain describes the forensic discipline it relates to.
+
+**Domain vs Platform:** Windows Forensics describes a forensic discipline. Windows under `runs_on` indicates an execution environment.
+
+**Website vs Blog:** Use the controlled vocabulary to distinguish general websites from blogs.
+
+**Sample Evidence vs Dataset:** Classify these according to the resource's nature and intended use.
+
+**Not applicable vs Unknown:** Omit or leave inapplicable optional fields empty as permitted by the schema. Do not invent values for information that cannot be verified.
+
+### 4. Pricing and licensing
+
+Pricing, source-code availability and commercial-use permissions are separate considerations.
+
+- [ ] Verify the pricing model against an official source.
+- [ ] Confirm whether source code is publicly available before marking a resource as open source.
+- [ ] Record a specific licence only when supported by reliable information.
+- [ ] Verify commercial-use permissions before recording them as permitted or prohibited.
+- [ ] Leave unverified permissions unknown rather than making assumptions.
+
+A resource being free of charge does not necessarily mean it is open source or permitted for unrestricted commercial use.
+
+### 5. Status and verification date
+
+Every accepted resource must include a `last_verified` date in `YYYY-MM-DD` format.
+
+The date must reflect when the resource's information was actually checked, not when its YAML file was last edited.
+
+Review the current availability and maintenance status, using the permitted values in the controlled vocabulary.
+
+If a resource becomes unavailable, abandoned or discontinued, investigate before updating its status.
+
+### 6. Validation before publication
+
+After creating or modifying a YAML resource record:
+
+- [ ] Confirm the file follows the resource template.
+- [ ] Run the repository's automated resource validator.
+- [ ] Resolve validation errors.
+- [ ] Confirm that the resource appears correctly in the generated catalogue.
+- [ ] Check the resource detail page and classification links.
+- [ ] Verify that the Docusaurus production build succeeds.
+- [ ] Submit or commit the verified changes.
+
+Validation confirms that records meet technical and structural requirements. It does not replace manual verification of their factual accuracy.
+
+### 7. Periodic review
+
+Resource information should be reviewed periodically to reduce the risk of outdated links, classifications and compatibility information.
+
+The initial target review interval is **180 days**.
+
+During a review:
+
+- [ ] Recheck official URLs.
+- [ ] Confirm the resource remains available.
+- [ ] Check for significant changes in functionality or supported platforms.
+- [ ] Recheck pricing and licensing where relevant.
+- [ ] Update descriptions and classifications if required.
+- [ ] Update `last_verified` only after completing the review.
+
+Automated link checking and stale-entry reports may identify resources requiring attention.
+
+HTTP errors, temporary connection failures and rate limiting should be investigated rather than automatically treated as evidence that a resource has been discontinued.
+
+### 8. Verification outcomes
+
+A review may result in one of the following decisions:
+
+- **Accept:** The resource meets the directory's requirements and can be published.
+- **Request changes:** Additional information or corrections are needed.
+- **Defer:** Important details cannot currently be verified.
+- **Decline:** The resource is outside the directory's scope, is an unsuitable duplicate or fails its inclusion requirements.
+- **Update existing record:** The resource is already listed and its metadata needs correction.
+
+The reviewer should explain significant decisions in the associated GitHub Issue or pull request.
+
+Verification is an ongoing process. Previously accepted resources may require updates or reconsideration as new information becomes available.
