@@ -31,7 +31,7 @@ export default function resourcePagesPlugin(context) {
         );
 
         addRoute({
-          path: `/resource/${resource.id}`,
+          path: `${context.baseUrl}resource/${resource.id}`,
           component: '@site/src/components/ResourceDetail.tsx',
           modules: {
             resource: dataPath,
