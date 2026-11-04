@@ -72,12 +72,36 @@ function yesNoUnknown(value?: boolean | null) {
   return 'Unknown';
 }
 
+
 export default function ResourceDetail({
   resource,
 }: {
   resource: Resource;
 }) {
+  const softwareTypes = new Set([
+    'Tool',
+    'Tool Suite',
+    'Forensic Suite',
+    'Script',
+    'Library / Framework',
+    'Plugin / Extension',
+  ]);
+
+  const isSoftware = (resource.type ?? []).some(
+    (type) => softwareTypes.has(type)
+  );
+
+  const showCommercialUse =
+    isSoftware || resource.pricing?.commercial_use != null;
+
+  const showOpenSource =
+    isSoftware || resource.open_source != null;
+
+  const showLicence =
+    isSoftware || Boolean(resource.licence?.trim());
+
   return (
+
     <Layout title={resource.name} description={resource.description}>
       <main className="container margin-vert--lg">
         <Link to="/resources">← Back to Browse Resources</Link>
@@ -145,40 +169,58 @@ export default function ResourceDetail({
 <InformationSection
   title="Keywords"
   items={resource.keywords}
+  filterParam="keyword"
 />
+
         <h2>Additional Information</h2>
-        <table>
-          <tbody>
-            <tr>
-              <th>Author / Creator</th>
-              <td>{resource.author || 'Unknown'}</td>
-            </tr>
-            <tr>
-              <th>Pricing</th>
-              <td>{resource.pricing?.model || 'Unknown'}</td>
-            </tr>
-            <tr>
-              <th>Commercial Use</th>
-              <td>{yesNoUnknown(resource.pricing?.commercial_use)}</td>
-            </tr>
-            <tr>
-              <th>Open Source</th>
-              <td>{yesNoUnknown(resource.open_source)}</td>
-            </tr>
-            <tr>
-              <th>Licence</th>
-              <td>{resource.licence || 'Not specified'}</td>
-            </tr>
-            <tr>
-              <th>Status</th>
-              <td>{resource.status || 'Unknown'}</td>
-            </tr>
-            <tr>
-              <th>Last Verified</th>
-              <td>{resource.last_verified || 'Not verified'}</td>
-            </tr>
-          </tbody>
-        </table>
+      
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Author / Creator</th>
+      <td>{resource.author || 'Unknown'}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Pricing</th>
+      <td>{resource.pricing?.model || 'Unknown'}</td>
+    </tr>
+
+    {showCommercialUse && (
+      <tr>
+        <th scope="row">Commercial Use</th>
+        <td>
+          {yesNoUnknown(resource.pricing?.commercial_use)}
+        </td>
+      </tr>
+    )}
+
+    {showOpenSource && (
+      <tr>
+        <th scope="row">Open Source</th>
+        <td>{yesNoUnknown(resource.open_source)}</td>
+      </tr>
+    )}
+
+    {showLicence && (
+      <tr>
+        <th scope="row">Licence</th>
+        <td>{resource.licence || 'Not specified'}</td>
+      </tr>
+    )}
+
+    <tr>
+      <th scope="row">Status</th>
+      <td>{resource.status || 'Unknown'}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Last Verified</th>
+      <td>{resource.last_verified || 'Not verified'}</td>
+    </tr>
+  </tbody>
+</table>
+
       </main>
     </Layout>
   );

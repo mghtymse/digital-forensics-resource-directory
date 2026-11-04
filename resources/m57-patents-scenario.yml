@@ -1,0 +1,42 @@
+
+name: M57-Patents Scenario (2009)
+
+type:
+  - Sample Evidence
+
+description: >
+  Multi-week simulated corporate investigation scenario with disk images,
+  memory images, and network packet captures. Suitable for digital forensics
+  training, tool testing, and research.
+
+website: https://digitalcorpora.org/corpora/scenarios/m57-patents-scenario/
+repository: ""
+author: Digital Corpora
+
+domains:
+  - Disk Forensics
+  - Memory Forensics
+  - Network Forensics
+
+runs_on: []
+analyses: []
+
+artefacts:
+  - Disk Images
+  - Memory Dumps
+  - PCAP
+
+keywords:
+  - Test Data
+  - Training
+  - Research
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: ""
+
+status: Active
+last_verified: "2026-11-03"

@@ -9,6 +9,7 @@ type Resource = {
   name: string;
   description: string;
   website: string;
+  author?: string;
   type?: string[];
   domains?: string[];
   artefacts?: string[];
@@ -20,7 +21,7 @@ type Resource = {
 
 const resources = resourceData as Resource[];
 
-type FilterField = 'type' | 'domains' | 'artefacts' | 'runs_on' | 'analyses';
+type FilterField = 'type' | 'domains' | 'artefacts' | 'runs_on' | 'analyses' | 'keywords';
 
 function getOptions(field: FilterField): string[] {
   return Array.from(
@@ -72,6 +73,7 @@ export default function ResourcesPage() {
   const domain = params.get('domain') ?? '';
   const resourceType = params.get('type') ?? '';
   const artefact = params.get('artefact') ?? '';
+  const keyword = params.get('keyword') ?? '';
   const runsOn = params.get('runsOn') ?? '';
   const analyses = params.get('analyses') ?? '';
 
@@ -119,6 +121,7 @@ export default function ResourcesPage() {
       (!domain || resource.domains?.includes(domain)) &&
       (!resourceType || resource.type?.includes(resourceType)) &&
       (!artefact || resource.artefacts?.includes(artefact)) &&
+      (!keyword || resource.keywords?.includes(keyword)) &&
       (!runsOn || resource.runs_on?.includes(runsOn)) &&
       (!analyses || resource.analyses?.includes(analyses))
     );
@@ -133,7 +136,7 @@ export default function ResourcesPage() {
         <h1>Browse Resources</h1>
         <p>
           Find digital forensics resources by discipline, artefact, platform,
-          or resource type.
+          resource type, or keyword.
         </p>
 
         <div
@@ -186,6 +189,15 @@ export default function ResourcesPage() {
                 value={artefact}
                 options={getOptions('artefacts')}
                 onChange={(value) => updateUrlFilter('artefact', value)}
+              />
+            </div>
+
+            <div className="col col--4 margin-bottom--md">
+              <FilterSelect
+                label="Keyword"
+                value={keyword}
+                options={getOptions('keywords')}
+                onChange={(value) => updateUrlFilter('keyword', value)}
               />
             </div>
 
@@ -275,10 +287,18 @@ export default function ResourcesPage() {
                 </div>
 
                 <div className="dfir-card-bottom">
-                  <p className="dfir-card-platforms">
-                    <strong>Runs on:</strong>{' '}
-                    {(resource.runs_on ?? []).join(' · ') || 'Not specified'}
-                  </p>
+                  
+{(resource.runs_on?.length ?? 0) > 0 ? (
+  <p className="dfir-card-platforms">
+    <strong>Runs on:</strong>{' '}
+    {resource.runs_on!.join(' · ')}
+  </p>
+) : resource.author ? (
+  <p className="dfir-card-platforms">
+    <strong>Creator:</strong>{' '}
+    {resource.author}
+  </p>
+) : null}
 
                   <div className="dfir-card-actions">
                     <Link

@@ -43,6 +43,74 @@
     "id": "autopsy"
   },
   {
+    "name": "M57-Patents Scenario (2009)",
+    "type": [
+      "Sample Evidence"
+    ],
+    "description": "Multi-week simulated corporate investigation scenario with disk images, memory images, and network packet captures. Suitable for digital forensics training, tool testing, and research.\n",
+    "website": "https://digitalcorpora.org/corpora/scenarios/m57-patents-scenario/",
+    "repository": "",
+    "author": "Digital Corpora",
+    "domains": [
+      "Disk Forensics",
+      "Memory Forensics",
+      "Network Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [
+      "Disk Images",
+      "Memory Dumps",
+      "PCAP"
+    ],
+    "keywords": [
+      "Test Data",
+      "Training",
+      "Research"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-03",
+    "id": "m57-patents-scenario"
+  },
+  {
+    "name": "The DFIR Report",
+    "type": [
+      "Website"
+    ],
+    "description": "Publishes public reports on real-world intrusions, documenting attacker techniques, incident timelines, indicators of compromise, and lessons for incident responders and defenders.\n",
+    "website": "https://thedfirreport.com/",
+    "repository": "",
+    "author": "The DFIR Report",
+    "domains": [
+      "Incident Response",
+      "Threat Hunting",
+      "Intelligence Analysis"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Case Studies",
+      "IoCs",
+      "Ransomware"
+    ],
+    "pricing": {
+      "model": "Freemium",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-03",
+    "id": "the-dfir-report"
+  },
+  {
     "name": "Volatility 3",
     "type": [
       "Tool"
