@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import {useHistory} from '@docusaurus/router';
 import resourceData from '../data/resources.json';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type ResourceSummary = {
   domains?: string[];
@@ -30,14 +31,22 @@ const featuredDomains = Array.from(domainCounts, ([name, count]) => ({
   .slice(0, DOMAIN_SHORTCUT_LIMIT);
 
 export default function Home() {
+  const resourcesPath = useBaseUrl('/resources');
   const [query, setQuery] = useState('');
   const history = useHistory();
 
-  function handleSearch(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const term = query.trim();
-    history.push(term ? `/resources?q=${encodeURIComponent(term)}` : '/resources');
-  }
+  
+function handleSearch(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  const term = query.trim();
+
+  history.push(
+    term
+      ? `${resourcesPath}?q=${encodeURIComponent(term)}`
+      : resourcesPath
+  );
+}
+
 
   return (
     <Layout
