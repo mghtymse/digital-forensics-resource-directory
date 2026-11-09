@@ -1,0 +1,48 @@
+
+name: Plaso
+type:
+  - Tool Suite
+
+description: "Open-source digital forensic timeline analysis framework that extracts and correlates timestamped events from files, logs, databases and forensic images."
+
+website: https://plaso.readthedocs.io/en/latest/
+repository: https://github.com/log2timeline/plaso
+author: "Log2Timeline project contributors"
+
+domains:
+  - Timeline Analysis
+  - Digital Forensics
+
+runs_on:
+  - Linux
+  - macOS
+  - Windows
+  - Container
+
+analyses:
+  - Windows
+  - macOS
+  - Linux
+
+artefacts:
+  - Windows Registry
+  - Browser History
+  - SQLite Databases
+  - File Metadata
+
+keywords:
+  - Timeline
+  - Super Timeline
+  - Correlation
+  - Event Reconstruction
+  - log2timeline
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-09"
