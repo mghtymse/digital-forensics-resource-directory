@@ -1,0 +1,36 @@
+
+name: Forensic Focus
+type:
+  - Website
+
+description: "Digital forensics and incident response website providing industry news, technical articles, interviews, podcasts, educational resources and professional discussion forums."
+
+website: https://www.forensicfocus.com/
+repository: ""
+author: "Forensic Focus"
+
+domains:
+  - Digital Forensics
+  - DFIR
+
+runs_on: []
+analyses: []
+artefacts: []
+
+keywords:
+  - News
+  - Articles
+  - Community
+  - Discussion Forum
+  - Training
+  - Podcast
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: ""
+
+status: Active
+last_verified: "2026-11-09"
