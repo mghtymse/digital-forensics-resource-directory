@@ -1,0 +1,38 @@
+
+name: 13Cubed
+type:
+  - YouTube Channel
+
+description: "Educational YouTube channel covering digital forensics and incident response, including Windows forensic artefacts, memory analysis, threat hunting and investigative techniques."
+
+website: https://www.youtube.com/@13Cubed
+repository: ""
+author: "Richard Davis / 13Cubed Studios LLC"
+
+domains:
+  - Digital Forensics
+  - DFIR
+  - Windows Forensics
+  - Memory Forensics
+  - Threat Hunting
+
+runs_on: []
+analyses: []
+artefacts: []
+
+keywords:
+  - Training
+  - Tutorials
+  - Forensic Artefacts
+  - Windows
+  - Incident Response
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: ""
+
+status: Active
+last_verified: "2026-11-09"
