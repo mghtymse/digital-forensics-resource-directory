@@ -1,0 +1,45 @@
+
+name: ALEAPP
+type:
+  - Tool
+
+description: "Open-source Android forensic artefact parser that processes mobile device extractions to identify and report system and application data, including logs, databases and protobuf records."
+
+website: https://leapps.org/
+repository: https://github.com/abrignoni/ALEAPP
+author: "Alexis Brignoni and contributors"
+
+domains:
+  - Android Forensics
+  - Mobile Application Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses:
+  - Android
+
+artefacts:
+  - Mobile App Data
+  - Application Databases
+  - Application Logs
+  - SQLite Databases
+
+keywords:
+  - Android
+  - Protobuf
+  - Artefact Parsing
+  - Mobile Triage
+  - Forensic Extraction
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-09"
