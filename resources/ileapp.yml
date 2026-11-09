@@ -1,0 +1,45 @@
+
+name: iLEAPP
+type:
+  - Tool
+
+description: "Open-source iOS and iPadOS forensic artefact parser that processes device extractions and backups to recover and report system and application data, including databases, logs and plist records."
+
+website: https://leapps.org/
+repository: https://github.com/abrignoni/iLEAPP
+author: "Alexis Brignoni and contributors"
+
+domains:
+  - iOS Forensics
+  - Mobile Application Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses:
+  - iOS / iPadOS
+
+artefacts:
+  - Mobile App Data
+  - Application Databases
+  - SQLite Databases
+  - Device Backups
+
+keywords:
+  - iOS
+  - Plist
+  - Artefact Parsing
+  - Backup Analysis
+  - Mobile Triage
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-09"
