@@ -1,0 +1,48 @@
+
+name: ExifTool
+type:
+  - Tool
+
+description: "Open-source command-line tool and Perl library for reading, writing and editing metadata in images, videos, audio files, documents and other file formats, including EXIF, XMP, IPTC and GPS information."
+
+website: https://exiftool.sourceforge.net/
+repository: https://github.com/exiftool/exiftool
+author: Phil Harvey
+
+domains:
+  - Image Forensics
+  - Multimedia Forensics
+  - Digital Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - File Metadata
+  - EXIF Metadata
+  - Image Metadata
+  - Video Metadata
+  - Audio Metadata
+  - Embedded Metadata
+
+keywords:
+  - Metadata
+  - EXIF
+  - XMP
+  - IPTC
+  - GPS
+  - Metadata Extraction
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: "Artistic-1.0-Perl OR GPL-1.0-or-later"
+
+status: Active
+last_verified: "2026-11-10"
