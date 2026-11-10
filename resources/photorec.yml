@@ -1,0 +1,43 @@
+
+name: PhotoRec
+type:
+  - Tool
+
+description: "Open-source file carving and data recovery tool that uses file signatures to recover deleted or lost files from storage media and forensic disk images, including damaged or reformatted filesystems."
+
+website: https://www.cgsecurity.org/wiki/PhotoRec
+repository: https://github.com/cgsecurity/testdisk
+author: Christophe Grenier
+
+domains:
+  - File Carving
+  - Disk Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+  - Unix / BSD
+
+analyses: []
+
+artefacts:
+  - Deleted Files
+  - Disk Images
+
+keywords:
+  - File Signatures
+  - Deleted Data Recovery
+  - File Recovery
+  - Data Carving
+  - Data Recovery
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: GPL-2.0-or-later
+
+status: Active
+last_verified: "2026-11-10"
