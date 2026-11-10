@@ -1,0 +1,88 @@
+
+name: "Suggest a Resource"
+description: "Recommend a digital forensics resource for inclusion."
+title: "[Resource suggestion]: "
+labels:
+  - community
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a resource!
+
+        Suggestions are reviewed before inclusion in the
+        Digital Forensics Resource Directory.
+
+  - type: input
+    id: resource-name
+    attributes:
+      label: Resource name
+      placeholder: "e.g. A forensic analysis tool"
+    validations:
+      required: true
+
+  - type: input
+    id: resource-url
+    attributes:
+      label: Official website or repository URL
+      placeholder: "https://example.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Resource description
+      description: "What does this resource offer?"
+      placeholder: "Briefly explain its purpose and capabilities."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: resource-type
+    attributes:
+      label: Suggested resource type
+      options:
+        - Tool
+        - Tool Suite
+        - Script
+        - Website
+        - Blog
+        - YouTube Channel
+        - Dataset
+        - Sample Evidence
+        - Directory / Index
+        - Reference
+        - Other / Unsure
+    validations:
+      required: false
+
+  - type: textarea
+    id: forensic-domains
+    attributes:
+      label: Relevant forensic domains
+      description: "Optional. Which forensic disciplines does it relate to?"
+      placeholder: "e.g. Windows Forensics, Timeline Analysis"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Your affiliation with the resource
+      options:
+        - No affiliation
+        - Creator or maintainer
+        - Contributor
+        - Other affiliation
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Before submitting
+      options:
+        - label: "I checked the directory for an existing entry."
+          required: true
