@@ -1,0 +1,41 @@
+
+name: Timesketch
+type:
+  - Tool
+
+description: "Open-source collaborative forensic timeline analysis platform for importing, searching, correlating and annotating timestamped events during digital forensic investigations."
+
+website: https://timesketch.org/
+repository: https://github.com/google/timesketch
+author: "Timesketch development team"
+
+domains:
+  - Timeline Analysis
+  - DFIR
+  - Incident Response
+
+runs_on:
+  - Linux
+  - Container
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - Timeline
+  - Correlation
+  - Event Analysis
+  - Collaboration
+  - Plaso
+  - Event Search
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-09"
