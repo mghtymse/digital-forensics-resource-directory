@@ -1,0 +1,42 @@
+
+name: capa
+type:
+  - Tool
+
+description: "Open-source malware analysis tool that identifies capabilities and behaviours in executable files and supported sandbox reports using rules derived from reverse engineering techniques."
+
+website: https://mandiant.github.io/capa/
+repository: https://github.com/mandiant/capa
+author: "Mandiant FLARE team"
+
+domains:
+  - Malware Analysis
+  - Reverse Engineering
+  - Triage
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - Malware
+  - Binary Analysis
+  - Static Analysis
+  - Capability Detection
+  - MITRE ATT&CK
+  - Sandbox Analysis
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-10"
