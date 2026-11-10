@@ -1,0 +1,46 @@
+
+name: MemProcFS
+type:
+  - Tool
+
+description: "Open-source physical memory analysis framework that exposes Windows memory contents and forensic artefacts through a virtual file system and programmatic APIs, supporting memory dump analysis and live memory investigation."
+
+website: https://github.com/ufrisk/MemProcFS/wiki
+repository: https://github.com/ufrisk/MemProcFS
+author: Ulf Frisk
+
+domains:
+  - Memory Forensics
+  - Live Forensics
+  - Windows Forensics
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Memory Dumps
+  - Process Memory
+  - Kernel Memory
+  - Windows Registry
+
+keywords:
+  - Memory Analysis
+  - Virtual File System
+  - Live Response
+  - Volatile Data
+  - YARA
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: AGPL-3.0
+
+status: Active
+last_verified: "2026-11-10"
