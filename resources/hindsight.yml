@@ -1,0 +1,50 @@
+
+name: Hindsight
+type:
+  - Tool
+
+description: "Open-source browser forensic analysis tool that extracts and correlates history, downloads, cookies, bookmarks, cache and other artefacts from Chromium-based and Firefox browser profiles into investigative timelines."
+
+website: https://hindsig.ht/hindsight/
+repository: https://github.com/RyanDFIR/hindsight
+author: "Ryan Benson and contributors"
+
+domains:
+  - Browser Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - Browser History
+  - Browser Downloads
+  - Browser Cookies
+  - Browser Cache
+  - Browser Bookmarks
+  - Autofill Data
+  - Browser Extensions
+  - Web Storage
+  - IndexedDB
+
+keywords:
+  - Chrome
+  - Chromium
+  - Firefox
+  - Browser Profiles
+  - Browser Timeline
+  - Activity Reconstruction
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-10"
