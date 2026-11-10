@@ -187,3 +187,36 @@ A review may result in one of the following decisions:
 The reviewer should explain significant decisions in the associated GitHub Issue or pull request.
 
 Verification is an ongoing process. Previously accepted resources may require updates or reconsideration as new information becomes available.
+
+## Suggesting a Resource
+
+We welcome suggestions for digital forensics and incident response
+resources.
+
+You do not need to create a YAML file to suggest a resource.
+
+### How to suggest a resource
+
+1. Check the directory to see whether the resource is already listed.
+2. Open the [Suggest a Resource form](https://github.com/mghtymse/digital-forensics-resource-directory/issues/new/choose).
+3. Select **Suggest a Resource**.
+4. Provide the resource name, official URL and a brief description.
+5. Complete any relevant optional fields.
+6. Submit the GitHub Issue.
+
+A GitHub account is required to submit a suggestion.
+
+### What happens next?
+
+Maintainers review suggestions for:
+
+- Relevance to digital forensics or incident response.
+- Accuracy of resource information.
+- Availability of an official website or repository.
+- Duplicate entries.
+- Compliance with the directory's taxonomy and verification process.
+
+Submitting a suggestion does not guarantee inclusion.
+
+Approved resources are added using the standard resource metadata
+and verification process documented in this repository.
