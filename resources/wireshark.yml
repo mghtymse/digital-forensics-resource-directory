@@ -1,0 +1,42 @@
+
+name: Wireshark
+type:
+  - Tool
+
+description: "Open-source network protocol analyser for capturing, inspecting and filtering live network traffic and saved packet captures to investigate network communications."
+
+website: https://www.wireshark.org/
+repository: https://gitlab.com/wireshark/wireshark
+author: "Wireshark contributors"
+
+domains:
+  - Network Forensics
+  - Incident Response
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+  - Unix / BSD
+
+analyses: []
+
+artefacts:
+  - PCAP
+
+keywords:
+  - Packet Capture
+  - Packet Analysis
+  - Network Traffic
+  - Protocol Analysis
+  - Traffic Inspection
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: GPL-2.0
+
+status: Active
+last_verified: "2026-11-10"
