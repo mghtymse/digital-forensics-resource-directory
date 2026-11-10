@@ -1,0 +1,48 @@
+
+name: The Sleuth Kit
+type:
+  - Tool Suite
+
+description: "Open-source collection of command-line tools and libraries for forensic analysis of disk images, partition structures and filesystems, including examination and recovery of allocated and deleted files."
+
+website: https://www.sleuthkit.org/sleuthkit/
+repository: https://github.com/sleuthkit/sleuthkit
+author: "Brian Carrier and contributors"
+
+domains:
+  - Disk Forensics
+  - Filesystem Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - Disk Images
+  - Filesystem Metadata
+  - Deleted Files
+  - Partition Tables
+  - Master File Table (MFT)
+  - Alternate Data Streams
+
+keywords:
+  - NTFS
+  - FAT
+  - exFAT
+  - APFS
+  - ext4
+  - Disk Image Analysis
+  - Deleted Data Recovery
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: "Multiple (IPL-1.0, CPL-1.0; GPL-2.0 for some utilities)"
+
+status: Active
+last_verified: "2026-11-10"
