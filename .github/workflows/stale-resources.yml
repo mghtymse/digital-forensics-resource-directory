@@ -1,0 +1,33 @@
+
+name: Stale Resource Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "27 9 * * 1"
+      timezone: "Australia/Brisbane"
+
+permissions:
+  contents: read
+
+jobs:
+  stale-resource-report:
+    name: Check resource verification dates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate stale-resource report
+        shell: bash
+        run: |
+          python3 scripts/report_stale_resources.py \
+            | tee stale-report.txt
+
+          {
+            echo "## Stale Resource Report"
+            echo '```text'
+            cat stale-report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
