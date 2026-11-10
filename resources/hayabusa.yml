@@ -1,0 +1,45 @@
+
+name: Hayabusa
+type:
+  - Tool
+
+description: "Open-source Windows Event Log analysis and threat hunting tool that uses detection rules to identify suspicious activity and generate forensic timelines from EVTX records."
+
+website: https://yamato-security.github.io/hayabusa/
+repository: https://github.com/Yamato-Security/hayabusa
+author: "Yamato Security"
+
+domains:
+  - Windows Forensics
+  - Log Analysis
+  - Threat Hunting
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Windows Event Logs
+
+keywords:
+  - EVTX
+  - Sigma
+  - Threat Hunting
+  - Event Correlation
+  - Timeline
+  - Detection Rules
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: AGPL-3.0
+
+status: Active
+last_verified: "2026-11-10"
