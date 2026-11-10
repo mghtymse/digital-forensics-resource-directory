@@ -1,0 +1,37 @@
+
+name: MITRE ATT&CK
+type:
+  - Reference
+
+description: "Publicly accessible knowledge base of observed cyber adversary tactics, techniques and procedures, supporting threat hunting, incident response, detection development and threat intelligence analysis."
+
+website: https://attack.mitre.org/
+repository: https://github.com/mitre-attack/attack-stix-data
+author: "The MITRE Corporation"
+
+domains:
+  - Threat Hunting
+  - Intelligence Analysis
+  - Incident Response
+
+runs_on: []
+analyses: []
+artefacts: []
+
+keywords:
+  - MITRE ATT&CK
+  - TTPs
+  - Adversary Behaviour
+  - Detection Engineering
+  - Threat Intelligence
+  - Adversary Emulation
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: null
+licence: "MITRE ATT&CK Terms of Use"
+
+status: Active
+last_verified: "2026-11-10"
