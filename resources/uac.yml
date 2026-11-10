@@ -1,0 +1,50 @@
+
+name: UAC (Unix-like Artifacts Collector)
+type:
+  - Tool
+
+description: "Open-source incident response and forensic collection tool for Unix-like systems that gathers system information, logs, configuration files, process details and other artefacts using configurable YAML profiles."
+
+website: https://tclahr.github.io/uac-docs/
+repository: https://github.com/tclahr/uac
+author: "Thiago Canozzo Lahr and contributors"
+
+domains:
+  - Linux Forensics
+  - macOS Forensics
+  - Live Forensics
+  - Incident Response
+  - Triage
+
+runs_on:
+  - Linux
+  - macOS
+  - Unix / BSD
+
+analyses:
+  - Linux
+  - macOS
+  - Unix / BSD
+
+artefacts:
+  - Configuration Files
+  - Application Logs
+  - Filesystem Metadata
+
+keywords:
+  - Forensic Acquisition
+  - Live Response
+  - Artefact Collection
+  - Unix
+  - Order of Volatility
+  - Incident Response
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-10"
