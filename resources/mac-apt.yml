@@ -1,0 +1,48 @@
+
+name: mac_apt
+type:
+  - Tool
+
+description: "Open-source macOS forensic artefact parsing framework that processes disk images, mounted volumes and collected files to extract system, application, browser and filesystem evidence."
+
+website: https://github.com/ydkhatri/mac_apt
+repository: https://github.com/ydkhatri/mac_apt
+author: "Yogesh Khatri and contributors"
+
+domains:
+  - macOS Forensics
+  - Filesystem Forensics
+  - Application Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses:
+  - macOS
+
+artefacts:
+  - Browser History
+  - Browser Cookies
+  - SQLite Databases
+  - Application Databases
+  - Filesystem Metadata
+
+keywords:
+  - APFS
+  - HFS+
+  - Safari
+  - Plist
+  - Artefact Parsing
+  - Forensic Extraction
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-10"
