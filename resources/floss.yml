@@ -1,0 +1,41 @@
+
+name: FLOSS
+type:
+  - Tool
+
+description: "Open-source malware analysis tool that automatically extracts and deobfuscates strings from executable files, including static, stack and decoded strings, to assist malware triage and reverse engineering."
+
+website: https://github.com/mandiant/flare-floss
+repository: https://github.com/mandiant/flare-floss
+author: "Mandiant FLARE team"
+
+domains:
+  - Malware Analysis
+  - Reverse Engineering
+  - Triage
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - Malware
+  - Static Analysis
+  - String Extraction
+  - Deobfuscation
+  - Reverse Engineering
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-10"
