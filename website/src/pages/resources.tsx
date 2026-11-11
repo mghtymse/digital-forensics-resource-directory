@@ -17,6 +17,7 @@ type Resource = {
   analyses?: string[];
   keywords?: string[];
   pricing?: {model?: string};
+    last_verified?: string | null;
 };
 
 const resources = resourceData as Resource[];
@@ -76,6 +77,7 @@ export default function ResourcesPage() {
   const keyword = params.get('keyword') ?? '';
   const runsOn = params.get('runsOn') ?? '';
   const analyses = params.get('analyses') ?? '';
+    const sort = params.get('sort') ?? 'name-asc';
 
   function updateUrlFilter(key: string, value: string, replace = false) {
     const nextParams = new URLSearchParams(location.search);
@@ -125,6 +127,44 @@ export default function ResourcesPage() {
       (!runsOn || resource.runs_on?.includes(runsOn)) &&
       (!analyses || resource.analyses?.includes(analyses))
     );
+  });
+
+  const sortedResults = [...results].sort((a, b) => {
+    const nameComparison = a.name.localeCompare(b.name);
+
+    switch (sort) {
+      case 'name-desc':
+        return -nameComparison;
+
+      case 'verified-newest':
+      case 'verified-oldest': {
+        const aDate = a.last_verified ?? '';
+        const bDate = b.last_verified ?? '';
+
+        // Resources without verification dates appear last.
+        if (!aDate && !bDate) return nameComparison;
+        if (!aDate) return 1;
+        if (!bDate) return -1;
+
+        const dateComparison = aDate.localeCompare(bDate);
+
+        return (
+          (sort === 'verified-newest'
+            ? -dateComparison
+            : dateComparison) || nameComparison
+        );
+      }
+
+      case 'type-asc':
+        return (
+          (a.type?.[0] ?? '').localeCompare(b.type?.[0] ?? '') ||
+          nameComparison
+        );
+
+      case 'name-asc':
+      default:
+        return nameComparison;
+    }
   });
 
   return (
@@ -220,6 +260,42 @@ export default function ResourcesPage() {
             </div>
           </div>
 
+          <label
+            style={{
+              display: 'block',
+              marginBottom: '1rem',
+              maxWidth: '350px',
+            }}
+          >
+            <strong>Sort resources by</strong>
+            <select
+              value={sort}
+              onChange={(event) =>
+                updateUrlFilter(
+                  'sort',
+                  event.target.value === 'name-asc'
+                    ? ''
+                    : event.target.value
+                )
+              }
+              style={{
+                width: '100%',
+                padding: '0.75rem',
+                marginTop: '0.35rem',
+              }}
+            >
+              <option value="name-asc">Name (A–Z)</option>
+              <option value="name-desc">Name (Z–A)</option>
+              <option value="verified-newest">
+                Recently verified (newest first)
+              </option>
+              <option value="verified-oldest">
+                Recently verified (oldest first)
+              </option>
+              <option value="type-asc">Resource type (A–Z)</option>
+            </select>
+          </label>
+
           <button
             type="button"
             className="button button--secondary"
@@ -236,7 +312,7 @@ export default function ResourcesPage() {
         </p>
 
         <div className="row">
-          {results.map((resource) => (
+          {sortedResults.map((resource) => (
             <div
               key={resource.id}
               className="col col--6 margin-bottom--lg"
