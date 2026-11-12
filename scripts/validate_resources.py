@@ -102,7 +102,7 @@ def validate(path, vocab):
         except ValueError:
             errors.append('last_verified is not a valid date')
 
-    return errors, data.get('name') if isinstance(data.get('name'), str) else None
+    return errors, data
 
 
 def main():
@@ -121,16 +121,55 @@ def main():
     if not paths:
         print('ERROR: No resource YAML files found in resources/')
         return 1
+
     fail = 0
     seen_names = {}
+    seen_websites = {}
+    seen_repositories = {}
+
     for path in paths:
-        errors, name = validate(path, vocab)
-        if name:
+        errors, resource = validate(path, vocab)
+        name = resource.get('name') if resource else None
+
+        # Detect duplicate resource names.
+        if isinstance(name, str) and name.strip():
             key = name.strip().casefold()
             if key in seen_names:
-                errors.append(f'Duplicate resource name also used by {seen_names[key].name}')
+                errors.append(
+                    f'Duplicate resource name also used by {seen_names[key].name}'
+                )
             else:
                 seen_names[key] = path
+
+        # Detect duplicate website and repository URLs.
+        for field, seen in (
+            ('website', seen_websites),
+            ('repository', seen_repositories),
+        ):
+            url = resource.get(field) if resource else None
+
+            if not isinstance(url, str) or not url.strip():
+                continue
+
+            if not url_ok(url):
+                continue
+
+            key = url.strip().rstrip('/')
+
+            
+            if key in seen:
+                message = (
+                    f'Duplicate {field} URL also used by {seen[key].name}'
+                )
+
+                if field == 'website':
+                    print(f'WARN {path.relative_to(ROOT)}: {message}')
+                else:
+                    errors.append(message)
+            else:
+                seen[key] = path
+
+        # Report validation results.
         if errors:
             fail += 1
             print(f'FAIL {path.relative_to(ROOT)}')
@@ -138,9 +177,9 @@ def main():
                 print('  - ' + error)
         else:
             print(f'PASS {path.relative_to(ROOT)}')
+
     print(f'\nChecked {len(paths)} resource(s); {fail} failed.')
     return 1 if fail else 0
-
 
 if __name__ == '__main__':
     sys.exit(main())
