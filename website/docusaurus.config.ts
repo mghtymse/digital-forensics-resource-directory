@@ -85,6 +85,15 @@ navbar: {
       label: 'Home',
       position: 'left',
     },
+
+{
+  label: 'Suggest a Resource',
+  href: 'https://github.com/mghtymse/digital-forensics-resource-directory/issues/new?template=resource-suggestion.yml',
+  position: 'right',
+  target: '_blank',
+  rel: 'noopener noreferrer',
+},
+
     {
       to: '/resources',
       label: 'Browse Resources',
