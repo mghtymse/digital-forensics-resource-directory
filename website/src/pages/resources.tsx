@@ -79,6 +79,16 @@ export default function ResourcesPage() {
   const analyses = params.get('analyses') ?? '';
     const sort = params.get('sort') ?? 'name-asc';
 
+  const activeFilters = [
+    {key: 'q', label: 'Search', value: search},
+    {key: 'domain', label: 'Domain', value: domain},
+    {key: 'type', label: 'Resource Type', value: resourceType},
+    {key: 'artefact', label: 'Artefact', value: artefact},
+    {key: 'keyword', label: 'Keyword', value: keyword},
+    {key: 'runsOn', label: 'Runs On', value: runsOn},
+    {key: 'analyses', label: 'Analyses', value: analyses},
+  ].filter((filter) => filter.value !== '');
+
   function updateUrlFilter(key: string, value: string, replace = false) {
     const nextParams = new URLSearchParams(location.search);
     if (value) {
@@ -305,6 +315,33 @@ export default function ResourcesPage() {
           </button>
         </div>
 
+        {activeFilters.length > 0 && (
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              gap: '0.5rem',
+              marginBottom: '1rem',
+            }}
+          >
+            <strong>Active filters:</strong>
+
+            {activeFilters.map((filter) => (
+              <button
+                key={filter.key}
+                type="button"
+                className="button button--secondary button--sm"
+                onClick={() => updateUrlFilter(filter.key, '')}
+                aria-label={`Remove ${filter.label}: ${filter.value}`}
+                title={`Remove ${filter.label} filter`}
+              >
+                {filter.label}: {filter.value} ×
+              </button>
+            ))}
+          </div>
+        )}
+
         <p>
           <strong>
             Showing {results.length} of {resources.length} resources
@@ -398,12 +435,34 @@ export default function ResourcesPage() {
           ))}
         </div>
 
+        
         {results.length === 0 && (
-          <p>
-            No resources match your filters. Try changing your selection or
-            clearing the filters.
-          </p>
+          <div
+            style={{
+              padding: '2rem',
+              textAlign: 'center',
+              border: '1px solid var(--ifm-color-emphasis-300)',
+              borderRadius: '12px',
+              marginTop: '1rem',
+            }}
+          >
+            <h2>No matching resources found</h2>
+
+            <p>
+              Try adjusting your search terms or removing some filters
+              to find more resources.
+            </p>
+
+            <button
+              type="button"
+              className="button button--primary"
+              onClick={clearFilters}
+            >
+              Clear Filters
+            </button>
+          </div>
         )}
+
       </main>
     </Layout>
   );
