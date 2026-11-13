@@ -1,0 +1,51 @@
+
+name: Mobile Verification Toolkit (MVT)
+type:
+  - Tool Suite
+
+description: "Collection of forensic utilities for consensual examination of Android and iOS devices to identify potential signs of compromise, including analysis of device backups, application records, system logs and indicators of compromise."
+
+website: https://docs.mvt.re/en/latest/
+repository: https://github.com/mvt-project/mvt
+author: "Amnesty International Security Lab and contributors"
+
+domains:
+  - iOS Forensics
+  - Android Forensics
+  - Mobile Application Forensics
+  - Incident Response
+
+runs_on:
+  - Linux
+  - macOS
+
+analyses:
+  - Android
+  - iOS / iPadOS
+
+artefacts:
+  - Device Backups
+  - Mobile App Data
+  - Application Logs
+  - SQLite Databases
+  - SMS / Messages
+  - Call Logs
+
+keywords:
+  - Mobile Verification Toolkit
+  - MVT
+  - Mobile Spyware
+  - Indicators of Compromise
+  - Pegasus
+  - STIX2
+  - Mobile Threat Analysis
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: false
+licence: "MVT License v1.1 (source-available; consensual-use restriction)"
+
+status: Active
+last_verified: "2026-11-13"
