@@ -5,7 +5,7 @@ type:
 
 description: "Open-source vehicle forensic artefact parsing tool for examining supported vehicle logs, events, configuration information and protobuf data from infotainment systems and forensic extractions."
 
-website: https://github.com/abrignoni/VLEAPP
+website: https://leapps.org/
 repository: https://github.com/abrignoni/VLEAPP
 author: "Alexis Brignoni and contributors"
 
