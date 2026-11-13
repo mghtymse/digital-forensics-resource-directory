@@ -1,0 +1,50 @@
+
+name: Investigating Android 10 - Digital Forensics Lab
+type:
+  - Lab / Exercise
+  - Tutorial
+
+description: "Collection of practical Android 10 forensic investigation exercises using a Google Pixel 3 dataset, covering device settings, application lifecycles, messaging, contacts, calendars, location artefacts and third-party applications."
+
+website: https://github.com/frankwxu/digital-forensics-lab/tree/main/Android10
+repository: https://github.com/frankwxu/digital-forensics-lab
+author: "Frank Xu and contributors"
+
+domains:
+  - Android Forensics
+  - Mobile Application Forensics
+  - Application Forensics
+
+runs_on:
+  - Linux
+
+analyses:
+  - Android
+
+artefacts:
+  - Mobile App Data
+  - SQLite Databases
+  - SMS / Messages
+  - Contacts
+  - Location Data
+
+keywords:
+  - Android 10
+  - Google Pixel 3
+  - Mobile Forensics Training
+  - Forensic Lab
+  - Android Applications
+  - WhatsApp
+  - Google Maps
+  - Google Photos
+  - Practical Exercises
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Apache-2.0 (repository; external datasets may have separate terms)"
+
+status: Active
+last_verified: "2026-11-13"
