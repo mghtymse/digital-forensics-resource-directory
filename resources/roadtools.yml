@@ -1,0 +1,52 @@
+
+name: ROADtools
+type:
+  - Tool Suite
+  - Library / Framework
+
+description: "Open-source framework for exploring Microsoft Entra ID and Azure Active Directory environments, collecting directory information into local databases and examining identities, groups, roles, applications and access relationships."
+
+website: https://github.com/dirkjanm/ROADtools
+repository: https://github.com/dirkjanm/ROADtools
+author: "Dirk-jan Mollema and contributors"
+
+domains:
+  - Cloud Forensics
+  - Intelligence Analysis
+  - Incident Response
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses:
+  - Cloud
+
+artefacts:
+  - Identity / Sign-in Logs
+  - Application Databases
+
+keywords:
+  - ROADtools
+  - ROADrecon
+  - ROADlib
+  - roadtx
+  - Microsoft Entra ID
+  - Azure Active Directory
+  - Azure AD
+  - Identity Investigation
+  - Directory Enumeration
+  - Conditional Access
+  - Cloud Identity
+  - Access Relationships
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-13"

@@ -1,0 +1,48 @@
+
+name: Cloud Forensics Utils
+type:
+  - Tool
+  - Library / Framework
+
+description: "Open-source Python library and command-line tools for collecting forensic evidence from cloud platforms, supporting incident response investigations across Google Cloud, Amazon Web Services and Microsoft Azure."
+
+website: https://libcloudforensics.readthedocs.io/
+repository: https://github.com/google/cloud-forensics-utils
+author: "Google and Cloud Forensics Utils contributors"
+
+domains:
+  - Cloud Forensics
+  - Incident Response
+  - Evidence Handling
+
+runs_on:
+  - Linux
+  - macOS
+
+analyses:
+  - Cloud
+
+artefacts:
+  - Cloud Storage Metadata
+  - Disk Images
+
+keywords:
+  - Cloud Evidence Collection
+  - AWS
+  - Amazon Web Services
+  - Google Cloud
+  - Microsoft Azure
+  - Cloud Incident Response
+  - Evidence Acquisition
+  - Python
+  - libcloudforensics
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-13"

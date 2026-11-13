@@ -1,0 +1,52 @@
+
+name: Hawk
+type:
+  - Tool
+  - Script
+
+description: "Open-source PowerShell forensic collection module for Microsoft 365 and Microsoft Entra ID investigations. Collects tenant configurations, audit information, mailbox settings, user activity and authentication-related data to support incident response."
+
+website: https://hawkforensics.io/
+repository: https://github.com/T0pCyber/hawk
+author: "Hawk project contributors"
+
+domains:
+  - Cloud Forensics
+  - Email Forensics
+  - Incident Response
+  - Log Analysis
+
+runs_on:
+  - Windows
+
+analyses:
+  - Cloud
+
+artefacts:
+  - Cloud Audit Logs
+  - Authentication Logs
+  - Identity / Sign-in Logs
+  - Email
+
+keywords:
+  - Hawk
+  - Microsoft 365
+  - Office 365
+  - Microsoft Entra ID
+  - Azure Active Directory
+  - Exchange Online
+  - PowerShell
+  - Cloud Forensic Collection
+  - Tenant Investigation
+  - Mailbox Investigation
+  - Audit Logs
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-13"
