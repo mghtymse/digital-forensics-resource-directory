@@ -1,0 +1,53 @@
+
+name: Suricata
+type:
+  - Tool
+
+description: "Open-source network intrusion detection, intrusion prevention and security monitoring engine that analyses live traffic and PCAP files, applying detection rules and generating alerts and structured network activity logs for forensic investigations."
+
+website: https://suricata.io/
+repository: https://github.com/OISF/suricata
+author: "Open Information Security Foundation (OISF)"
+
+domains:
+  - Network Forensics
+  - Threat Hunting
+  - Incident Response
+  - Log Analysis
+
+runs_on:
+  - Linux
+  - macOS
+  - Windows
+  - Unix / BSD
+
+analyses: []
+
+artefacts:
+  - PCAP
+  - Network Logs
+  - DNS Logs
+  - Network Flow Data
+
+keywords:
+  - Suricata
+  - Intrusion Detection
+  - IDS
+  - IPS
+  - Network Security Monitoring
+  - Network Traffic Analysis
+  - Signature Detection
+  - EVE JSON
+  - PCAP Analysis
+  - Threat Detection
+  - Network Incident Response
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: GPL-2.0
+
+status: Active
+last_verified: "2026-11-13"
