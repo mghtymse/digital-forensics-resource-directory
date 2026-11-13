@@ -1,0 +1,51 @@
+
+name: Mobile Security Framework (MobSF)
+type:
+  - Tool Suite
+
+description: "Open-source mobile application security analysis framework supporting static and dynamic examination of Android and iOS applications, including application binaries, security configurations, runtime behaviour and network communications."
+
+website: https://mobsf.github.io/Mobile-Security-Framework-MobSF/
+repository: https://github.com/MobSF/Mobile-Security-Framework-MobSF
+author: "Ajin Abraham and contributors"
+
+domains:
+  - Mobile Application Forensics
+  - Malware Analysis
+  - Reverse Engineering
+  - Application Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+  - Container
+  - Browser
+
+analyses:
+  - Android
+  - iOS / iPadOS
+
+artefacts: []
+
+keywords:
+  - MobSF
+  - Mobile Security Framework
+  - Android APK
+  - iOS IPA
+  - Static Analysis
+  - Dynamic Analysis
+  - Application Security
+  - Mobile Malware
+  - Runtime Analysis
+  - Network Traffic Analysis
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: GPL-3.0
+
+status: Active
+last_verified: "2026-11-13"
