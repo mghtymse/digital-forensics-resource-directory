@@ -1,0 +1,51 @@
+
+name: libimobiledevice
+type:
+  - Tool Suite
+  - Library / Framework
+
+description: "Open-source library and command-line utilities for communicating with iOS devices, supporting device information retrieval, backup creation, crash report collection, system log access and interaction with device services."
+
+website: https://libimobiledevice.org/
+repository: https://github.com/libimobiledevice/libimobiledevice
+author: "libimobiledevice project contributors"
+
+domains:
+  - iOS Forensics
+  - Mobile Application Forensics
+  - Live Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses:
+  - iOS / iPadOS
+
+artefacts:
+  - Device Backups
+  - Application Logs
+  - Mobile App Data
+
+keywords:
+  - libimobiledevice
+  - iPhone
+  - iPad
+  - iOS Acquisition
+  - idevicebackup2
+  - idevicecrashreport
+  - idevicesyslog
+  - Device Information
+  - Crash Reports
+  - System Logs
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: "LGPL-2.1 (primary library and utilities)"
+
+status: Active
+last_verified: "2026-11-13"
