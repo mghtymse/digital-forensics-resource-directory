@@ -1,0 +1,51 @@
+
+name: Zeek
+type:
+  - Tool
+
+description: "Open-source network traffic analysis and security monitoring framework that processes live network traffic and packet captures to generate structured logs describing connections, protocols, DNS requests, HTTP transactions and other network activity."
+
+website: https://zeek.org/
+repository: https://github.com/zeek/zeek
+author: "The Zeek Project"
+
+domains:
+  - Network Forensics
+  - Incident Response
+  - Threat Hunting
+  - Log Analysis
+
+runs_on:
+  - Linux
+  - macOS
+  - Unix / BSD
+
+analyses: []
+
+artefacts:
+  - PCAP
+  - Network Logs
+  - DNS Logs
+  - Network Flow Data
+
+keywords:
+  - Zeek
+  - Network Security Monitoring
+  - Network Traffic Analysis
+  - Packet Capture Analysis
+  - PCAP Analysis
+  - Connection Logs
+  - DNS Analysis
+  - HTTP Analysis
+  - Threat Detection
+  - Network Incident Response
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: BSD-3-Clause
+
+status: Active
+last_verified: "2026-11-13"
