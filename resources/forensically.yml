@@ -1,0 +1,47 @@
+
+name: Forensically
+type:
+  - Tool
+  - Website
+
+description: "Free browser-based image forensic examination toolkit offering clone detection, error-level analysis, noise analysis, metadata extraction, thumbnail inspection and other image examination techniques."
+
+website: https://29a.ch/photo-forensics/
+repository: ""
+author: "Jonas Wagner"
+
+domains:
+  - Image Forensics
+  - Multimedia Forensics
+
+runs_on:
+  - Browser
+
+analyses: []
+
+artefacts:
+  - Image Metadata
+  - EXIF Metadata
+  - Embedded Metadata
+
+keywords:
+  - Forensically
+  - Image Authentication
+  - Clone Detection
+  - Error Level Analysis
+  - ELA
+  - Noise Analysis
+  - JPEG Analysis
+  - Image Manipulation
+  - Thumbnail Analysis
+  - Image Examination
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Not specified"
+
+status: Active
+last_verified: "2026-11-13"

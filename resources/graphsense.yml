@@ -1,0 +1,46 @@
+
+name: GraphSense
+type:
+  - Tool Suite
+  - Library / Framework
+
+description: "Open-source cryptoasset analytics platform for investigating blockchain addresses, transactions, clusters and fund flows across supported cryptocurrency networks."
+
+website: https://graphsense.org/
+repository: https://github.com/graphsense/graphsense-dashboard
+author: "GraphSense project contributors"
+
+domains:
+  - Cryptocurrency Forensics
+  - Intelligence Analysis
+  - OSINT
+
+runs_on:
+  - Browser
+  - Container
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - GraphSense
+  - Blockchain Analytics
+  - Cryptocurrency
+  - Bitcoin
+  - Ethereum
+  - Tron
+  - Transaction Tracing
+  - Address Clustering
+  - Fund Flow Analysis
+  - Cryptocurrency Investigations
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: "MIT (open-source platform; hosted services and extensions may have separate terms)"
+
+status: Active
+last_verified: "2026-11-13"

@@ -1,0 +1,49 @@
+
+name: MediaInfo
+type:
+  - Tool
+  - Library / Framework
+
+description: "Open-source command-line and graphical utility for inspecting technical metadata and tags in audio and video files, including codecs, container formats, duration, bitrate and stream properties."
+
+website: https://mediaarea.net/MediaInfo
+repository: https://github.com/MediaArea/MediaInfo
+author: "MediaArea"
+
+domains:
+  - Multimedia Forensics
+  - Audio Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - Audio Metadata
+  - Video Metadata
+  - Embedded Metadata
+  - File Metadata
+
+keywords:
+  - MediaInfo
+  - Video Metadata
+  - Audio Metadata
+  - Codecs
+  - Media Containers
+  - Bitrate
+  - Video Examination
+  - Audio Examination
+  - Technical Metadata
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: BSD-2-Clause
+
+status: Active
+last_verified: "2026-11-13"

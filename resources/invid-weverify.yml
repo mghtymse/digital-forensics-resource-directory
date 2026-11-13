@@ -1,0 +1,50 @@
+
+name: InVID-WeVerify Verification Plugin
+type:
+  - Tool
+  - Plugin / Extension
+
+description: "Browser-based verification toolkit for examining online images and videos, including video keyframe extraction, reverse-image searching, metadata inspection and image forensic analysis."
+
+website: https://weverify.eu/verification-plugin/
+repository: https://github.com/AFP-Medialab/invid-verification-plugin
+author: "AFP Medialab and InVID-WeVerify project contributors"
+
+domains:
+  - Multimedia Forensics
+  - Image Forensics
+  - OSINT
+  - Social Media Forensics
+
+runs_on:
+  - Browser
+
+analyses:
+  - Web
+
+artefacts:
+  - Image Metadata
+  - Video Metadata
+  - EXIF Metadata
+
+keywords:
+  - InVID
+  - WeVerify
+  - VeraAI
+  - Video Verification
+  - Image Verification
+  - Reverse Image Search
+  - Video Keyframes
+  - Image Forensics
+  - Fact Checking
+  - Online Media Investigation
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: true
+licence: "MIT (plugin source; external services may have separate terms)"
+
+status: Active
+last_verified: "2026-11-13"

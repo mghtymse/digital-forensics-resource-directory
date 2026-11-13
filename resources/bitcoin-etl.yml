@@ -1,0 +1,44 @@
+
+name: Bitcoin ETL
+type:
+  - Tool
+  - Library / Framework
+
+description: "Open-source blockchain data extraction and transformation toolkit for exporting Bitcoin and related cryptocurrency blocks and transactions into structured data suitable for analysis and research."
+
+website: https://github.com/blockchain-etl/bitcoin-etl
+repository: https://github.com/blockchain-etl/bitcoin-etl
+author: "Blockchain ETL contributors"
+
+domains:
+  - Cryptocurrency Forensics
+  - Intelligence Analysis
+
+runs_on:
+  - Linux
+  - macOS
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - Bitcoin ETL
+  - Bitcoin
+  - Litecoin
+  - Dogecoin
+  - Blockchain Data
+  - Transaction Extraction
+  - Blockchain Analytics
+  - Python
+  - Cryptocurrency Research
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Maintenance Uncertain
+last_verified: "2026-11-13"
