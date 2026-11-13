@@ -1,0 +1,49 @@
+
+name: Android Forensics References
+type:
+  - Reference
+  - Directory / Index
+
+description: "Curated reference collection of Android forensic artefact locations and supporting research, organised by filesystem paths, system components and applications. Links to technical articles, research papers, forensic tools and artefact parsers."
+
+website: https://github.com/RealityNet/Android-Forensics-References/blob/main/README.md
+repository: https://github.com/RealityNet/Android-Forensics-References
+author: RealityNet
+
+domains:
+  - Android Forensics
+  - Mobile Application Forensics
+  - Application Forensics
+
+runs_on: []
+
+analyses: []
+
+artefacts:
+  - Mobile App Data
+  - Application Databases
+  - SQLite Databases
+  - Configuration Files
+  - Application Logs
+  - Call Logs
+
+keywords:
+  - Android Forensic Artifacts
+  - Android Filesystem
+  - Artefact Locations
+  - Mobile Forensic Research
+  - Android System Files
+  - Application Usage
+  - Android Databases
+  - Research References
+  - Forensic Documentation
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Not specified (reference collection; linked materials have separate terms)"
+
+status: Active
+last_verified: "2026-11-13"
