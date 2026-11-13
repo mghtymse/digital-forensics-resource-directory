@@ -1,0 +1,46 @@
+
+name: DB Browser for SQLite
+type:
+  - Tool
+
+description: "Open-source graphical application for viewing, querying and editing SQLite and supported SQLCipher databases. Useful for examining application database structures, records and SQL query results during forensic analysis."
+
+website: https://sqlitebrowser.org/
+repository: https://github.com/sqlitebrowser/sqlitebrowser
+author: "DB Browser for SQLite contributors"
+
+domains:
+  - Database Forensics
+  - Application Forensics
+  - Mobile Application Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - SQLite Databases
+  - Application Databases
+
+keywords:
+  - DB Browser for SQLite
+  - SQLite
+  - SQLCipher
+  - Database Examination
+  - SQL Queries
+  - Mobile App Databases
+  - Database Records
+  - Application Forensics
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: "MPL-2.0 or GPL-3.0-or-later; third-party components have separate terms"
+
+status: Active
+last_verified: "2026-11-13"

@@ -1,0 +1,48 @@
+
+name: ForenThings
+type:
+  - Tool
+  - Research Paper
+
+description: "Open-source research framework for reconstructing events and their relationships in Internet of Things environments using smart-device and application logs. Includes an implementation and example datasets based on the SmartThings platform."
+
+website: https://github.com/ehsankhodayar/ForenThings
+repository: https://github.com/ehsankhodayar/ForenThings
+author: "Ehsan Khodayarseresht and research collaborators"
+
+domains:
+  - IoT Forensics
+  - Application Forensics
+  - Timeline Analysis
+  - Incident Response
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - Application Logs
+  - Application Databases
+
+keywords:
+  - ForenThings
+  - Internet of Things
+  - Smart Home Forensics
+  - SmartThings
+  - Event Reconstruction
+  - Provenance Analysis
+  - IoT Logs
+  - Forensic Research
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-13"

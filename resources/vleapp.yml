@@ -1,0 +1,50 @@
+
+name: VLEAPP
+type:
+  - Tool
+
+description: "Open-source vehicle forensic artefact parsing tool for examining supported vehicle logs, events, configuration information and protobuf data from infotainment systems and forensic extractions."
+
+website: https://github.com/abrignoni/VLEAPP
+repository: https://github.com/abrignoni/VLEAPP
+author: "Alexis Brignoni and contributors"
+
+domains:
+  - Vehicle Forensics
+  - Application Forensics
+  - Database Forensics
+
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+
+analyses: []
+
+artefacts:
+  - Application Logs
+  - Application Databases
+  - Configuration Files
+  - SQLite Databases
+  - Disk Images
+
+keywords:
+  - VLEAPP
+  - Vehicle Forensics
+  - Vehicle Logs
+  - Infotainment Forensics
+  - Automotive Forensics
+  - Protobuf
+  - E01
+  - QNX
+  - Vehicle Artefacts
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: MIT
+
+status: Active
+last_verified: "2026-11-13"

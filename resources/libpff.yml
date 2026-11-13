@@ -1,0 +1,49 @@
+
+name: libpff
+type:
+  - Tool
+  - Library / Framework
+
+description: "Open-source library and command-line utilities for accessing Microsoft Outlook Personal Folder File and Offline Folder File formats, including PST, OST and PAB, to examine and export stored messages and other Outlook items."
+
+website: https://github.com/libyal/libpff
+repository: https://github.com/libyal/libpff
+author: "Joachim Metz and libyal contributors"
+
+domains:
+  - Email Forensics
+  - Application Forensics
+  - Digital Forensics
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses: []
+
+artefacts:
+  - Email
+  - Application Databases
+
+keywords:
+  - libpff
+  - Outlook
+  - PST
+  - OST
+  - PAB
+  - pffexport
+  - pffinfo
+  - Email Analysis
+  - Mailbox Examination
+  - Outlook Forensics
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: LGPL-3.0-or-later
+
+status: Active
+last_verified: "2026-11-13"

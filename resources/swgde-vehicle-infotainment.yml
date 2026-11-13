@@ -1,0 +1,50 @@
+
+name: SWGDE Best Practices for Vehicle Infotainment and Telematics Systems
+type:
+  - Reference
+  - Documentation
+
+description: "Technical best-practice guidance for identifying, collecting, preserving and acquiring digital evidence from vehicle infotainment and telematics systems, including connected devices, navigation records and vehicle event information."
+
+website: https://www.swgde.org/documents/published-complete-listing/12-f-004-best-practices-for-vehicle-infotainment-and-telematics-systems/
+repository: ""
+author: "Scientific Working Group on Digital Evidence (SWGDE)"
+
+domains:
+  - Vehicle Forensics
+  - Forensic Methodology
+  - Evidence Handling
+  - Legal & Investigative Practice
+
+runs_on: []
+
+analyses: []
+
+artefacts:
+  - Location Data
+  - Contacts
+  - Call Logs
+  - SMS / Messages
+  - Application Logs
+
+keywords:
+  - SWGDE
+  - Vehicle Infotainment
+  - Vehicle Telematics
+  - Automotive Forensics
+  - Connected Vehicles
+  - Navigation Data
+  - Vehicle Events
+  - Forensic Acquisition
+  - Evidence Preservation
+  - Best Practices
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "SWGDE document use and redistribution conditions"
+
+status: Active
+last_verified: "2026-11-13"
