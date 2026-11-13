@@ -1,0 +1,51 @@
+
+name: Blue Team Labs Online
+type:
+  - Training Platform
+  - CTF / Challenge
+
+description: "Practical blue-team investigation platform offering downloadable forensic and cybersecurity challenges involving memory dumps, network captures, phishing emails, logs and other evidence. Includes free challenges and paid investigation labs."
+
+website: https://blueteamlabs.online/
+repository: ""
+author: "Security Blue Team / Centri"
+
+domains:
+  - DFIR
+  - Digital Forensics
+  - Incident Response
+  - Network Forensics
+  - Memory Forensics
+  - Threat Hunting
+
+runs_on:
+  - Browser
+
+analyses: []
+
+artefacts:
+  - Memory Dumps
+  - PCAP
+  - Email
+  - Network Logs
+
+keywords:
+  - Blue Team Labs Online
+  - BTLO
+  - Digital Forensics Training
+  - Investigation Challenges
+  - Practical Labs
+  - Incident Response Training
+  - Blue Team
+  - Threat Hunting
+  - Forensic Exercises
+
+pricing:
+  model: Freemium
+  commercial_use: null
+
+open_source: null
+licence: "Proprietary platform; subject to service terms"
+
+status: Active
+last_verified: "2026-11-13"

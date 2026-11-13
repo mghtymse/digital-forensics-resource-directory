@@ -1,0 +1,52 @@
+
+name: DFIR Madness
+type:
+  - Website
+  - Lab / Exercise
+  - Tutorial
+
+description: "Collection of digital forensic investigation exercises, case studies and technical walkthroughs covering disk examination, timeline reconstruction, packet analysis and incident response."
+
+website: https://dfirmadness.com/
+repository: ""
+author: "DFIR Madness"
+
+domains:
+  - DFIR
+  - Digital Forensics
+  - Disk Forensics
+  - Timeline Analysis
+  - Network Forensics
+  - Incident Response
+
+runs_on:
+  - Browser
+
+analyses: []
+
+artefacts:
+  - Disk Images
+  - PCAP
+  - Windows Registry
+  - Filesystem Metadata
+
+keywords:
+  - DFIR Madness
+  - Forensic Training
+  - Practical Exercises
+  - Incident Response
+  - Timeline Analysis
+  - Disk Triage
+  - PCAP Analysis
+  - Forensic Case Studies
+  - E01
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Not specified; check individual material terms"
+
+status: Active
+last_verified: "2026-11-13"

@@ -1,0 +1,47 @@
+
+name: SWGDE Published Documents
+type:
+  - Reference
+  - Documentation
+
+description: "Collection of publicly accessible technical guidelines, best-practice documents and recommendations developed by the Scientific Working Group on Digital Evidence, covering digital evidence collection, acquisition, examination, validation and reporting."
+
+website: https://www.swgde.org/documents/current-documents/
+repository: ""
+author: "Scientific Working Group on Digital Evidence (SWGDE)"
+
+domains:
+  - Digital Forensics
+  - Forensic Methodology
+  - Evidence Handling
+  - Legal & Investigative Practice
+  - Mobile Application Forensics
+  - Multimedia Forensics
+
+runs_on: []
+
+analyses: []
+
+artefacts: []
+
+keywords:
+  - SWGDE
+  - Digital Evidence
+  - Best Practices
+  - Forensic Guidelines
+  - Evidence Collection
+  - Forensic Acquisition
+  - Tool Validation
+  - Chain of Custody
+  - Forensic Reporting
+  - Digital Evidence Standards
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "SWGDE document use and redistribution conditions"
+
+status: Active
+last_verified: "2026-11-13"

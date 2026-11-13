@@ -1,0 +1,52 @@
+
+name: DFRWS 2023 Forensic Challenge - The Troubled Elevator
+type:
+  - Dataset
+  - Sample Evidence
+  - CTF / Challenge
+
+description: "Digital forensic investigation challenge involving an industrial elevator control system, with network traffic, PLC memory dumps, desktop memory evidence and CCTV footage for multidisciplinary forensic analysis."
+
+website: https://dfrws.org/forensic-challenges/
+repository: https://github.com/dfrws/dfrws2023-challenge
+author: "DFRWS and VCU SAFE Lab"
+
+domains:
+  - Network Forensics
+  - Memory Forensics
+  - IoT Forensics
+  - Incident Response
+
+runs_on: []
+
+analyses:
+  - Windows
+
+artefacts:
+  - PCAP
+  - Memory Dumps
+  - Network Logs
+  - Video Metadata
+
+keywords:
+  - DFRWS
+  - Forensic Challenge
+  - The Troubled Elevator
+  - Industrial Control Systems
+  - ICS
+  - Programmable Logic Controllers
+  - PLC
+  - Digital Forensic Dataset
+  - Memory Analysis
+  - Network Investigation
+  - CCTV Evidence
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Apache-2.0 (repository; verify individual evidence terms)"
+
+status: Active
+last_verified: "2026-11-13"

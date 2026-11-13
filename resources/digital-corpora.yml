@@ -1,0 +1,52 @@
+
+name: Digital Corpora
+type:
+  - Dataset
+  - Sample Evidence
+  - Website
+
+description: "Collection of forensic datasets for education, research and tool testing, including disk images, memory dumps, packet captures, mobile device evidence and realistic investigative scenarios."
+
+website: https://digitalcorpora.org/
+repository: ""
+author: "Digital Corpora project (Simson Garfinkel and contributors)"
+
+domains:
+  - Digital Forensics
+  - Disk Forensics
+  - Filesystem Forensics
+  - Memory Forensics
+  - Network Forensics
+
+runs_on: []
+
+analyses:
+  - Windows
+  - Linux
+  - Android
+
+artefacts:
+  - Disk Images
+  - Memory Dumps
+  - PCAP
+  - Filesystem Metadata
+
+keywords:
+  - Digital Corpora
+  - Forensic Datasets
+  - Sample Evidence
+  - E01 Images
+  - Forensic Research
+  - Tool Validation
+  - Test Data
+  - Forensic Scenarios
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: "Varies by dataset; check individual corpus terms"
+
+status: Active
+last_verified: "2026-11-13"
