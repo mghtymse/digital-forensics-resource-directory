@@ -1,0 +1,60 @@
+
+name: Website Regression Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'resources/**'
+      - '.github/workflows/website-tests.yml'
+
+  pull_request:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'resources/**'
+      - '.github/workflows/website-tests.yml'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  playwright-tests:
+    name: Run Playwright tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    defaults:
+      run:
+        working-directory: website
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser tests
+        run: npx playwright test --project=chromium --workers=1
+
+      - name: Upload test results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: website/test-results/
+          retention-days: 7
