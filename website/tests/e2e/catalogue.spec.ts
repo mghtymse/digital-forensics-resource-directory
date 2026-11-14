@@ -130,3 +130,88 @@ test('resource detail page navigation works', async ({page}) => {
     })
   ).toBeVisible();
 });
+test('multi-term search works regardless of word order and case', async ({page}) => {
+  await page.goto('resources');
+
+  const searchBox = page.getByRole('searchbox', {
+    name: 'Search resources',
+  });
+
+  const cards = page.locator('.dfir-resource-card');
+
+  // Search using two terms.
+  await searchBox.fill('memory forensics');
+
+  await expect(page).toHaveURL(/q=memory(?:\+|%20)forensics/);
+
+  const firstResults = await cards.allTextContents();
+
+  // The search should return at least one matching resource.
+  expect(firstResults.length).toBeGreaterThan(0);
+
+  // Reverse the word order.
+  await searchBox.fill('forensics memory');
+
+  await expect(page).toHaveURL(/q=forensics(?:\+|%20)memory/);
+
+  const reversedResults = await cards.allTextContents();
+
+  // The same resources should be returned.
+  expect(reversedResults).toEqual(firstResults);
+
+  // Repeat using uppercase.
+  await searchBox.fill('MEMORY FORENSICS');
+
+  await expect(page).toHaveURL(/q=MEMORY(?:\+|%20)FORENSICS/);
+
+  const uppercaseResults = await cards.allTextContents();
+
+  expect(uppercaseResults).toEqual(firstResults);
+});
+test('search defaults to relevance and supports alphabetical sorting', async ({page}) => {
+  await page.goto('resources');
+
+  const searchBox = page.getByRole('searchbox', {
+    name: 'Search resources',
+  });
+
+  const sortSelect = page.getByRole('combobox', {
+    name: 'Sort resources by',
+  });
+
+  // Browsing without a search defaults to alphabetical sorting.
+  await expect(sortSelect).toHaveValue('name-asc');
+
+  // Entering a search automatically selects relevance sorting.
+  await searchBox.fill('forensics');
+
+  await expect(sortSelect).toHaveValue('relevance');
+
+  // An explicit sorting choice overrides relevance.
+  await sortSelect.selectOption('name-desc');
+
+  await expect(sortSelect).toHaveValue('name-desc');
+  await expect(page).toHaveURL(/sort=name-desc/);
+
+  // Confirm the search results are in reverse alphabetical order.
+  const names = await page
+    .locator('.dfir-resource-card')
+    .evaluateAll((cards) =>
+      cards.map((card) => {
+        const link = card.querySelector('a[href*="/resource/"]');
+        return link?.textContent?.trim() ?? '';
+      })
+    );
+
+  expect(names.length).toBeGreaterThan(1);
+
+  expect(names).toEqual(
+    [...names].sort((a, b) => b.localeCompare(a))
+  );
+
+  // Clearing filters restores the default alphabetical sort.
+  await page.getByRole('button', {name: 'Clear Filters'}).click();
+
+  await expect(searchBox).toHaveValue('');
+  await expect(sortSelect).toHaveValue('name-asc');
+});

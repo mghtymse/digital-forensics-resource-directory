@@ -77,7 +77,7 @@ export default function ResourcesPage() {
   const keyword = params.get('keyword') ?? '';
   const runsOn = params.get('runsOn') ?? '';
   const analyses = params.get('analyses') ?? '';
-    const sort = params.get('sort') ?? 'name-asc';
+      const sort = params.get('sort') ?? (search.trim() ? 'relevance' : 'name-asc');
 
   const activeFilters = [
     {key: 'q', label: 'Search', value: search},
@@ -113,6 +113,40 @@ export default function ResourcesPage() {
   function clearFilters() {
     history.push({pathname: location.pathname, search: ''});
   }
+  // Split the search into individual, case-insensitive terms.
+  const searchTerms = search
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean);
+
+      // Calculate how closely each resource matches the search terms.
+  function relevanceScore(resource: (typeof resources)[number]): number {
+    if (searchTerms.length === 0) return 0;
+
+    const fields = [
+      {text: resource.name, weight: 10},
+      {text: (resource.keywords ?? []).join(' '), weight: 6},
+      {text: (resource.artefacts ?? []).join(' '), weight: 5},
+      {text: (resource.domains ?? []).join(' '), weight: 4},
+      {text: resource.description ?? '', weight: 2},
+      {text: (resource.type ?? []).join(' '), weight: 1},
+      {text: (resource.runs_on ?? []).join(' '), weight: 1},
+      {text: (resource.analyses ?? []).join(' '), weight: 1},
+    ];
+
+    return searchTerms.reduce((score, term) => {
+      return (
+        score +
+        fields.reduce((termScore, field) => {
+          return (
+            termScore +
+            (field.text.toLowerCase().includes(term) ? field.weight : 0)
+          );
+        }, 0)
+      );
+    }, 0);
+  }
 
   const results = resources.filter((resource) => {
     const searchableText = [
@@ -129,7 +163,7 @@ export default function ResourcesPage() {
       .toLowerCase();
 
     return (
-      searchableText.includes(search.trim().toLowerCase()) &&
+      searchTerms.every((term) => searchableText.includes(term)) &&
       (!domain || resource.domains?.includes(domain)) &&
       (!resourceType || resource.type?.includes(resourceType)) &&
       (!artefact || resource.artefacts?.includes(artefact)) &&
@@ -142,7 +176,10 @@ export default function ResourcesPage() {
   const sortedResults = [...results].sort((a, b) => {
     const nameComparison = a.name.localeCompare(b.name);
 
-    switch (sort) {
+        switch (sort) {
+      case 'relevance':
+        return relevanceScore(b) - relevanceScore(a) || nameComparison;
+
       case 'name-desc':
         return -nameComparison;
 
@@ -294,6 +331,7 @@ export default function ResourcesPage() {
                 marginTop: '0.35rem',
               }}
             >
+              <option value="relevance">Relevance</option>
               <option value="name-asc">Name (A–Z)</option>
               <option value="name-desc">Name (Z–A)</option>
               <option value="verified-newest">
