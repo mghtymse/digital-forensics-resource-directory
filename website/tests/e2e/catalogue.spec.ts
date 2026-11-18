@@ -215,3 +215,40 @@ test('search defaults to relevance and supports alphabetical sorting', async ({p
   await expect(searchBox).toHaveValue('');
   await expect(sortSelect).toHaveValue('name-asc');
 });
+test('resource detail pages display valid related resources', async ({page}) => {
+  await page.goto('resource/autopsy');
+
+  // Find the Related Resources section.
+  const relatedSection = page.getByRole('region', {
+    name: 'Related Resources',
+  });
+
+  await expect(relatedSection).toBeVisible();
+
+  // Confirm recommendations are displayed.
+  const relatedLinks = relatedSection.locator('h3 a');
+
+  const count = await relatedLinks.count();
+
+  expect(count).toBeGreaterThan(0);
+  expect(count).toBeLessThanOrEqual(5);
+
+  // The current resource must not recommend itself.
+  await expect(
+    relatedLinks.filter({hasText: /^Autopsy$/})
+  ).toHaveCount(0);
+
+  // Follow a recommendation.
+  const firstResourceName = await relatedLinks.first().textContent();
+
+  await relatedLinks.first().click();
+
+  // Confirm the recommended resource page opens.
+  await expect(
+    page.getByRole('heading', {
+      name: firstResourceName?.trim(),
+      exact: true,
+      level: 1,
+    })
+  ).toBeVisible();
+});

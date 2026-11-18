@@ -2,8 +2,10 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import resources from '../data/resources.json';
 
 type Resource = {
+  id: string;
   name: string;
   description: string;
   website: string;
@@ -71,13 +73,56 @@ function yesNoUnknown(value?: boolean | null) {
   if (value === false) return 'No';
   return 'Unknown';
 }
+// Score how closely two resources are related.
+function relatedResourceScore(
+  current: Resource,
+  candidate: Resource
+): number {
+  const fields: {
+    key: 'artefacts' | 'domains' | 'keywords' |
+         'analyses' | 'runs_on' | 'type';
+    weight: number;
+  }[] = [
+    {key: 'artefacts', weight: 5},
+    {key: 'domains', weight: 4},
+    {key: 'keywords', weight: 3},
+    {key: 'analyses', weight: 2},
+    {key: 'runs_on', weight: 1},
+    {key: 'type', weight: 1},
+  ];
 
+  return fields.reduce((score, {key, weight}) => {
+    const currentValues = new Set(
+      (current[key] ?? []).map((value) => value.toLowerCase())
+    );
+
+    const matches = (candidate[key] ?? []).filter(
+      (value) => currentValues.has(value.toLowerCase())
+    );
+
+    return score + matches.length * weight;
+  }, 0);
+}
 
 export default function ResourceDetail({
   resource,
 }: {
   resource: Resource;
 }) {
+    // Find the five highest-scoring related resources.
+  const relatedResources = resources
+    .filter((candidate) => candidate.id !== resource.id)
+    .map((candidate) => ({
+      resource: candidate,
+      score: relatedResourceScore(resource, candidate),
+    }))
+    .filter(({score}) => score > 0)
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        a.resource.name.localeCompare(b.resource.name)
+    )
+    .slice(0, 5);
   const softwareTypes = new Set([
     'Tool',
     'Tool Suite',
@@ -220,7 +265,46 @@ export default function ResourceDetail({
     </tr>
   </tbody>
 </table>
+        {relatedResources.length > 0 && (
+          <section
+            className="margin-top--lg margin-bottom--lg"
+            aria-labelledby="related-resources-heading"
+          >
+            <h2 id="related-resources-heading">
+              Related Resources
+            </h2>
 
+            <p>
+              Explore other resources with similar forensic
+              domains, artefacts, platforms or keywords.
+            </p>
+
+            <div className="row">
+              {relatedResources.map(({resource: related}) => (
+                <div
+                  key={related.id}
+                  className="col col--6 margin-bottom--md"
+                >
+                  <div className="card">
+                    <div className="card__body">
+                      <h3>
+                        <Link to={`/resource/${related.id}`}>
+                          {related.name}
+                        </Link>
+                      </h3>
+
+                      <p>{related.description}</p>
+
+                      <Link to={`/resource/${related.id}`}>
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
     </Layout>
   );
