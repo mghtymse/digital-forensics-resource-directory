@@ -297,3 +297,36 @@ test('resources can be selected and compared', async ({page}) => {
     page.getByRole('columnheader', {name: 'Volatility 3', exact: true})
   ).toBeVisible();
 });
+test('artefact discovery and catalogue navigation work', async ({page}) => {
+  await page.goto('artefacts');
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Browse Artefacts',
+      level: 1,
+    })
+  ).toBeVisible();
+
+  const searchBox = page.getByRole('searchbox', {
+    name: 'Search artefacts',
+  });
+
+  await searchBox.fill('Memory Dumps');
+
+  const artefactLink = page.getByRole('link', {
+    name: /Memory Dumps/,
+  });
+
+  await expect(artefactLink).toHaveCount(1);
+  await artefactLink.click();
+
+  await expect(page).toHaveURL(/artefact=Memory(?:%20|\+)Dumps/);
+
+  await expect(
+    page.getByRole('combobox', {name: 'Artefact'})
+  ).toHaveValue('Memory Dumps');
+
+  await expect(
+    page.locator('.dfir-resource-card').first()
+  ).toBeVisible();
+});

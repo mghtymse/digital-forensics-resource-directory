@@ -99,6 +99,11 @@ navbar: {
       label: 'Browse Resources',
       position: 'left',
     },
+    {
+  to: '/artefacts',
+  label: 'Browse Artefacts',
+  position: 'left',
+},
   ],
 },
     footer: {

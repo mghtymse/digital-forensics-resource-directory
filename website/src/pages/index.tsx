@@ -104,9 +104,22 @@ function handleSearch(event: React.FormEvent<HTMLFormElement>) {
                 Search Resources
               </button>
             </form>
-            <Link to="/resources" className="button button--secondary">
-              Browse All Resources
-            </Link>
+            <div
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: '0.75rem',
+  }}
+>
+  <Link to="/resources" className="button button--secondary">
+    Browse All Resources
+  </Link>
+
+  <Link to="/artefacts" className="button button--secondary">
+    Browse Artefacts
+  </Link>
+</div>
           </div>
         </header>
 
