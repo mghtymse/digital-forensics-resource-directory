@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useHistory, useLocation} from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -67,7 +67,27 @@ function FilterSelect({
 export default function ResourcesPage() {
   const location = useLocation();
   const history = useHistory();
+  const [selectedResources, setSelectedResources] = useState<string[]>([]);
 
+  const maxComparisonResources = 3;
+
+  function toggleComparison(resourceId: string) {
+    setSelectedResources((current) => {
+      if (current.includes(resourceId)) {
+        return current.filter((id) => id !== resourceId);
+      }
+
+      if (current.length >= maxComparisonResources) {
+        return current;
+      }
+
+      return [...current, resourceId];
+    });
+  }
+
+  function clearComparison() {
+    setSelectedResources([]);
+  }
   // The URL is our single source of truth for all filters.
   const params = new URLSearchParams(location.search);
   const search = params.get('q') ?? '';
@@ -352,7 +372,58 @@ export default function ResourcesPage() {
             Clear Filters
           </button>
         </div>
+{selectedResources.length > 0 && (
+  <section
+    aria-label="Resource comparison"
+    style={{
+      padding: '1rem',
+      border: '1px solid var(--ifm-color-primary)',
+      borderRadius: '12px',
+      marginBottom: '1.5rem',
+    }}
+  >
+    <h3>
+      Compare Resources ({selectedResources.length}/3)
+    </h3>
 
+    <ul>
+      {selectedResources.map((id) => (
+        <li key={id}>
+          {resources.find((resource) => resource.id === id)?.name}
+          {' '}
+          <button
+            type="button"
+            onClick={() => toggleComparison(id)}
+            aria-label={`Remove ${id} from comparison`}
+          >
+            ×
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    {selectedResources.length >= 2 ? (
+      <Link
+        className="button button--primary"
+        to={`/compare?ids=${selectedResources.join(',')}`}
+      >
+        Compare Selected Resources
+      </Link>
+    ) : (
+      <p>Select at least two resources to compare.</p>
+    )}
+
+    {' '}
+
+    <button
+      type="button"
+      className="button button--secondary"
+      onClick={clearComparison}
+    >
+      Clear Selection
+    </button>
+  </section>
+)}
         {activeFilters.length > 0 && (
           <div
             style={{
@@ -450,7 +521,25 @@ export default function ResourcesPage() {
     {resource.author}
   </p>
 ) : null}
-
+<label
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    marginBottom: '0.75rem',
+  }}
+>
+  <input
+    type="checkbox"
+    checked={selectedResources.includes(resource.id)}
+    disabled={
+      selectedResources.length >= maxComparisonResources &&
+      !selectedResources.includes(resource.id)
+    }
+    onChange={() => toggleComparison(resource.id)}
+  />
+  Compare
+</label>
                   <div className="dfir-card-actions">
                     <Link
                       className="button button--primary"

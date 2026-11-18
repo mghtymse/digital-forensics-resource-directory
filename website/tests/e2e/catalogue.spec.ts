@@ -252,3 +252,48 @@ test('resource detail pages display valid related resources', async ({page}) => 
     })
   ).toBeVisible();
 });
+test('resources can be selected and compared', async ({page}) => {
+  await page.goto('resources');
+
+  const autopsy = page.locator('.dfir-resource-card').filter({
+    has: page.getByRole('link', {name: 'Autopsy', exact: true}),
+  });
+
+  const volatility = page.locator('.dfir-resource-card').filter({
+    has: page.getByRole('link', {name: 'Volatility 3', exact: true}),
+  });
+
+  await autopsy.getByRole('checkbox', {name: 'Compare'}).check();
+  await volatility.getByRole('checkbox', {name: 'Compare'}).check();
+
+  await page.getByRole('link', {
+    name: 'Compare Selected Resources',
+  }).click();
+
+  await expect(page).toHaveURL(/compare\?ids=/);
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Compare Resources',
+      level: 1,
+    })
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('columnheader', {name: 'Autopsy', exact: true})
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('columnheader', {name: 'Volatility 3', exact: true})
+  ).toBeVisible();
+
+  await page.reload();
+
+  await expect(
+    page.getByRole('columnheader', {name: 'Autopsy', exact: true})
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('columnheader', {name: 'Volatility 3', exact: true})
+  ).toBeVisible();
+});
