@@ -330,3 +330,59 @@ test('artefact discovery and catalogue navigation work', async ({page}) => {
     page.locator('.dfir-resource-card').first()
   ).toBeVisible();
 });
+test('saved searches persist and restore filters', async ({page}) => {
+  await page.goto('resources');
+
+  const domainFilter = page.getByRole('combobox', {
+    name: 'Forensic Domain',
+  });
+
+  const typeFilter = page.getByRole('combobox', {
+    name: 'Resource Type',
+  });
+
+  await domainFilter.selectOption('Memory Forensics');
+  await typeFilter.selectOption('Tool');
+
+  await page.getByRole('textbox', {
+    name: 'Saved search name',
+  }).fill('Memory Analysis Tools');
+
+  await page.getByRole('button', {
+    name: 'Save Search',
+    exact: true,
+  }).click();
+
+  const savedSearch = page.getByRole('button', {
+    name: 'Memory Analysis Tools',
+    exact: true,
+  });
+
+  await expect(savedSearch).toBeVisible();
+
+  await page.reload();
+
+  await expect(savedSearch).toBeVisible();
+
+  await page.getByRole('button', {
+    name: 'Clear Filters',
+  }).click();
+
+  await expect(domainFilter).toHaveValue('');
+  await expect(typeFilter).toHaveValue('');
+
+  await savedSearch.click();
+
+  await expect(domainFilter).toHaveValue('Memory Forensics');
+  await expect(typeFilter).toHaveValue('Tool');
+
+  await page.getByRole('button', {
+    name: 'Delete saved search Memory Analysis Tools',
+  }).click();
+
+  await expect(savedSearch).toHaveCount(0);
+
+  await page.reload();
+
+  await expect(savedSearch).toHaveCount(0);
+});

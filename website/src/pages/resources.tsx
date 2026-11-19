@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory, useLocation} from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -21,6 +21,14 @@ type Resource = {
 };
 
 const resources = resourceData as Resource[];
+
+type SavedSearch = {
+  id: string;
+  name: string;
+  query: string;
+};
+
+const SAVED_SEARCHES_KEY = 'dfir-saved-searches';
 
 type FilterField = 'type' | 'domains' | 'artefacts' | 'runs_on' | 'analyses' | 'keywords';
 
@@ -68,7 +76,25 @@ export default function ResourcesPage() {
   const location = useLocation();
   const history = useHistory();
   const [selectedResources, setSelectedResources] = useState<string[]>([]);
+const [savedSearches, setSavedSearches] = useState<SavedSearch[]>([]);
+const [savedSearchName, setSavedSearchName] = useState('');
+const [shareMessage, setShareMessage] = useState('');
 
+useEffect(() => {
+  try {
+    const stored = localStorage.getItem(SAVED_SEARCHES_KEY);
+
+    if (stored) {
+      const parsed = JSON.parse(stored);
+
+      if (Array.isArray(parsed)) {
+        setSavedSearches(parsed);
+      }
+    }
+  } catch {
+    console.warn('Unable to load saved searches.');
+  }
+}, []);
   const maxComparisonResources = 3;
 
   function toggleComparison(resourceId: string) {
@@ -88,6 +114,68 @@ export default function ResourcesPage() {
   function clearComparison() {
     setSelectedResources([]);
   }
+  function updateSavedSearches(updated: SavedSearch[]) {
+  try {
+    localStorage.setItem(
+      SAVED_SEARCHES_KEY,
+      JSON.stringify(updated)
+    );
+
+    setSavedSearches(updated);
+    return true;
+  } catch {
+    setShareMessage('Unable to store saved searches.');
+    return false;
+  }
+}
+
+function saveCurrentSearch() {
+  const name = savedSearchName.trim();
+
+  if (!name) {
+    setShareMessage('Please enter a name for your search.');
+    return;
+  }
+
+  const newSearch: SavedSearch = {
+    id: crypto.randomUUID(),
+    name,
+    query: location.search,
+  };
+
+  if (updateSavedSearches([...savedSearches, newSearch])) {
+    setSavedSearchName('');
+    setShareMessage('Search saved successfully.');
+  }
+}
+
+function openSavedSearch(saved: SavedSearch) {
+  history.push({
+    pathname: location.pathname,
+    search: saved.query,
+  });
+
+  setShareMessage(`Loaded: ${saved.name}`);
+}
+
+function deleteSavedSearch(id: string) {
+  if (
+    updateSavedSearches(
+      savedSearches.filter((saved) => saved.id !== id)
+    )
+  ) {
+    setShareMessage('Saved search removed.');
+  }
+}
+
+async function copyFilterLink() {
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    setShareMessage('Filter link copied to clipboard.');
+  } catch {
+    setShareMessage('Unable to copy. Copy the browser address instead.');
+  }
+}
   // The URL is our single source of truth for all filters.
   const params = new URLSearchParams(location.search);
   const search = params.get('q') ?? '';
@@ -372,6 +460,101 @@ export default function ResourcesPage() {
             Clear Filters
           </button>
         </div>
+        <section
+  aria-label="Saved searches"
+  style={{
+    padding: '1rem',
+    border: '1px solid var(--ifm-color-emphasis-300)',
+    borderRadius: '12px',
+    marginBottom: '1.5rem',
+  }}
+>
+  <h3>Save & Share Searches</h3>
+
+  <p>Save your current filters or share them with others.</p>
+
+  <div
+    style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '0.75rem',
+      alignItems: 'center',
+    }}
+  >
+    <input
+      type="text"
+      aria-label="Saved search name"
+      placeholder="Name your search..."
+      value={savedSearchName}
+      onChange={(event) =>
+        setSavedSearchName(event.target.value)
+      }
+      style={{
+        padding: '0.75rem',
+        flex: '1 1 200px',
+        minWidth: 0,
+      }}
+    />
+
+    <button
+      type="button"
+      className="button button--primary"
+      onClick={saveCurrentSearch}
+    >
+      Save Search
+    </button>
+
+    <button
+      type="button"
+      className="button button--secondary"
+      onClick={copyFilterLink}
+    >
+      Copy Filter Link
+    </button>
+  </div>
+
+  {shareMessage && (
+    <p role="status" className="margin-top--md">
+      {shareMessage}
+    </p>
+  )}
+
+  {savedSearches.length > 0 && (
+    <div className="margin-top--md">
+      <h4>Saved Searches ({savedSearches.length})</h4>
+
+      {savedSearches.map((saved) => (
+        <div
+          key={saved.id}
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: '0.75rem',
+            marginBottom: '0.5rem',
+          }}
+        >
+          <button
+            type="button"
+            className="button button--secondary"
+            onClick={() => openSavedSearch(saved)}
+          >
+            {saved.name}
+          </button>
+
+          <button
+            type="button"
+            className="button button--outline button--danger"
+            onClick={() => deleteSavedSearch(saved.id)}
+            aria-label={`Delete saved search ${saved.name}`}
+          >
+            Delete
+          </button>
+        </div>
+      ))}
+    </div>
+  )}
+</section>
 {selectedResources.length > 0 && (
   <section
     aria-label="Resource comparison"
