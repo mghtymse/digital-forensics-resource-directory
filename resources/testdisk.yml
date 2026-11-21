@@ -1,0 +1,44 @@
+name: TestDisk
+type:
+  - Tool
+description: Open-source data recovery utility for recovering lost partitions, examining damaged filesystem structures and recovering deleted files from supported filesystems.
+website: https://www.cgsecurity.org/wiki/TestDisk
+repository: https://git.cgsecurity.org/cgit/testdisk/
+author: Christophe Grenier
+domains:
+  - Disk Forensics
+  - Filesystem Forensics
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+  - Unix / BSD
+analyses:
+  - Windows
+  - Linux
+  - macOS
+  - Unix / BSD
+artefacts:
+  - Partition Tables
+  - Filesystem Metadata
+  - Deleted Files
+  - Disk Images
+  - Master File Table (MFT)
+keywords:
+  - Data Recovery
+  - Partition Recovery
+  - NTFS
+  - FAT
+  - exFAT
+  - ext2
+  - ext3
+  - ext4
+  - Boot Sectors
+  - Deleted Data Recovery
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-2.0-or-later
+status: Active
+last_verified: "2026-11-21"

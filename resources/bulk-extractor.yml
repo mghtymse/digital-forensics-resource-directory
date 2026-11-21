@@ -1,0 +1,38 @@
+name: bulk_extractor
+type:
+  - Tool
+description: High-performance forensic extraction utility that scans raw data, disk images and files independently of filesystem structures to identify structured information and embedded content.
+website: https://github.com/simsong/bulk_extractor
+repository: https://github.com/simsong/bulk_extractor
+author: Simson Garfinkel and contributors
+domains:
+  - Disk Forensics
+  - File Carving
+  - Digital Forensics
+runs_on:
+  - Linux
+  - macOS
+  - Windows
+analyses:
+  - Windows
+  - Linux
+  - macOS
+artefacts:
+  - Disk Images
+  - Memory Dumps
+keywords:
+  - Feature Extraction
+  - Email Addresses
+  - Credit Card Numbers
+  - Pattern Matching
+  - Unallocated Space
+  - Data Carving
+  - Histograms
+  - Raw Data Analysis
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-3.0-or-later
+status: Active
+last_verified: "2026-11-21"

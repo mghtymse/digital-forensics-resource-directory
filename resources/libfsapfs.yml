@@ -1,0 +1,39 @@
+name: libfsapfs
+type:
+  - Library / Framework
+  - Tool Suite
+description: Open-source library and supporting utilities for read-only access to Apple File System containers, volumes, file contents and filesystem metadata.
+website: https://github.com/libyal/libfsapfs
+repository: https://github.com/libyal/libfsapfs
+author: Joachim Metz and contributors
+domains:
+  - macOS Forensics
+  - Filesystem Forensics
+  - Disk Forensics
+runs_on:
+  - Linux
+  - Windows
+  - macOS
+analyses:
+  - macOS
+artefacts:
+  - Filesystem Metadata
+  - File Metadata
+keywords:
+  - APFS
+  - Apple File System
+  - APFS Containers
+  - APFS Volumes
+  - Extended Attributes
+  - Filesystem Parsing
+  - pyfsapfs
+  - fsapfsinfo
+  - fsapfsmount
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: LGPL-3.0-or-later / GPL-3.0
+status: Active
+last_verified: "2026-11-21"

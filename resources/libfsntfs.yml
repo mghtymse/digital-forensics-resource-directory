@@ -1,0 +1,39 @@
+name: libfsntfs
+type:
+  - Library / Framework
+  - Tool Suite
+description: Open-source library and supporting utilities for read-only examination of NTFS filesystems, including access to filesystem structures, file contents and metadata.
+website: https://github.com/libyal/libfsntfs
+repository: https://github.com/libyal/libfsntfs
+author: Joachim Metz and contributors
+domains:
+  - Windows Forensics
+  - Filesystem Forensics
+  - Disk Forensics
+runs_on:
+  - Linux
+  - Windows
+  - macOS
+analyses:
+  - Windows
+artefacts:
+  - Filesystem Metadata
+  - Master File Table (MFT)
+  - Alternate Data Streams
+  - File Metadata
+keywords:
+  - NTFS
+  - MFT
+  - Filesystem Parsing
+  - Read-Only Access
+  - pyfsntfs
+  - fsntfsinfo
+  - fsntfsmount
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: LGPL-3.0-or-later / GPL-3.0
+status: Active
+last_verified: "2026-11-21"

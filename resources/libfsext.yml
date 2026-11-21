@@ -1,0 +1,39 @@
+name: libfsext
+type:
+  - Library / Framework
+  - Tool Suite
+description: Open-source library and supporting utilities for read-only examination of Linux extended filesystems, including ext2, ext3 and ext4 file structures and metadata.
+website: https://github.com/libyal/libfsext
+repository: https://github.com/libyal/libfsext
+author: Joachim Metz and contributors
+domains:
+  - Linux Forensics
+  - Filesystem Forensics
+  - Disk Forensics
+runs_on:
+  - Linux
+  - Windows
+  - macOS
+analyses:
+  - Linux
+artefacts:
+  - Filesystem Metadata
+  - File Metadata
+keywords:
+  - ext2
+  - ext3
+  - ext4
+  - Inodes
+  - Extended Attributes
+  - Filesystem Parsing
+  - pyfsext
+  - fsextinfo
+  - fsextmount
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: LGPL-3.0-or-later / GPL-3.0
+status: Active
+last_verified: "2026-11-21"
