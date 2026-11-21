@@ -1,4 +1,3 @@
-
 name: Deploy DFIR Directory
 
 on:
@@ -17,13 +16,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Build and publish website
+  build:
+    name: Build website
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     defaults:
       run:
@@ -54,6 +49,16 @@ jobs:
         with:
           path: website/build
 
+  deploy:
+    name: Publish website
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
