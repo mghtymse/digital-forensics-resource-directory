@@ -1,0 +1,53 @@
+name: AppCompatCacheParser
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for Windows Application
+  Compatibility Cache (Shimcache) records. Extracts cached
+  file paths, modification timestamps and version-dependent
+  metadata from SYSTEM registry hives to support forensic
+  examination of historical application activity.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/AppCompatCacheParser
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Shimcache / AppCompatCache
+  - Windows Registry
+
+keywords:
+  - Shimcache
+  - Application Compatibility Cache
+  - SYSTEM Hive
+  - Executable Metadata
+  - Registry Parsing
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

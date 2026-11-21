@@ -1,0 +1,53 @@
+name: AmcacheParser
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for Windows Amcache registry
+  hives and supported application inventory databases.
+  Extracts application, executable, driver and device metadata,
+  including file paths and available hashes.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/AmcacheParser
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Amcache
+  - Windows Registry
+  - SQLite Databases
+
+keywords:
+  - Application Inventory
+  - Installed Applications
+  - Executable Metadata
+  - SHA-1
+  - Amcache.hve
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

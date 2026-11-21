@@ -1,0 +1,51 @@
+name: PECmd
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for Windows Prefetch files,
+  extracting executable information, execution timestamps,
+  run counts, referenced files and volume information to
+  support program execution analysis and timeline reconstruction.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/PECmd
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Prefetch
+
+keywords:
+  - Program Execution
+  - Execution History
+  - Prefetch Parser
+  - Timeline
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

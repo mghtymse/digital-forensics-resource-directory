@@ -1,0 +1,55 @@
+name: JLECmd
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for Windows Automatic and
+  Custom Destination Jump Lists. Extracts application
+  identifiers, destination records, timestamps and embedded
+  shortcut metadata to support forensic reconstruction of
+  user activity and file access history.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/JLECmd
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Jump Lists
+  - LNK Files
+
+keywords:
+  - Automatic Destinations
+  - Custom Destinations
+  - AppID
+  - DestList
+  - Recent Files
+  - User Activity
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"
