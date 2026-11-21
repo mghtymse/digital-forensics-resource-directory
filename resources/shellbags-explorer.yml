@@ -1,0 +1,55 @@
+name: ShellBags Explorer
+
+type:
+  - Tool
+
+description: >
+  Graphical forensic tool for examining Windows ShellBag
+  artefacts stored in registry hives. Displays historical
+  folder paths, shell item metadata and associated timestamps,
+  supporting investigation of folder navigation, removable
+  media and network locations.
+
+website: https://ericzimmerman.github.io/
+
+repository: ""
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Filesystem Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+
+analyses:
+  - Windows
+
+artefacts:
+  - ShellBags
+  - Windows Registry
+
+keywords:
+  - BagMRU
+  - Folder Navigation
+  - User Activity
+  - Removable Media
+  - Network Shares
+  - NTUSER.dat
+  - UsrClass.dat
+  - GUI
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: null
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

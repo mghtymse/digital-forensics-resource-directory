@@ -1,0 +1,62 @@
+name: MFTECmd
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for NTFS filesystem metadata,
+  including the Master File Table, USN Journal, transaction
+  log, boot sector, security descriptors and directory indexes.
+  Supports filesystem examination, historical file activity
+  analysis and forensic timeline reconstruction.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/MFTECmd
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Disk Forensics
+  - Filesystem Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+
+analyses:
+  - Windows
+
+artefacts:
+  - Master File Table (MFT)
+  - USN Journal
+  - Filesystem Metadata
+  - Filesystem Journals
+  - Deleted Files
+
+keywords:
+  - NTFS
+  - $MFT
+  - $UsnJrnl
+  - $LogFile
+  - $Boot
+  - $SDS
+  - $I30
+  - File Timestamps
+  - Bodyfile
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

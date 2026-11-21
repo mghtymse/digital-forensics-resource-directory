@@ -1,0 +1,58 @@
+name: Registry Explorer
+
+type:
+  - Tool
+
+description: >
+  Graphical forensic examination tool for Windows Registry
+  hives. Supports registry browsing, searching, multiple
+  hive examination, transaction log processing and
+  artefact interpretation through specialised plugins.
+
+website: https://ericzimmerman.github.io/
+
+repository: ""
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+
+analyses:
+  - Windows
+
+artefacts:
+  - Windows Registry
+  - UserAssist
+  - Amcache
+  - Shimcache / AppCompatCache
+  - Windows Services
+
+keywords:
+  - Registry Analysis
+  - Registry Hives
+  - Registry Transaction Logs
+  - NTUSER.dat
+  - UsrClass.dat
+  - SYSTEM Hive
+  - SOFTWARE Hive
+  - Registry Plugins
+  - GUI
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: false
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"

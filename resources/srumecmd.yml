@@ -1,0 +1,54 @@
+name: SrumECmd
+
+type:
+  - Tool
+
+description: >
+  Command-line forensic parser for the Windows System
+  Resource Usage Monitor (SRUM) database. Extracts
+  application resource usage, network activity, energy
+  consumption and application timeline records, with
+  optional SOFTWARE registry hive enrichment.
+
+website: https://ericzimmerman.github.io/
+
+repository: https://github.com/EricZimmerman/Srum
+
+author: Eric Zimmerman
+
+domains:
+  - Windows Forensics
+  - Application Forensics
+  - Timeline Analysis
+
+runs_on:
+  - Windows
+
+analyses:
+  - Windows
+
+artefacts:
+  - SRUM
+  - Application Databases
+  - Windows Registry
+
+keywords:
+  - System Resource Usage Monitor
+  - SRUDB.dat
+  - ESE Database
+  - Application Usage
+  - Network Usage
+  - User Activity
+  - EZ Tools
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+
+licence: MIT
+
+status: Active
+
+last_verified: "2026-11-21"
