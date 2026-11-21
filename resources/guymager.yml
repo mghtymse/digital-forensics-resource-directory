@@ -1,0 +1,36 @@
+name: Guymager
+type:
+  - Tool
+description: Open-source graphical forensic acquisition utility for Linux supporting multithreaded disk imaging, disk cloning, image compression and evidence verification in RAW, EWF and AFF formats.
+website: https://guymager.sourceforge.io/
+repository: https://sourceforge.net/p/guymager/code/
+author: Guy Voncken
+domains:
+  - Disk Forensics
+  - Evidence Handling
+runs_on:
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+  - Unix / BSD
+artefacts:
+  - Disk Images
+keywords:
+  - Forensic Acquisition
+  - Disk Imaging
+  - Disk Cloning
+  - E01
+  - EWF
+  - AFF
+  - RAW Images
+  - Hashing
+  - Integrity Verification
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-2.0
+status: Maintenance Uncertain
+last_verified: "2026-11-21"

@@ -1,0 +1,43 @@
+name: libewf / ewf-tools
+type:
+  - Library / Framework
+  - Tool Suite
+description: Open-source library and command-line utilities for acquiring, reading, exporting, mounting, recovering and verifying forensic images stored in Expert Witness Format, including E01 images.
+website: https://github.com/libyal/libewf
+repository: https://github.com/libyal/libewf
+author: Joachim Metz and contributors
+domains:
+  - Disk Forensics
+  - Evidence Handling
+runs_on:
+  - Linux
+  - Windows
+  - macOS
+  - Unix / BSD
+analyses:
+  - Windows
+  - Linux
+  - macOS
+  - Unix / BSD
+artefacts:
+  - Disk Images
+keywords:
+  - Forensic Acquisition
+  - EWF
+  - E01
+  - Ex01
+  - ewfacquire
+  - ewfmount
+  - ewfverify
+  - ewfinfo
+  - ewfexport
+  - Image Conversion
+  - Integrity Verification
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: LGPL-3.0-or-later / GPL-3.0
+status: Active
+last_verified: "2026-11-21"

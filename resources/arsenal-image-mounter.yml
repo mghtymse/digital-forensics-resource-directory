@@ -1,0 +1,39 @@
+name: Arsenal Image Mounter
+type:
+  - Tool
+description: Forensic disk image mounting utility that exposes image contents as complete disks within Windows. Supports forensic and virtual disk formats, with advanced examination capabilities available in Professional Mode.
+website: https://arsenalrecon.com/products/arsenal-image-mounter
+repository: https://github.com/ArsenalRecon/Arsenal-Image-Mounter
+author: Arsenal Recon
+domains:
+  - Disk Forensics
+  - Filesystem Forensics
+  - Windows Forensics
+runs_on:
+  - Windows
+analyses:
+  - Windows
+  - Linux
+  - macOS
+  - Virtual Machines
+artefacts:
+  - Disk Images
+  - Partition Tables
+  - Volume Shadow Copies
+  - Filesystem Metadata
+keywords:
+  - Disk Mounting
+  - E01
+  - RAW Images
+  - Virtual Disks
+  - Read-Only Access
+  - BitLocker
+  - Encryption
+  - VSS
+pricing:
+  model: Freemium
+  commercial_use: true
+open_source: true
+licence: AGPL-3.0 / Commercial
+status: Active
+last_verified: "2026-11-21"

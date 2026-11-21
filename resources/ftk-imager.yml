@@ -1,0 +1,36 @@
+name: FTK Imager
+type:
+  - Tool
+description: Free forensic imaging and evidence preview utility for acquiring storage media, examining forensic images, exporting files and verifying evidence integrity through hashing.
+website: https://www.exterro.com/digital-forensics-software/ftk-imager
+repository: ""
+author: Exterro
+domains:
+  - Disk Forensics
+  - Filesystem Forensics
+  - Evidence Handling
+runs_on:
+  - Windows
+analyses:
+  - Windows
+  - Linux
+  - macOS
+artefacts:
+  - Disk Images
+  - Filesystem Metadata
+  - Deleted Files
+keywords:
+  - Forensic Acquisition
+  - Disk Imaging
+  - E01
+  - RAW Images
+  - Hashing
+  - Evidence Preview
+  - Integrity Verification
+pricing:
+  model: Free
+  commercial_use: true
+open_source: false
+licence: Proprietary Freeware
+status: Active
+last_verified: "2026-11-21"
