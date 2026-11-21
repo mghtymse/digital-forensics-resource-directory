@@ -1,0 +1,30 @@
+name: EvtxECmd
+type:
+  - Tool
+description: Command-line Windows Event Log parser supporting structured extraction, event mapping and export of EVTX records for forensic analysis and timeline reconstruction.
+website: https://github.com/EricZimmerman/evtx
+repository: https://github.com/EricZimmerman/evtx
+author: Eric Zimmerman
+domains:
+  - Windows Forensics
+  - Log Analysis
+  - Timeline Analysis
+runs_on:
+  - Windows
+analyses:
+  - Windows
+artefacts:
+  - Windows Event Logs
+keywords:
+  - EVTX
+  - Event IDs
+  - User Activity
+  - Timeline
+  - Event Mapping
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Active
+last_verified: "2026-11-21"

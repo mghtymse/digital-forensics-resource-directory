@@ -1,0 +1,29 @@
+name: Thumbcache Viewer
+type:
+  - Tool
+description: Windows forensic utility for viewing and extracting cached thumbnail images and icons from Windows thumbnail and icon cache databases, with image preview and reporting capabilities.
+website: https://thumbcacheviewer.github.io/
+repository: https://github.com/thumbcacheviewer/thumbcacheviewer
+author: Eric Kutcher
+domains:
+  - Windows Forensics
+  - Image Forensics
+runs_on:
+  - Windows
+analyses:
+  - Windows
+artefacts:
+  - Thumbnail Cache
+keywords:
+  - Thumbcache
+  - Iconcache
+  - Cached Images
+  - Thumbnail Extraction
+  - User Activity
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-3.0-or-later
+status: Maintenance Uncertain
+last_verified: "2026-11-21"

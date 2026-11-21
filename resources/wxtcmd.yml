@@ -1,0 +1,31 @@
+name: WxTCmd
+type:
+  - Tool
+description: Windows Timeline database parser that extracts recorded user activities, application usage, timestamps and associated content from ActivitiesCache.db for forensic timeline reconstruction.
+website: https://github.com/EricZimmerman/WxTCmd
+repository: https://github.com/EricZimmerman/WxTCmd
+author: Eric Zimmerman
+domains:
+  - Windows Forensics
+  - Timeline Analysis
+  - Database Forensics
+runs_on:
+  - Windows
+analyses:
+  - Windows
+artefacts:
+  - Windows Timeline
+  - SQLite Databases
+keywords:
+  - ActivitiesCache.db
+  - User Activity
+  - Connected Devices Platform
+  - Application Usage
+  - Timeline
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Active
+last_verified: "2026-11-21"

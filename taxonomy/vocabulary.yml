@@ -139,6 +139,7 @@ artefacts:
   - Windows Defender
   - Recycle Bin
   - Windows Notifications
+  - Windows Timeline
   - Thumbnail Cache
   # Filesystems and storage
   - Master File Table (MFT)

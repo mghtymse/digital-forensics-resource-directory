@@ -1,0 +1,30 @@
+name: VSCMount
+type:
+  - Tool
+description: Windows utility that exposes Volume Shadow Copies through directory symbolic links, allowing forensic examiners to access historical filesystem snapshots and examine previous versions of files.
+website: https://github.com/EricZimmerman/VSCMount
+repository: https://github.com/EricZimmerman/VSCMount
+author: Eric Zimmerman
+domains:
+  - Windows Forensics
+  - Filesystem Forensics
+  - Disk Forensics
+runs_on:
+  - Windows
+analyses:
+  - Windows
+artefacts:
+  - Volume Shadow Copies
+keywords:
+  - VSS
+  - NTFS
+  - Filesystem Snapshots
+  - Historical Data
+  - Deleted Data Recovery
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Active
+last_verified: "2026-11-21"
