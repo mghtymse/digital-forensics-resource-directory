@@ -1,0 +1,35 @@
+name: KnockKnock
+type:
+  - Tool
+description: macOS examination utility that enumerates persistently installed software and automatic execution mechanisms, assisting investigators in identifying installed applications and potentially unwanted software.
+website: https://objective-see.org/products/knockknock.html
+repository: https://github.com/objective-see/KnockKnock
+author: Patrick Wardle / Objective-See Foundation
+domains:
+  - macOS Forensics
+  - Live Forensics
+  - Application Forensics
+runs_on:
+  - macOS
+analyses:
+  - macOS
+artefacts:
+  - Launch Agents / Daemons
+  - Property Lists (Plists)
+  - Configuration Files
+keywords:
+  - Persistence
+  - Installed Software
+  - Login Items
+  - LaunchAgents
+  - LaunchDaemons
+  - Background Tasks
+  - Code Signing
+  - Malware
+pricing:
+  model: Free
+  commercial_use: null
+open_source: true
+licence: GPL-3.0
+status: Active
+last_verified: "2026-11-21"

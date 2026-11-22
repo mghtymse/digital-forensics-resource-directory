@@ -1,0 +1,32 @@
+name: macMRU Parser
+type:
+  - Script
+description: Python utility for parsing macOS Most Recently Used property lists and embedded bookmark data to identify recently accessed files and other recorded user activities.
+website: https://github.com/mac4n6/macMRU-Parser
+repository: https://github.com/mac4n6/macMRU-Parser
+author: Sarah Edwards
+domains:
+  - macOS Forensics
+  - Application Forensics
+runs_on:
+  - macOS
+analyses:
+  - macOS
+artefacts:
+  - Property Lists (Plists)
+  - Most Recently Used (MRU)
+keywords:
+  - MRU
+  - Recent Files
+  - Recent Applications
+  - Bookmark Data
+  - Binary Plist
+  - User Activity
+  - Python
+pricing:
+  model: Free
+  commercial_use: null
+open_source: null
+licence: Not specified
+status: Maintenance Uncertain
+last_verified: "2026-11-21"

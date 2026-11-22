@@ -1,0 +1,41 @@
+name: APOLLO
+type:
+  - Tool
+description: Apple Pattern of Life Lazy Output'er is a modular forensic analysis tool that queries device databases to reconstruct historical user activities, application usage, device events and location information.
+website: https://github.com/mac4n6/APOLLO
+repository: https://github.com/mac4n6/APOLLO
+author: Sarah Edwards and contributors
+domains:
+  - macOS Forensics
+  - iOS Forensics
+  - Timeline Analysis
+  - Database Forensics
+  - Mobile Application Forensics
+runs_on:
+  - macOS
+  - Windows
+  - Linux
+analyses:
+  - macOS
+  - iOS / iPadOS
+artefacts:
+  - SQLite Databases
+  - Application Databases
+  - KnowledgeC Database
+  - Location Data
+keywords:
+  - Pattern of Life
+  - User Activity
+  - KnowledgeC
+  - PowerLog
+  - Application Usage
+  - Location History
+  - Timeline
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-3.0-or-later OR BSD-like with acknowledgement clause
+status: Maintenance Uncertain
+last_verified: "2026-11-21"

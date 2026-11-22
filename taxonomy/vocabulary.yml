@@ -141,6 +141,12 @@ artefacts:
   - Windows Notifications
   - Windows Timeline
   - Thumbnail Cache
+    # macOS and Apple
+  - Unified Logs
+  - Property Lists (Plists)
+  - KnowledgeC Database
+  - Most Recently Used (MRU)
+  - Launch Agents / Daemons
   # Filesystems and storage
   - Master File Table (MFT)
   - USN Journal

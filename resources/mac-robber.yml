@@ -1,0 +1,39 @@
+name: mac-robber
+type:
+  - Tool
+description: Command-line forensic utility that recursively collects modification, access and metadata change timestamps from allocated files and directories for subsequent filesystem timeline generation.
+website: https://www.sleuthkit.org/mac-robber/
+repository: https://github.com/sleuthkit/mac-robber
+author: Brian Carrier
+domains:
+  - macOS Forensics
+  - Linux Forensics
+  - Unix Forensics
+  - Filesystem Forensics
+  - Timeline Analysis
+runs_on:
+  - macOS
+  - Linux
+  - Unix / BSD
+analyses:
+  - macOS
+  - Linux
+  - Unix / BSD
+artefacts:
+  - Filesystem Metadata
+  - File Metadata
+keywords:
+  - MAC Times
+  - Timestamps
+  - Bodyfile
+  - mactime
+  - The Sleuth Kit
+  - Timeline
+  - Mounted Filesystems
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: GPL-2.0
+status: Maintenance Uncertain
+last_verified: "2026-11-21"

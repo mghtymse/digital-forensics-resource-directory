@@ -1,0 +1,38 @@
+name: macOS UnifiedLogs
+type:
+  - Library / Framework
+  - Tool
+description: Cross-platform Rust library and supporting utilities for parsing Apple Unified Log files and reconstructing recorded system and application events from collected log data.
+website: https://github.com/mandiant/macos-UnifiedLogs
+repository: https://github.com/mandiant/macos-UnifiedLogs
+author: Mandiant and contributors
+domains:
+  - macOS Forensics
+  - Log Analysis
+  - Timeline Analysis
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - macOS
+artefacts:
+  - Unified Logs
+  - Application Logs
+keywords:
+  - Unified Logging
+  - tracev3
+  - uuidtext
+  - timesync
+  - logarchive
+  - System Events
+  - User Activity
+  - Rust
+  - Timeline
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: Apache-2.0
+status: Active
+last_verified: "2026-11-21"
