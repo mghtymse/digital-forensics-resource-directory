@@ -1,0 +1,35 @@
+name: Android Backup Extractor
+type:
+  - Tool
+description: Java-based utility for unpacking and repacking Android backup files created using adb backup, including supported encrypted backups when the password is available.
+website: https://github.com/nelenkov/android-backup-extractor
+repository: https://github.com/nelenkov/android-backup-extractor
+author: Nikolay Elenkov and contributors
+domains:
+  - Android Forensics
+  - Mobile Application Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Android
+artefacts:
+  - Device Backups
+  - Mobile App Data
+  - Mobile App Sandboxes
+keywords:
+  - ABE
+  - ADB Backup
+  - backup.ab
+  - TAR
+  - Backup Extraction
+  - Encrypted Backups
+  - Java
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: Apache-2.0
+status: Active
+last_verified: "2026-11-22"

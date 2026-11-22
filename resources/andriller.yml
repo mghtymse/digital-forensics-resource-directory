@@ -1,0 +1,38 @@
+name: Andriller CE
+type:
+  - Tool Suite
+description: Community edition mobile forensic toolkit for supported Android device acquisition, backup extraction and application database decoding, with HTML and spreadsheet reporting capabilities.
+website: https://github.com/den4uk/andriller
+repository: https://github.com/den4uk/andriller
+author: Denis Sazonov (den4uk)
+domains:
+  - Android Forensics
+  - Mobile Application Forensics
+  - Database Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Android
+artefacts:
+  - Device Backups
+  - Mobile App Data
+  - Application Databases
+  - SQLite Databases
+keywords:
+  - Android Backup
+  - Application Decoders
+  - WhatsApp
+  - ADB
+  - Logical Acquisition
+  - Database Decryption
+  - HTML Reports
+  - Python
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Maintenance Uncertain
+last_verified: "2026-11-22"

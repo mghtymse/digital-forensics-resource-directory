@@ -1,0 +1,41 @@
+name: iBackup Viewer
+type:
+  - Tool
+description: Graphical utility for examining local iOS device backups and extracting communications, contacts, browsing history, photographs and other application data from supported backup formats.
+website: https://www.imactools.com/iphonebackupviewer/
+repository: ""
+author: IMT Studio
+domains:
+  - iOS Forensics
+  - Mobile Application Forensics
+  - Browser Forensics
+runs_on:
+  - Windows
+  - macOS
+analyses:
+  - iOS / iPadOS
+artefacts:
+  - Device Backups
+  - SMS / Messages
+  - Call Logs
+  - Contacts
+  - Browser History
+  - Browser Bookmarks
+  - Mobile App Data
+keywords:
+  - iPhone
+  - iPad
+  - iTunes Backup
+  - Encrypted Backups
+  - Backup Extraction
+  - iMessage
+  - WhatsApp
+  - Safari
+  - Data Recovery
+pricing:
+  model: Freemium
+  commercial_use: null
+open_source: false
+licence: Proprietary
+status: Active
+last_verified: "2026-11-22"

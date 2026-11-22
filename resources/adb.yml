@@ -1,0 +1,38 @@
+name: Android Debug Bridge (ADB)
+type:
+  - Tool
+description: Android command-line communication utility supporting device interaction, accessible file acquisition, system information collection and diagnostic log extraction for authorised forensic examinations.
+website: https://developer.android.com/tools/adb
+repository: https://android.googlesource.com/platform/packages/modules/adb/
+author: Google / Android Open Source Project
+domains:
+  - Android Forensics
+  - Live Forensics
+  - Evidence Handling
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Android
+artefacts:
+  - Device Backups
+  - Mobile App Data
+  - Application Logs
+  - Configuration Files
+keywords:
+  - ADB
+  - USB Debugging
+  - Logical Acquisition
+  - Forensic Acquisition
+  - Logcat
+  - Dumpsys
+  - Android SDK
+  - Platform Tools
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: Apache-2.0
+status: Active
+last_verified: "2026-11-22"

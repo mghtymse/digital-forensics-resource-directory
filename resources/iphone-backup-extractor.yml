@@ -1,0 +1,39 @@
+name: iPhone Backup Extractor
+type:
+  - Tool
+description: Utility for examining and extracting data from iPhone and iPad backups, including application data, communications, media and device information. Free edition has extraction limitations.
+website: https://www.iphonebackupextractor.com/
+repository: ""
+author: Reincubate
+domains:
+  - iOS Forensics
+  - Mobile Application Forensics
+  - Cloud Forensics
+runs_on:
+  - Windows
+  - macOS
+analyses:
+  - iOS / iPadOS
+artefacts:
+  - Device Backups
+  - Mobile App Data
+  - Application Databases
+  - SMS / Messages
+  - Call Logs
+  - Contacts
+  - Property Lists (Plists)
+keywords:
+  - iPhone
+  - iPad
+  - iTunes Backup
+  - iCloud
+  - Encrypted Backups
+  - Backup Extraction
+  - Data Recovery
+pricing:
+  model: Freemium
+  commercial_use: null
+open_source: false
+licence: Proprietary
+status: Active
+last_verified: "2026-11-22"
