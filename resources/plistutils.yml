@@ -1,0 +1,41 @@
+name: plistutils
+type:
+  - Library / Framework
+description: >
+  A Python library for parsing Apple property lists, including
+  binary and XML plists, embedded property lists, NSKeyedArchive
+  structures, bookmarks and alias records.
+website: https://github.com/strozfriedberg/plistutils
+repository: https://github.com/strozfriedberg/plistutils
+author: Stroz Friedberg
+domains:
+  - macOS Forensics
+  - iOS Forensics
+  - Application Forensics
+  - Mobile Application Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - macOS
+  - iOS / iPadOS
+artefacts:
+  - Property Lists (Plists)
+  - Configuration Files
+  - Mobile App Data
+keywords:
+  - Plist
+  - Binary Plist
+  - NSKeyedArchiver
+  - NSKeyedArchive
+  - Bookmark Data
+  - Alias Records
+  - Apple
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: BSD-3-Clause
+status: Maintenance Uncertain
+last_verified: "2026-11-22"

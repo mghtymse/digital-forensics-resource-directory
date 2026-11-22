@@ -1,0 +1,46 @@
+name: CCL Chromium Reader
+type:
+  - Library / Framework
+description: >
+  A Python library for forensic examination of data storage
+  formats used by Chromium-based browsers and applications,
+  including LevelDB, IndexedDB, local storage, session storage
+  and browser caches.
+website: https://github.com/cclgroupltd/ccl_chromium_reader
+repository: https://github.com/cclgroupltd/ccl_chromium_reader
+author: CCL Solutions Group
+domains:
+  - Browser Forensics
+  - Application Forensics
+  - Database Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+artefacts:
+  - IndexedDB
+  - LevelDB Databases
+  - Web Storage
+  - Browser Cache
+  - Application Databases
+  - Application Cache
+keywords:
+  - Chromium
+  - Chrome
+  - Microsoft Edge
+  - Electron
+  - LevelDB
+  - IndexedDB
+  - Local Storage
+  - Session Storage
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Active
+last_verified: "2026-11-22"

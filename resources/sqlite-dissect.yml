@@ -1,0 +1,45 @@
+name: SQLite Dissect
+type:
+  - Tool
+  - Library / Framework
+description: >
+  A Python-based forensic tool for examining SQLite database
+  structures, recovering deleted records and reconstructing
+  historical database states from write-ahead logs.
+website: https://github.com/dod-cyber-crime-center/sqlite-dissect
+repository: https://github.com/dod-cyber-crime-center/sqlite-dissect
+author: DoD Cyber Crime Center (DC3)
+domains:
+  - Database Forensics
+  - Application Forensics
+  - Mobile Application Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+  - Android
+  - iOS / iPadOS
+artefacts:
+  - SQLite Databases
+  - SQLite Write-Ahead Logs (WAL)
+  - SQLite Rollback Journals
+  - Application Databases
+keywords:
+  - SQLite
+  - Database Structure
+  - Deleted Records
+  - Record Carving
+  - B-Trees
+  - WAL
+  - Schema History
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: DC3 SQLite Dissect Open Source License
+status: Maintenance Uncertain
+last_verified: "2026-11-22"

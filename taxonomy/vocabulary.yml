@@ -188,6 +188,9 @@ artefacts:
   - Configuration Files
   - Application Logs
   - Application Cache
+  - SQLite Write-Ahead Logs (WAL)
+  - SQLite Rollback Journals
+  - LevelDB Databases
   # Network
   - PCAP
   - Network Logs

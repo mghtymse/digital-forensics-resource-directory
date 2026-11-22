@@ -1,0 +1,42 @@
+name: xsqlite
+type:
+  - Tool
+  - Library / Framework
+description: >
+  A Python package and command-line tool for forensic analysis
+  of SQLite databases, specialising in deleted record recovery
+  and examination of low-level database structures and
+  associated write-ahead logs.
+website: https://github.com/NetherlandsForensicInstitute/xsqlite
+repository: https://github.com/NetherlandsForensicInstitute/xsqlite
+author: Netherlands Forensic Institute
+domains:
+  - Database Forensics
+  - Application Forensics
+  - Mobile Application Forensics
+runs_on:
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+  - Android
+  - iOS / iPadOS
+artefacts:
+  - SQLite Databases
+  - SQLite Write-Ahead Logs (WAL)
+  - Application Databases
+keywords:
+  - SQLite
+  - Deleted Records
+  - Record Recovery
+  - Record Carving
+  - WAL
+  - Database Structure
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: MIT
+status: Maintenance Uncertain
+last_verified: "2026-11-22"

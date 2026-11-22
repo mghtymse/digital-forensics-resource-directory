@@ -1,0 +1,43 @@
+name: FQLite
+type:
+  - Tool
+description: >
+  A SQLite forensic analysis and recovery tool designed to
+  identify and recover deleted database records and examine
+  database structures, write-ahead logs and rollback journals.
+website: https://github.com/pawlaszczyk/fqlite
+repository: https://github.com/pawlaszczyk/fqlite
+author: Dirk Pawlaszczyk
+domains:
+  - Database Forensics
+  - Application Forensics
+  - Mobile Application Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+  - Android
+  - iOS / iPadOS
+artefacts:
+  - SQLite Databases
+  - SQLite Write-Ahead Logs (WAL)
+  - SQLite Rollback Journals
+  - Application Databases
+keywords:
+  - SQLite
+  - Deleted Records
+  - Record Recovery
+  - Database Carving
+  - Freelist Pages
+  - WAL
+pricing:
+  model: Free
+  commercial_use: true
+open_source: true
+licence: Apache-2.0
+status: Active
+last_verified: "2026-11-22"
