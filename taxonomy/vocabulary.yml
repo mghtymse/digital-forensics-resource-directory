@@ -82,6 +82,7 @@ domains:
   - Log Analysis
   # Specialist areas
   - Multimedia Forensics
+  - Document Forensics
   - Image Forensics
   - Audio Forensics
   - IoT Forensics
@@ -91,9 +92,9 @@ domains:
   - Digital Forensics
   - DFIR
   - Forensic Methodology
+  - Forensic Tool Validation
   - Evidence Handling
   - Legal & Investigative Practice
-
 runs_on:
   - Windows
   - macOS

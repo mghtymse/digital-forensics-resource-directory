@@ -1,0 +1,35 @@
+name: NIST Computer Forensics Tool Testing (CFTT)
+type: [Website, Reference]
+description: >
+  Publishes forensic tool testing methodologies, test
+  specifications and evaluation reports to support the
+  assessment of forensic software reliability and accuracy.
+website: https://www.nist.gov/itl/csd/secure-systems-and-applications/computer-forensics-tool-testing-program-cftt
+repository: ""
+author: National Institute of Standards and Technology (NIST)
+
+domains:
+  - Forensic Tool Validation
+  - Forensic Methodology
+  - Digital Forensics
+runs_on: []
+analyses: []
+artefacts: []
+keywords:
+  - Tool Testing
+  - Tool Validation
+  - Test Methodology
+  - Quality Assurance
+  - Accuracy
+  - Reliability
+  - Research
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: ""
+
+status: Active
+last_verified: "2026-11-22"

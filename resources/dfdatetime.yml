@@ -1,0 +1,40 @@
+name: Digital Forensics Date and Time (dfDateTime)
+type: [Library / Framework]
+description: >
+  Python library for interpreting and converting forensic
+  date and time values while preserving timestamp accuracy,
+  precision and relevant timezone information.
+website: https://dfdatetime.readthedocs.io/en/latest/
+repository: https://github.com/log2timeline/dfdatetime
+author: log2timeline project contributors
+
+domains:
+  - Digital Forensics
+  - Timeline Analysis
+  - Forensic Methodology
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses: []
+artefacts: []
+keywords:
+  - Python
+  - Timestamps
+  - Timestamp Conversion
+  - Time Zones
+  - UTC
+  - FILETIME
+  - Unix Epoch
+  - Timestamp Precision
+  - Timeline
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-22"

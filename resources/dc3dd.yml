@@ -3,7 +3,7 @@ type:
   - Tool
 description: Command-line forensic acquisition utility based on GNU dd, providing bitstream copying, acquisition-time hashing, split image output, progress reporting and evidence verification.
 website: https://sourceforge.net/projects/dc3dd/
-repository: ""
+repository: https://sourceforge.net/projects/dc3dd/files/dc3dd/
 author: Defense Cyber Crime Center (DC3) and contributors
 domains:
   - Disk Forensics

@@ -1,0 +1,50 @@
+name: AutoDFBench
+type: [Library / Framework]
+description: >
+  Automated benchmarking framework for evaluating digital
+  forensic tools, scripts and AI-generated code against
+  documented NIST test cases using standardised quantitative
+  performance metrics.
+website: https://github.com/akila-UCD/AutoDFBench
+repository: https://github.com/akila-UCD/AutoDFBench
+author: Akila Wickramasekara and contributors
+
+domains:
+  - Forensic Tool Validation
+  - Forensic Methodology
+  - File Carving
+  - Filesystem Forensics
+  - Windows Forensics
+  - Database Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+  - Container
+analyses:
+  - Windows
+artefacts:
+  - Windows Registry
+  - Deleted Files
+  - SQLite Databases
+  - SQLite Write-Ahead Logs (WAL)
+keywords:
+  - Benchmarking
+  - Precision
+  - Recall
+  - F1 Score
+  - Ground Truth
+  - Automation
+  - Tool Validation
+  - Research
+  - Reproducibility
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-22"

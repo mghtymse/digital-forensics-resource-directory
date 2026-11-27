@@ -1,17 +1,22 @@
-
-name: The Sleuth Kit
+name: The Sleuth Kit (TSK)
 type:
   - Tool Suite
+  - Library / Framework
 
-description: "Open-source collection of command-line tools and libraries for forensic analysis of disk images, partition structures and filesystems, including examination and recovery of allocated and deleted files."
+description: >
+  Open-source collection of command-line tools and libraries
+  for forensic analysis of disk images, partitions and
+  filesystem structures, including examination and recovery
+  of allocated and deleted files and filesystem timestamps.
 
 website: https://www.sleuthkit.org/sleuthkit/
 repository: https://github.com/sleuthkit/sleuthkit
-author: "Brian Carrier and contributors"
+author: Brian Carrier and contributors
 
 domains:
   - Disk Forensics
   - Filesystem Forensics
+  - Timeline Analysis
 
 runs_on:
   - Windows
@@ -27,6 +32,7 @@ artefacts:
   - Partition Tables
   - Master File Table (MFT)
   - Alternate Data Streams
+  - File Metadata
 
 keywords:
   - NTFS
@@ -36,13 +42,15 @@ keywords:
   - ext4
   - Disk Image Analysis
   - Deleted Data Recovery
+  - Timeline
+  - Command Line
 
 pricing:
   model: Free
   commercial_use: true
 
 open_source: true
-licence: "Multiple (IPL-1.0, CPL-1.0; GPL-2.0 for some utilities)"
+licence: Multiple open-source licences
 
 status: Active
-last_verified: "2026-11-10"
+last_verified: "2026-11-22"

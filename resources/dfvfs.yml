@@ -1,0 +1,45 @@
+name: Digital Forensics Virtual File System (dfVFS)
+type: [Library / Framework]
+description: >
+  Python library providing a unified read-only interface
+  for accessing filesystem objects across forensic disk
+  images, volume systems and storage formats.
+website: https://dfvfs.readthedocs.io/en/latest/
+repository: https://github.com/log2timeline/dfvfs
+author: log2timeline project contributors
+
+domains:
+  - Disk Forensics
+  - Filesystem Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses:
+  - Windows
+  - macOS
+  - Linux
+artefacts:
+  - Disk Images
+  - Filesystem Metadata
+  - Partition Tables
+  - Volume Shadow Copies
+keywords:
+  - Python
+  - E01
+  - NTFS
+  - APFS
+  - EXT
+  - BitLocker
+  - Virtual Filesystem
+  - Read-Only Access
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-22"

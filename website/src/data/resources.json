@@ -1,5 +1,512 @@
 [
   {
+    "name": "13Cubed",
+    "type": [
+      "YouTube Channel"
+    ],
+    "description": "Educational YouTube channel covering digital forensics and incident response, including Windows forensic artefacts, memory analysis, threat hunting and investigative techniques.",
+    "website": "https://www.youtube.com/@13Cubed",
+    "repository": "",
+    "author": "Richard Davis / 13Cubed Studios LLC",
+    "domains": [
+      "Digital Forensics",
+      "DFIR",
+      "Windows Forensics",
+      "Memory Forensics",
+      "Threat Hunting"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Training",
+      "Tutorials",
+      "Forensic Artefacts",
+      "Windows",
+      "Incident Response"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "13cubed"
+  },
+  {
+    "name": "ALEAPP",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source Android forensic artefact parser that processes mobile device extractions to identify and report system and application data, including logs, databases and protobuf records.",
+    "website": "https://leapps.org/",
+    "repository": "https://github.com/abrignoni/ALEAPP",
+    "author": "Alexis Brignoni and contributors",
+    "domains": [
+      "Android Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Android"
+    ],
+    "artefacts": [
+      "Mobile App Data",
+      "Application Databases",
+      "Application Logs",
+      "SQLite Databases"
+    ],
+    "keywords": [
+      "Android",
+      "Protobuf",
+      "Artefact Parsing",
+      "Mobile Triage",
+      "Forensic Extraction"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "aleapp"
+  },
+  {
+    "name": "AmcacheParser",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows Amcache registry hives and supported application inventory databases. Extracts application, executable, driver and device metadata, including file paths and available hashes.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/AmcacheParser",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Amcache",
+      "Windows Registry",
+      "SQLite Databases"
+    ],
+    "keywords": [
+      "Application Inventory",
+      "Installed Applications",
+      "Executable Metadata",
+      "SHA-1",
+      "Amcache.hve",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "amcacheparser"
+  },
+  {
+    "name": "Andriller CE",
+    "type": [
+      "Tool Suite"
+    ],
+    "description": "Community edition mobile forensic toolkit for supported Android device acquisition, backup extraction and application database decoding, with HTML and spreadsheet reporting capabilities.",
+    "website": "https://github.com/den4uk/andriller",
+    "repository": "https://github.com/den4uk/andriller",
+    "author": "Denis Sazonov (den4uk)",
+    "domains": [
+      "Android Forensics",
+      "Mobile Application Forensics",
+      "Database Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Android"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Mobile App Data",
+      "Application Databases",
+      "SQLite Databases"
+    ],
+    "keywords": [
+      "Android Backup",
+      "Application Decoders",
+      "WhatsApp",
+      "ADB",
+      "Logical Acquisition",
+      "Database Decryption",
+      "HTML Reports",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-22",
+    "id": "andriller"
+  },
+  {
+    "name": "Android Backup Extractor",
+    "type": [
+      "Tool"
+    ],
+    "description": "Java-based utility for unpacking and repacking Android backup files created using adb backup, including supported encrypted backups when the password is available.",
+    "website": "https://github.com/nelenkov/android-backup-extractor",
+    "repository": "https://github.com/nelenkov/android-backup-extractor",
+    "author": "Nikolay Elenkov and contributors",
+    "domains": [
+      "Android Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Android"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Mobile App Data",
+      "Mobile App Sandboxes"
+    ],
+    "keywords": [
+      "ABE",
+      "ADB Backup",
+      "backup.ab",
+      "TAR",
+      "Backup Extraction",
+      "Encrypted Backups",
+      "Java"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "android-backup-extractor"
+  },
+  {
+    "name": "Android Debug Bridge (ADB)",
+    "type": [
+      "Tool"
+    ],
+    "description": "Android command-line communication utility supporting device interaction, accessible file acquisition, system information collection and diagnostic log extraction for authorised forensic examinations.",
+    "website": "https://developer.android.com/tools/adb",
+    "repository": "https://android.googlesource.com/platform/packages/modules/adb/",
+    "author": "Google / Android Open Source Project",
+    "domains": [
+      "Android Forensics",
+      "Live Forensics",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Android"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Mobile App Data",
+      "Application Logs",
+      "Configuration Files"
+    ],
+    "keywords": [
+      "ADB",
+      "USB Debugging",
+      "Logical Acquisition",
+      "Forensic Acquisition",
+      "Logcat",
+      "Dumpsys",
+      "Android SDK",
+      "Platform Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "adb"
+  },
+  {
+    "name": "Android Forensics References",
+    "type": [
+      "Reference",
+      "Directory / Index"
+    ],
+    "description": "Curated reference collection of Android forensic artefact locations and supporting research, organised by filesystem paths, system components and applications. Links to technical articles, research papers, forensic tools and artefact parsers.",
+    "website": "https://github.com/RealityNet/Android-Forensics-References/blob/main/README.md",
+    "repository": "https://github.com/RealityNet/Android-Forensics-References",
+    "author": "RealityNet",
+    "domains": [
+      "Android Forensics",
+      "Mobile Application Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [
+      "Mobile App Data",
+      "Application Databases",
+      "SQLite Databases",
+      "Configuration Files",
+      "Application Logs",
+      "Call Logs"
+    ],
+    "keywords": [
+      "Android Forensic Artifacts",
+      "Android Filesystem",
+      "Artefact Locations",
+      "Mobile Forensic Research",
+      "Android System Files",
+      "Application Usage",
+      "Android Databases",
+      "Research References",
+      "Forensic Documentation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Not specified (reference collection; linked materials have separate terms)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "android-forensics-references"
+  },
+  {
+    "name": "APOLLO",
+    "type": [
+      "Tool"
+    ],
+    "description": "Apple Pattern of Life Lazy Output'er is a modular forensic analysis tool that queries device databases to reconstruct historical user activities, application usage, device events and location information.",
+    "website": "https://github.com/mac4n6/APOLLO",
+    "repository": "https://github.com/mac4n6/APOLLO",
+    "author": "Sarah Edwards and contributors",
+    "domains": [
+      "macOS Forensics",
+      "iOS Forensics",
+      "Timeline Analysis",
+      "Database Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "analyses": [
+      "macOS",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "SQLite Databases",
+      "Application Databases",
+      "KnowledgeC Database",
+      "Location Data"
+    ],
+    "keywords": [
+      "Pattern of Life",
+      "User Activity",
+      "KnowledgeC",
+      "PowerLog",
+      "Application Usage",
+      "Location History",
+      "Timeline",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-3.0-or-later OR BSD-like with acknowledgement clause",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "apollo"
+  },
+  {
+    "name": "AppCompatCacheParser",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows Application Compatibility Cache (Shimcache) records. Extracts cached file paths, modification timestamps and version-dependent metadata from SYSTEM registry hives to support forensic examination of historical application activity.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/AppCompatCacheParser",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Shimcache / AppCompatCache",
+      "Windows Registry"
+    ],
+    "keywords": [
+      "Shimcache",
+      "Application Compatibility Cache",
+      "SYSTEM Hive",
+      "Executable Metadata",
+      "Registry Parsing",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "appcompatcacheparser"
+  },
+  {
+    "name": "Arsenal Image Mounter",
+    "type": [
+      "Tool"
+    ],
+    "description": "Forensic disk image mounting utility that exposes image contents as complete disks within Windows. Supports forensic and virtual disk formats, with advanced examination capabilities available in Professional Mode.",
+    "website": "https://arsenalrecon.com/products/arsenal-image-mounter",
+    "repository": "https://github.com/ArsenalRecon/Arsenal-Image-Mounter",
+    "author": "Arsenal Recon",
+    "domains": [
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "Windows Forensics"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Virtual Machines"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Partition Tables",
+      "Volume Shadow Copies",
+      "Filesystem Metadata"
+    ],
+    "keywords": [
+      "Disk Mounting",
+      "E01",
+      "RAW Images",
+      "Virtual Disks",
+      "Read-Only Access",
+      "BitLocker",
+      "Encryption",
+      "VSS"
+    ],
+    "pricing": {
+      "model": "Freemium",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "AGPL-3.0 / Commercial",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "arsenal-image-mounter"
+  },
+  {
+    "name": "AutoDFBench",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "Automated benchmarking framework for evaluating digital forensic tools, scripts and AI-generated code against documented NIST test cases using standardised quantitative performance metrics.\n",
+    "website": "https://github.com/akila-UCD/AutoDFBench",
+    "repository": "https://github.com/akila-UCD/AutoDFBench",
+    "author": "Akila Wickramasekara and contributors",
+    "domains": [
+      "Forensic Tool Validation",
+      "Forensic Methodology",
+      "File Carving",
+      "Filesystem Forensics",
+      "Windows Forensics",
+      "Database Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Container"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Registry",
+      "Deleted Files",
+      "SQLite Databases",
+      "SQLite Write-Ahead Logs (WAL)"
+    ],
+    "keywords": [
+      "Benchmarking",
+      "Precision",
+      "Recall",
+      "F1 Score",
+      "Ground Truth",
+      "Automation",
+      "Tool Validation",
+      "Research",
+      "Reproducibility"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "autodfbench"
+  },
+  {
     "name": "Autopsy",
     "type": [
       "Tool Suite"
@@ -43,6 +550,2040 @@
     "id": "autopsy"
   },
   {
+    "name": "Bitcoin ETL",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "Open-source blockchain data extraction and transformation toolkit for exporting Bitcoin and related cryptocurrency blocks and transactions into structured data suitable for analysis and research.",
+    "website": "https://github.com/blockchain-etl/bitcoin-etl",
+    "repository": "https://github.com/blockchain-etl/bitcoin-etl",
+    "author": "Blockchain ETL contributors",
+    "domains": [
+      "Cryptocurrency Forensics",
+      "Intelligence Analysis"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Bitcoin ETL",
+      "Bitcoin",
+      "Litecoin",
+      "Dogecoin",
+      "Blockchain Data",
+      "Transaction Extraction",
+      "Blockchain Analytics",
+      "Python",
+      "Cryptocurrency Research"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-13",
+    "id": "bitcoin-etl"
+  },
+  {
+    "name": "Blue Team Labs Online",
+    "type": [
+      "Training Platform",
+      "CTF / Challenge"
+    ],
+    "description": "Practical blue-team investigation platform offering downloadable forensic and cybersecurity challenges involving memory dumps, network captures, phishing emails, logs and other evidence. Includes free challenges and paid investigation labs.",
+    "website": "https://blueteamlabs.online/",
+    "repository": "",
+    "author": "Security Blue Team / Centri",
+    "domains": [
+      "DFIR",
+      "Digital Forensics",
+      "Incident Response",
+      "Network Forensics",
+      "Memory Forensics",
+      "Threat Hunting"
+    ],
+    "runs_on": [
+      "Browser"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Memory Dumps",
+      "PCAP",
+      "Email",
+      "Network Logs"
+    ],
+    "keywords": [
+      "Blue Team Labs Online",
+      "BTLO",
+      "Digital Forensics Training",
+      "Investigation Challenges",
+      "Practical Labs",
+      "Incident Response Training",
+      "Blue Team",
+      "Threat Hunting",
+      "Forensic Exercises"
+    ],
+    "pricing": {
+      "model": "Freemium",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Proprietary platform; subject to service terms",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "blue-team-labs-online"
+  },
+  {
+    "name": "bulk_extractor",
+    "type": [
+      "Tool"
+    ],
+    "description": "High-performance forensic extraction utility that scans raw data, disk images and files independently of filesystem structures to identify structured information and embedded content.",
+    "website": "https://github.com/simsong/bulk_extractor",
+    "repository": "https://github.com/simsong/bulk_extractor",
+    "author": "Simson Garfinkel and contributors",
+    "domains": [
+      "Disk Forensics",
+      "File Carving",
+      "Digital Forensics"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Memory Dumps"
+    ],
+    "keywords": [
+      "Feature Extraction",
+      "Email Addresses",
+      "Credit Card Numbers",
+      "Pattern Matching",
+      "Unallocated Space",
+      "Data Carving",
+      "Histograms",
+      "Raw Data Analysis"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-3.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "bulk-extractor"
+  },
+  {
+    "name": "capa",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source malware analysis tool that identifies capabilities and behaviours in executable files and supported sandbox reports using rules derived from reverse engineering techniques.",
+    "website": "https://mandiant.github.io/capa/",
+    "repository": "https://github.com/mandiant/capa",
+    "author": "Mandiant FLARE team",
+    "domains": [
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Triage"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Malware",
+      "Binary Analysis",
+      "Static Analysis",
+      "Capability Detection",
+      "MITRE ATT&CK",
+      "Sandbox Analysis"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "capa"
+  },
+  {
+    "name": "CCL Chromium Reader",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "A Python library for forensic examination of data storage formats used by Chromium-based browsers and applications, including LevelDB, IndexedDB, local storage, session storage and browser caches.\n",
+    "website": "https://github.com/cclgroupltd/ccl_chromium_reader",
+    "repository": "https://github.com/cclgroupltd/ccl_chromium_reader",
+    "author": "CCL Solutions Group",
+    "domains": [
+      "Browser Forensics",
+      "Application Forensics",
+      "Database Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "artefacts": [
+      "IndexedDB",
+      "LevelDB Databases",
+      "Web Storage",
+      "Browser Cache",
+      "Application Databases",
+      "Application Cache"
+    ],
+    "keywords": [
+      "Chromium",
+      "Chrome",
+      "Microsoft Edge",
+      "Electron",
+      "LevelDB",
+      "IndexedDB",
+      "Local Storage",
+      "Session Storage"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "ccl-chromium-reader"
+  },
+  {
+    "name": "Cloud Forensics Utils",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "Open-source Python library and command-line tools for collecting forensic evidence from cloud platforms, supporting incident response investigations across Google Cloud, Amazon Web Services and Microsoft Azure.",
+    "website": "https://libcloudforensics.readthedocs.io/",
+    "repository": "https://github.com/google/cloud-forensics-utils",
+    "author": "Google and Cloud Forensics Utils contributors",
+    "domains": [
+      "Cloud Forensics",
+      "Incident Response",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Cloud"
+    ],
+    "artefacts": [
+      "Cloud Storage Metadata",
+      "Disk Images"
+    ],
+    "keywords": [
+      "Cloud Evidence Collection",
+      "AWS",
+      "Amazon Web Services",
+      "Google Cloud",
+      "Microsoft Azure",
+      "Cloud Incident Response",
+      "Evidence Acquisition",
+      "Python",
+      "libcloudforensics"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "cloud-forensics-utils"
+  },
+  {
+    "name": "CyberChef",
+    "type": [
+      "Tool"
+    ],
+    "description": "Browser-based data transformation and analysis tool offering encoding, decoding, hashing, encryption and compression operations through reusable recipes.",
+    "website": "https://gchq.github.io/CyberChef/",
+    "repository": "https://github.com/gchq/CyberChef",
+    "author": "GCHQ",
+    "domains": [
+      "Digital Forensics"
+    ],
+    "runs_on": [
+      "Browser"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Encoding",
+      "Decoding",
+      "Hashing",
+      "Encryption",
+      "Data Transformation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-04",
+    "id": "cyberchef"
+  },
+  {
+    "name": "DB Browser for SQLite",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source graphical application for viewing, querying and editing SQLite and supported SQLCipher databases. Useful for examining application database structures, records and SQL query results during forensic analysis.",
+    "website": "https://sqlitebrowser.org/",
+    "repository": "https://github.com/sqlitebrowser/sqlitebrowser",
+    "author": "DB Browser for SQLite contributors",
+    "domains": [
+      "Database Forensics",
+      "Application Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "SQLite Databases",
+      "Application Databases"
+    ],
+    "keywords": [
+      "DB Browser for SQLite",
+      "SQLite",
+      "SQLCipher",
+      "Database Examination",
+      "SQL Queries",
+      "Mobile App Databases",
+      "Database Records",
+      "Application Forensics"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MPL-2.0 or GPL-3.0-or-later; third-party components have separate terms",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "db-browser-for-sqlite"
+  },
+  {
+    "name": "dc3dd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic acquisition utility based on GNU dd, providing bitstream copying, acquisition-time hashing, split image output, progress reporting and evidence verification.",
+    "website": "https://sourceforge.net/projects/dc3dd/",
+    "repository": "",
+    "author": "Defense Cyber Crime Center (DC3) and contributors",
+    "domains": [
+      "Disk Forensics",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Linux",
+      "Unix / BSD",
+      "Windows"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Disk Images"
+    ],
+    "keywords": [
+      "Forensic Acquisition",
+      "Disk Imaging",
+      "Bitstream Acquisition",
+      "RAW Images",
+      "Hashing",
+      "Disk Cloning",
+      "Integrity Verification",
+      "Command Line"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "dc3dd"
+  },
+  {
+    "name": "DFIR Madness",
+    "type": [
+      "Website",
+      "Lab / Exercise",
+      "Tutorial"
+    ],
+    "description": "Collection of digital forensic investigation exercises, case studies and technical walkthroughs covering disk examination, timeline reconstruction, packet analysis and incident response.",
+    "website": "https://dfirmadness.com/",
+    "repository": "",
+    "author": "DFIR Madness",
+    "domains": [
+      "DFIR",
+      "Digital Forensics",
+      "Disk Forensics",
+      "Timeline Analysis",
+      "Network Forensics",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Browser"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Disk Images",
+      "PCAP",
+      "Windows Registry",
+      "Filesystem Metadata"
+    ],
+    "keywords": [
+      "DFIR Madness",
+      "Forensic Training",
+      "Practical Exercises",
+      "Incident Response",
+      "Timeline Analysis",
+      "Disk Triage",
+      "PCAP Analysis",
+      "Forensic Case Studies",
+      "E01"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Not specified; check individual material terms",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "dfir-madness"
+  },
+  {
+    "name": "DFRWS 2023 Forensic Challenge - The Troubled Elevator",
+    "type": [
+      "Dataset",
+      "Sample Evidence",
+      "CTF / Challenge"
+    ],
+    "description": "Digital forensic investigation challenge involving an industrial elevator control system, with network traffic, PLC memory dumps, desktop memory evidence and CCTV footage for multidisciplinary forensic analysis.",
+    "website": "https://dfrws.org/forensic-challenges/",
+    "repository": "https://github.com/dfrws/dfrws2023-challenge",
+    "author": "DFRWS and VCU SAFE Lab",
+    "domains": [
+      "Network Forensics",
+      "Memory Forensics",
+      "IoT Forensics",
+      "Incident Response"
+    ],
+    "runs_on": [],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "PCAP",
+      "Memory Dumps",
+      "Network Logs",
+      "Video Metadata"
+    ],
+    "keywords": [
+      "DFRWS",
+      "Forensic Challenge",
+      "The Troubled Elevator",
+      "Industrial Control Systems",
+      "ICS",
+      "Programmable Logic Controllers",
+      "PLC",
+      "Digital Forensic Dataset",
+      "Memory Analysis",
+      "Network Investigation",
+      "CCTV Evidence"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Apache-2.0 (repository; verify individual evidence terms)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "dfrws-2023-challenge"
+  },
+  {
+    "name": "Digital Corpora",
+    "type": [
+      "Dataset",
+      "Sample Evidence",
+      "Website"
+    ],
+    "description": "Collection of forensic datasets for education, research and tool testing, including disk images, memory dumps, packet captures, mobile device evidence and realistic investigative scenarios.",
+    "website": "https://digitalcorpora.org/",
+    "repository": "",
+    "author": "Digital Corpora project (Simson Garfinkel and contributors)",
+    "domains": [
+      "Digital Forensics",
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "Memory Forensics",
+      "Network Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "Android"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Memory Dumps",
+      "PCAP",
+      "Filesystem Metadata"
+    ],
+    "keywords": [
+      "Digital Corpora",
+      "Forensic Datasets",
+      "Sample Evidence",
+      "E01 Images",
+      "Forensic Research",
+      "Tool Validation",
+      "Test Data",
+      "Forensic Scenarios"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Varies by dataset; check individual corpus terms",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "digital-corpora"
+  },
+  {
+    "name": "Digital Forensics Date and Time (dfDateTime)",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "Python library for interpreting and converting forensic date and time values while preserving timestamp accuracy, precision and relevant timezone information.\n",
+    "website": "https://dfdatetime.readthedocs.io/en/latest/",
+    "repository": "https://github.com/log2timeline/dfdatetime",
+    "author": "log2timeline project contributors",
+    "domains": [
+      "Digital Forensics",
+      "Timeline Analysis",
+      "Forensic Methodology"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Python",
+      "Timestamps",
+      "Timestamp Conversion",
+      "Time Zones",
+      "UTC",
+      "FILETIME",
+      "Unix Epoch",
+      "Timestamp Precision",
+      "Timeline"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "dfdatetime"
+  },
+  {
+    "name": "Digital Forensics Tool Testing Images (DFTT)",
+    "type": [
+      "Sample Evidence"
+    ],
+    "description": "Collection of documented forensic test images designed to evaluate acquisition and analysis tools using controlled filesystem, partition, memory and file recovery test cases.\n",
+    "website": "https://dftt.sourceforge.net/",
+    "repository": "",
+    "author": "Brian Carrier and contributors",
+    "domains": [
+      "Forensic Tool Validation",
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "File Carving",
+      "Memory Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [
+      "Windows",
+      "Linux"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Partition Tables",
+      "Deleted Files",
+      "Filesystem Metadata",
+      "Memory Dumps"
+    ],
+    "keywords": [
+      "Test Data",
+      "Ground Truth",
+      "FAT",
+      "NTFS",
+      "EXT3",
+      "Keyword Searching",
+      "Deleted Data Recovery",
+      "Tool Validation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-22",
+    "id": "dftt-images"
+  },
+  {
+    "name": "Digital Forensics Virtual File System (dfVFS)",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "Python library providing a unified read-only interface for accessing filesystem objects across forensic disk images, volume systems and storage formats.\n",
+    "website": "https://dfvfs.readthedocs.io/en/latest/",
+    "repository": "https://github.com/log2timeline/dfvfs",
+    "author": "log2timeline project contributors",
+    "domains": [
+      "Disk Forensics",
+      "Filesystem Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Filesystem Metadata",
+      "Partition Tables",
+      "Volume Shadow Copies"
+    ],
+    "keywords": [
+      "Python",
+      "E01",
+      "NTFS",
+      "APFS",
+      "EXT",
+      "BitLocker",
+      "Virtual Filesystem",
+      "Read-Only Access"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "dfvfs"
+  },
+  {
+    "name": "EvtxECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line Windows Event Log parser supporting structured extraction, event mapping and export of EVTX records for forensic analysis and timeline reconstruction.",
+    "website": "https://github.com/EricZimmerman/evtx",
+    "repository": "https://github.com/EricZimmerman/evtx",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Log Analysis",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Event Logs"
+    ],
+    "keywords": [
+      "EVTX",
+      "Event IDs",
+      "User Activity",
+      "Timeline",
+      "Event Mapping"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "evtxecmd"
+  },
+  {
+    "name": "ExifTool",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source command-line tool and Perl library for reading, writing and editing metadata in images, videos, audio files, documents and other file formats, including EXIF, XMP, IPTC and GPS information.",
+    "website": "https://exiftool.sourceforge.net/",
+    "repository": "https://github.com/exiftool/exiftool",
+    "author": "Phil Harvey",
+    "domains": [
+      "Image Forensics",
+      "Multimedia Forensics",
+      "Digital Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "File Metadata",
+      "EXIF Metadata",
+      "Image Metadata",
+      "Video Metadata",
+      "Audio Metadata",
+      "Embedded Metadata"
+    ],
+    "keywords": [
+      "Metadata",
+      "EXIF",
+      "XMP",
+      "IPTC",
+      "GPS",
+      "Metadata Extraction"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Artistic-1.0-Perl OR GPL-1.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "exiftool"
+  },
+  {
+    "name": "FLOSS",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source malware analysis tool that automatically extracts and deobfuscates strings from executable files, including static, stack and decoded strings, to assist malware triage and reverse engineering.",
+    "website": "https://github.com/mandiant/flare-floss",
+    "repository": "https://github.com/mandiant/flare-floss",
+    "author": "Mandiant FLARE team",
+    "domains": [
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Triage"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Malware",
+      "Static Analysis",
+      "String Extraction",
+      "Deobfuscation",
+      "Reverse Engineering"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "floss"
+  },
+  {
+    "name": "Forensic Focus",
+    "type": [
+      "Website"
+    ],
+    "description": "Digital forensics and incident response website providing industry news, technical articles, interviews, podcasts, educational resources and professional discussion forums.",
+    "website": "https://www.forensicfocus.com/",
+    "repository": "",
+    "author": "Forensic Focus",
+    "domains": [
+      "Digital Forensics",
+      "DFIR"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "News",
+      "Articles",
+      "Community",
+      "Discussion Forum",
+      "Training",
+      "Podcast"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "forensic-focus"
+  },
+  {
+    "name": "Forensically",
+    "type": [
+      "Tool",
+      "Website"
+    ],
+    "description": "Free browser-based image forensic examination toolkit offering clone detection, error-level analysis, noise analysis, metadata extraction, thumbnail inspection and other image examination techniques.",
+    "website": "https://29a.ch/photo-forensics/",
+    "repository": "",
+    "author": "Jonas Wagner",
+    "domains": [
+      "Image Forensics",
+      "Multimedia Forensics"
+    ],
+    "runs_on": [
+      "Browser"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Image Metadata",
+      "EXIF Metadata",
+      "Embedded Metadata"
+    ],
+    "keywords": [
+      "Forensically",
+      "Image Authentication",
+      "Clone Detection",
+      "Error Level Analysis",
+      "ELA",
+      "Noise Analysis",
+      "JPEG Analysis",
+      "Image Manipulation",
+      "Thumbnail Analysis",
+      "Image Examination"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Not specified",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "forensically"
+  },
+  {
+    "name": "ForenThings",
+    "type": [
+      "Tool",
+      "Research Paper"
+    ],
+    "description": "Open-source research framework for reconstructing events and their relationships in Internet of Things environments using smart-device and application logs. Includes an implementation and example datasets based on the SmartThings platform.",
+    "website": "https://github.com/ehsankhodayar/ForenThings",
+    "repository": "https://github.com/ehsankhodayar/ForenThings",
+    "author": "Ehsan Khodayarseresht and research collaborators",
+    "domains": [
+      "IoT Forensics",
+      "Application Forensics",
+      "Timeline Analysis",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Application Logs",
+      "Application Databases"
+    ],
+    "keywords": [
+      "ForenThings",
+      "Internet of Things",
+      "Smart Home Forensics",
+      "SmartThings",
+      "Event Reconstruction",
+      "Provenance Analysis",
+      "IoT Logs",
+      "Forensic Research"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "forenthings"
+  },
+  {
+    "name": "FQLite",
+    "type": [
+      "Tool"
+    ],
+    "description": "A SQLite forensic analysis and recovery tool designed to identify and recover deleted database records and examine database structures, write-ahead logs and rollback journals.\n",
+    "website": "https://github.com/pawlaszczyk/fqlite",
+    "repository": "https://github.com/pawlaszczyk/fqlite",
+    "author": "Dirk Pawlaszczyk",
+    "domains": [
+      "Database Forensics",
+      "Application Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "SQLite Databases",
+      "SQLite Write-Ahead Logs (WAL)",
+      "SQLite Rollback Journals",
+      "Application Databases"
+    ],
+    "keywords": [
+      "SQLite",
+      "Deleted Records",
+      "Record Recovery",
+      "Database Carving",
+      "Freelist Pages",
+      "WAL"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "fqlite"
+  },
+  {
+    "name": "FTK Imager",
+    "type": [
+      "Tool"
+    ],
+    "description": "Free forensic imaging and evidence preview utility for acquiring storage media, examining forensic images, exporting files and verifying evidence integrity through hashing.",
+    "website": "https://www.exterro.com/digital-forensics-software/ftk-imager",
+    "repository": "",
+    "author": "Exterro",
+    "domains": [
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "artefacts": [
+      "Disk Images",
+      "Filesystem Metadata",
+      "Deleted Files"
+    ],
+    "keywords": [
+      "Forensic Acquisition",
+      "Disk Imaging",
+      "E01",
+      "RAW Images",
+      "Hashing",
+      "Evidence Preview",
+      "Integrity Verification"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": false,
+    "licence": "Proprietary Freeware",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "ftk-imager"
+  },
+  {
+    "name": "GraphSense",
+    "type": [
+      "Tool Suite",
+      "Library / Framework"
+    ],
+    "description": "Open-source cryptoasset analytics platform for investigating blockchain addresses, transactions, clusters and fund flows across supported cryptocurrency networks.",
+    "website": "https://graphsense.org/",
+    "repository": "https://github.com/graphsense/graphsense-dashboard",
+    "author": "GraphSense project contributors",
+    "domains": [
+      "Cryptocurrency Forensics",
+      "Intelligence Analysis",
+      "OSINT"
+    ],
+    "runs_on": [
+      "Browser",
+      "Container"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "GraphSense",
+      "Blockchain Analytics",
+      "Cryptocurrency",
+      "Bitcoin",
+      "Ethereum",
+      "Tron",
+      "Transaction Tracing",
+      "Address Clustering",
+      "Fund Flow Analysis",
+      "Cryptocurrency Investigations"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT (open-source platform; hosted services and extensions may have separate terms)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "graphsense"
+  },
+  {
+    "name": "Guymager",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source graphical forensic acquisition utility for Linux supporting multithreaded disk imaging, disk cloning, image compression and evidence verification in RAW, EWF and AFF formats.",
+    "website": "https://guymager.sourceforge.io/",
+    "repository": "https://sourceforge.net/p/guymager/code/",
+    "author": "Guy Voncken",
+    "domains": [
+      "Disk Forensics",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Disk Images"
+    ],
+    "keywords": [
+      "Forensic Acquisition",
+      "Disk Imaging",
+      "Disk Cloning",
+      "E01",
+      "EWF",
+      "AFF",
+      "RAW Images",
+      "Hashing",
+      "Integrity Verification"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "guymager"
+  },
+  {
+    "name": "Hawk",
+    "type": [
+      "Tool",
+      "Script"
+    ],
+    "description": "Open-source PowerShell forensic collection module for Microsoft 365 and Microsoft Entra ID investigations. Collects tenant configurations, audit information, mailbox settings, user activity and authentication-related data to support incident response.",
+    "website": "https://hawkforensics.io/",
+    "repository": "https://github.com/T0pCyber/hawk",
+    "author": "Hawk project contributors",
+    "domains": [
+      "Cloud Forensics",
+      "Email Forensics",
+      "Incident Response",
+      "Log Analysis"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Cloud"
+    ],
+    "artefacts": [
+      "Cloud Audit Logs",
+      "Authentication Logs",
+      "Identity / Sign-in Logs",
+      "Email"
+    ],
+    "keywords": [
+      "Hawk",
+      "Microsoft 365",
+      "Office 365",
+      "Microsoft Entra ID",
+      "Azure Active Directory",
+      "Exchange Online",
+      "PowerShell",
+      "Cloud Forensic Collection",
+      "Tenant Investigation",
+      "Mailbox Investigation",
+      "Audit Logs"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "hawk"
+  },
+  {
+    "name": "Hayabusa",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source Windows Event Log analysis and threat hunting tool that uses detection rules to identify suspicious activity and generate forensic timelines from EVTX records.",
+    "website": "https://yamato-security.github.io/hayabusa/",
+    "repository": "https://github.com/Yamato-Security/hayabusa",
+    "author": "Yamato Security",
+    "domains": [
+      "Windows Forensics",
+      "Log Analysis",
+      "Threat Hunting",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Event Logs"
+    ],
+    "keywords": [
+      "EVTX",
+      "Sigma",
+      "Threat Hunting",
+      "Event Correlation",
+      "Timeline",
+      "Detection Rules"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "AGPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "hayabusa"
+  },
+  {
+    "name": "Hindsight",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source browser forensic analysis tool that extracts and correlates history, downloads, cookies, bookmarks, cache and other artefacts from Chromium-based and Firefox browser profiles into investigative timelines.",
+    "website": "https://hindsig.ht/hindsight/",
+    "repository": "https://github.com/RyanDFIR/hindsight",
+    "author": "Ryan Benson and contributors",
+    "domains": [
+      "Browser Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Browser History",
+      "Browser Downloads",
+      "Browser Cookies",
+      "Browser Cache",
+      "Browser Bookmarks",
+      "Autofill Data",
+      "Browser Extensions",
+      "Web Storage",
+      "IndexedDB"
+    ],
+    "keywords": [
+      "Chrome",
+      "Chromium",
+      "Firefox",
+      "Browser Profiles",
+      "Browser Timeline",
+      "Activity Reconstruction"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "hindsight"
+  },
+  {
+    "name": "iBackup Viewer",
+    "type": [
+      "Tool"
+    ],
+    "description": "Graphical utility for examining local iOS device backups and extracting communications, contacts, browsing history, photographs and other application data from supported backup formats.",
+    "website": "https://www.imactools.com/iphonebackupviewer/",
+    "repository": "",
+    "author": "IMT Studio",
+    "domains": [
+      "iOS Forensics",
+      "Mobile Application Forensics",
+      "Browser Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS"
+    ],
+    "analyses": [
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "SMS / Messages",
+      "Call Logs",
+      "Contacts",
+      "Browser History",
+      "Browser Bookmarks",
+      "Mobile App Data"
+    ],
+    "keywords": [
+      "iPhone",
+      "iPad",
+      "iTunes Backup",
+      "Encrypted Backups",
+      "Backup Extraction",
+      "iMessage",
+      "WhatsApp",
+      "Safari",
+      "Data Recovery"
+    ],
+    "pricing": {
+      "model": "Freemium",
+      "commercial_use": null
+    },
+    "open_source": false,
+    "licence": "Proprietary",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "ibackup-viewer"
+  },
+  {
+    "name": "iLEAPP",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source iOS and iPadOS forensic artefact parser that processes device extractions and backups to recover and report system and application data, including databases, logs and plist records.",
+    "website": "https://leapps.org/",
+    "repository": "https://github.com/abrignoni/iLEAPP",
+    "author": "Alexis Brignoni and contributors",
+    "domains": [
+      "iOS Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Mobile App Data",
+      "Application Databases",
+      "SQLite Databases",
+      "Device Backups"
+    ],
+    "keywords": [
+      "iOS",
+      "Plist",
+      "Artefact Parsing",
+      "Backup Analysis",
+      "Mobile Triage"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "ileapp"
+  },
+  {
+    "name": "Investigating Android 10 - Digital Forensics Lab",
+    "type": [
+      "Lab / Exercise",
+      "Tutorial"
+    ],
+    "description": "Collection of practical Android 10 forensic investigation exercises using a Google Pixel 3 dataset, covering device settings, application lifecycles, messaging, contacts, calendars, location artefacts and third-party applications.",
+    "website": "https://github.com/frankwxu/digital-forensics-lab/tree/main/Android10",
+    "repository": "https://github.com/frankwxu/digital-forensics-lab",
+    "author": "Frank Xu and contributors",
+    "domains": [
+      "Android Forensics",
+      "Mobile Application Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Linux"
+    ],
+    "analyses": [
+      "Android"
+    ],
+    "artefacts": [
+      "Mobile App Data",
+      "SQLite Databases",
+      "SMS / Messages",
+      "Contacts",
+      "Location Data"
+    ],
+    "keywords": [
+      "Android 10",
+      "Google Pixel 3",
+      "Mobile Forensics Training",
+      "Forensic Lab",
+      "Android Applications",
+      "WhatsApp",
+      "Google Maps",
+      "Google Photos",
+      "Practical Exercises"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Apache-2.0 (repository; external datasets may have separate terms)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "android-10-forensics-lab"
+  },
+  {
+    "name": "InVID-WeVerify Verification Plugin",
+    "type": [
+      "Tool",
+      "Plugin / Extension"
+    ],
+    "description": "Browser-based verification toolkit for examining online images and videos, including video keyframe extraction, reverse-image searching, metadata inspection and image forensic analysis.",
+    "website": "https://weverify.eu/verification-plugin/",
+    "repository": "https://github.com/AFP-Medialab/invid-verification-plugin",
+    "author": "AFP Medialab and InVID-WeVerify project contributors",
+    "domains": [
+      "Multimedia Forensics",
+      "Image Forensics",
+      "OSINT",
+      "Social Media Forensics"
+    ],
+    "runs_on": [
+      "Browser"
+    ],
+    "analyses": [
+      "Web"
+    ],
+    "artefacts": [
+      "Image Metadata",
+      "Video Metadata",
+      "EXIF Metadata"
+    ],
+    "keywords": [
+      "InVID",
+      "WeVerify",
+      "VeraAI",
+      "Video Verification",
+      "Image Verification",
+      "Reverse Image Search",
+      "Video Keyframes",
+      "Image Forensics",
+      "Fact Checking",
+      "Online Media Investigation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": true,
+    "licence": "MIT (plugin source; external services may have separate terms)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "invid-weverify"
+  },
+  {
+    "name": "iPhone Backup Extractor",
+    "type": [
+      "Tool"
+    ],
+    "description": "Utility for examining and extracting data from iPhone and iPad backups, including application data, communications, media and device information. Free edition has extraction limitations.",
+    "website": "https://www.iphonebackupextractor.com/",
+    "repository": "",
+    "author": "Reincubate",
+    "domains": [
+      "iOS Forensics",
+      "Mobile Application Forensics",
+      "Cloud Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS"
+    ],
+    "analyses": [
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Mobile App Data",
+      "Application Databases",
+      "SMS / Messages",
+      "Call Logs",
+      "Contacts",
+      "Property Lists (Plists)"
+    ],
+    "keywords": [
+      "iPhone",
+      "iPad",
+      "iTunes Backup",
+      "iCloud",
+      "Encrypted Backups",
+      "Backup Extraction",
+      "Data Recovery"
+    ],
+    "pricing": {
+      "model": "Freemium",
+      "commercial_use": null
+    },
+    "open_source": false,
+    "licence": "Proprietary",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "iphone-backup-extractor"
+  },
+  {
+    "name": "JLECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows Automatic and Custom Destination Jump Lists. Extracts application identifiers, destination records, timestamps and embedded shortcut metadata to support forensic reconstruction of user activity and file access history.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/JLECmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Jump Lists",
+      "LNK Files"
+    ],
+    "keywords": [
+      "Automatic Destinations",
+      "Custom Destinations",
+      "AppID",
+      "DestList",
+      "Recent Files",
+      "User Activity",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "jlecmd"
+  },
+  {
+    "name": "Joshua Hickman's Mobile Forensic Images",
+    "type": [
+      "Sample Evidence"
+    ],
+    "description": "Collection of publicly available iOS and Android forensic acquisitions containing documented user activity and application data for forensic training, research and tool validation.\n",
+    "website": "https://thebinaryhick.blog/",
+    "repository": "",
+    "author": "Joshua Hickman",
+    "domains": [
+      "iOS Forensics",
+      "Android Forensics",
+      "Mobile Application Forensics",
+      "Forensic Tool Validation"
+    ],
+    "runs_on": [],
+    "analyses": [
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Mobile App Data",
+      "Mobile App Sandboxes",
+      "SMS / Messages",
+      "Call Logs",
+      "Contacts",
+      "Location Data",
+      "Mobile Browser Data",
+      "Device Backups",
+      "SQLite Databases"
+    ],
+    "keywords": [
+      "Test Data",
+      "Ground Truth",
+      "Mobile Extractions",
+      "Training",
+      "Research",
+      "Tool Validation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "joshua-hickman-mobile-images"
+  },
+  {
+    "name": "KnockKnock",
+    "type": [
+      "Tool"
+    ],
+    "description": "macOS examination utility that enumerates persistently installed software and automatic execution mechanisms, assisting investigators in identifying installed applications and potentially unwanted software.",
+    "website": "https://objective-see.org/products/knockknock.html",
+    "repository": "https://github.com/objective-see/KnockKnock",
+    "author": "Patrick Wardle / Objective-See Foundation",
+    "domains": [
+      "macOS Forensics",
+      "Live Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "macOS"
+    ],
+    "analyses": [
+      "macOS"
+    ],
+    "artefacts": [
+      "Launch Agents / Daemons",
+      "Property Lists (Plists)",
+      "Configuration Files"
+    ],
+    "keywords": [
+      "Persistence",
+      "Installed Software",
+      "Login Items",
+      "LaunchAgents",
+      "LaunchDaemons",
+      "Background Tasks",
+      "Code Signing",
+      "Malware"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": true,
+    "licence": "GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "knockknock"
+  },
+  {
+    "name": "LECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows shortcut (LNK) files. Extracts target paths, timestamps, volume information, network share details, shell items and distributed link tracking metadata to support user activity reconstruction and forensic timeline analysis.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/LECmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "LNK Files"
+    ],
+    "keywords": [
+      "Windows Shortcuts",
+      "LNK Parser",
+      "User Activity",
+      "File Access",
+      "Removable Media",
+      "Distributed Link Tracking",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "lecmd"
+  },
+  {
+    "name": "libesedb",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "Library and command-line utilities for accessing and extracting records from Extensible Storage Engine databases used by Microsoft Windows and associated applications.\n",
+    "website": "https://github.com/libyal/libesedb",
+    "repository": "https://github.com/libyal/libesedb",
+    "author": "Joachim Metz and contributors",
+    "domains": [
+      "Windows Forensics",
+      "Database Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Search",
+      "Application Databases"
+    ],
+    "keywords": [
+      "ESE",
+      "EDB",
+      "ESENT",
+      "Jet Blue",
+      "Exchange",
+      "Active Directory",
+      "Database Parsing"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "libesedb"
+  },
+  {
+    "name": "libewf / ewf-tools",
+    "type": [
+      "Library / Framework",
+      "Tool Suite"
+    ],
+    "description": "Open-source library and command-line utilities for acquiring, reading, exporting, mounting, recovering and verifying forensic images stored in Expert Witness Format, including E01 images.",
+    "website": "https://github.com/libyal/libewf",
+    "repository": "https://github.com/libyal/libewf",
+    "author": "Joachim Metz and contributors",
+    "domains": [
+      "Disk Forensics",
+      "Evidence Handling"
+    ],
+    "runs_on": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Disk Images"
+    ],
+    "keywords": [
+      "Forensic Acquisition",
+      "EWF",
+      "E01",
+      "Ex01",
+      "ewfacquire",
+      "ewfmount",
+      "ewfverify",
+      "ewfinfo",
+      "ewfexport",
+      "Image Conversion",
+      "Integrity Verification",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later / GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "libewf"
+  },
+  {
+    "name": "libfsapfs",
+    "type": [
+      "Library / Framework",
+      "Tool Suite"
+    ],
+    "description": "Open-source library and supporting utilities for read-only access to Apple File System containers, volumes, file contents and filesystem metadata.",
+    "website": "https://github.com/libyal/libfsapfs",
+    "repository": "https://github.com/libyal/libfsapfs",
+    "author": "Joachim Metz and contributors",
+    "domains": [
+      "macOS Forensics",
+      "Filesystem Forensics",
+      "Disk Forensics"
+    ],
+    "runs_on": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "analyses": [
+      "macOS"
+    ],
+    "artefacts": [
+      "Filesystem Metadata",
+      "File Metadata"
+    ],
+    "keywords": [
+      "APFS",
+      "Apple File System",
+      "APFS Containers",
+      "APFS Volumes",
+      "Extended Attributes",
+      "Filesystem Parsing",
+      "pyfsapfs",
+      "fsapfsinfo",
+      "fsapfsmount",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later / GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "libfsapfs"
+  },
+  {
+    "name": "libfsext",
+    "type": [
+      "Library / Framework",
+      "Tool Suite"
+    ],
+    "description": "Open-source library and supporting utilities for read-only examination of Linux extended filesystems, including ext2, ext3 and ext4 file structures and metadata.",
+    "website": "https://github.com/libyal/libfsext",
+    "repository": "https://github.com/libyal/libfsext",
+    "author": "Joachim Metz and contributors",
+    "domains": [
+      "Linux Forensics",
+      "Filesystem Forensics",
+      "Disk Forensics"
+    ],
+    "runs_on": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "analyses": [
+      "Linux"
+    ],
+    "artefacts": [
+      "Filesystem Metadata",
+      "File Metadata"
+    ],
+    "keywords": [
+      "ext2",
+      "ext3",
+      "ext4",
+      "Inodes",
+      "Extended Attributes",
+      "Filesystem Parsing",
+      "pyfsext",
+      "fsextinfo",
+      "fsextmount",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later / GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "libfsext"
+  },
+  {
+    "name": "libfsntfs",
+    "type": [
+      "Library / Framework",
+      "Tool Suite"
+    ],
+    "description": "Open-source library and supporting utilities for read-only examination of NTFS filesystems, including access to filesystem structures, file contents and metadata.",
+    "website": "https://github.com/libyal/libfsntfs",
+    "repository": "https://github.com/libyal/libfsntfs",
+    "author": "Joachim Metz and contributors",
+    "domains": [
+      "Windows Forensics",
+      "Filesystem Forensics",
+      "Disk Forensics"
+    ],
+    "runs_on": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Filesystem Metadata",
+      "Master File Table (MFT)",
+      "Alternate Data Streams",
+      "File Metadata"
+    ],
+    "keywords": [
+      "NTFS",
+      "MFT",
+      "Filesystem Parsing",
+      "Read-Only Access",
+      "pyfsntfs",
+      "fsntfsinfo",
+      "fsntfsmount",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later / GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "libfsntfs"
+  },
+  {
+    "name": "libimobiledevice",
+    "type": [
+      "Tool Suite",
+      "Library / Framework"
+    ],
+    "description": "Open-source library and command-line utilities for communicating with iOS devices, supporting device information retrieval, backup creation, crash report collection, system log access and interaction with device services.",
+    "website": "https://libimobiledevice.org/",
+    "repository": "https://github.com/libimobiledevice/libimobiledevice",
+    "author": "libimobiledevice project contributors",
+    "domains": [
+      "iOS Forensics",
+      "Mobile Application Forensics",
+      "Live Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Application Logs",
+      "Mobile App Data"
+    ],
+    "keywords": [
+      "libimobiledevice",
+      "iPhone",
+      "iPad",
+      "iOS Acquisition",
+      "idevicebackup2",
+      "idevicecrashreport",
+      "idevicesyslog",
+      "Device Information",
+      "Crash Reports",
+      "System Logs"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-2.1 (primary library and utilities)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "libimobiledevice"
+  },
+  {
+    "name": "libpff",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "Open-source library and command-line utilities for accessing Microsoft Outlook Personal Folder File and Offline Folder File formats, including PST, OST and PAB, to examine and export stored messages and other Outlook items.",
+    "website": "https://github.com/libyal/libpff",
+    "repository": "https://github.com/libyal/libpff",
+    "author": "Joachim Metz and libyal contributors",
+    "domains": [
+      "Email Forensics",
+      "Application Forensics",
+      "Digital Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Email",
+      "Application Databases"
+    ],
+    "keywords": [
+      "libpff",
+      "Outlook",
+      "PST",
+      "OST",
+      "PAB",
+      "pffexport",
+      "pffinfo",
+      "Email Analysis",
+      "Mailbox Examination",
+      "Outlook Forensics"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "LGPL-3.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "libpff"
+  },
+  {
     "name": "M57-Patents Scenario (2009)",
     "type": [
       "Sample Evidence"
@@ -79,6 +2620,1356 @@
     "id": "m57-patents-scenario"
   },
   {
+    "name": "mac_apt",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source macOS forensic artefact parsing framework that processes disk images, mounted volumes and collected files to extract system, application, browser and filesystem evidence.",
+    "website": "https://github.com/ydkhatri/mac_apt",
+    "repository": "https://github.com/ydkhatri/mac_apt",
+    "author": "Yogesh Khatri and contributors",
+    "domains": [
+      "macOS Forensics",
+      "Filesystem Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "macOS"
+    ],
+    "artefacts": [
+      "Browser History",
+      "Browser Cookies",
+      "SQLite Databases",
+      "Application Databases",
+      "Filesystem Metadata"
+    ],
+    "keywords": [
+      "APFS",
+      "HFS+",
+      "Safari",
+      "Plist",
+      "Artefact Parsing",
+      "Forensic Extraction"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "mac-apt"
+  },
+  {
+    "name": "mac-robber",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic utility that recursively collects modification, access and metadata change timestamps from allocated files and directories for subsequent filesystem timeline generation.",
+    "website": "https://www.sleuthkit.org/mac-robber/",
+    "repository": "https://github.com/sleuthkit/mac-robber",
+    "author": "Brian Carrier",
+    "domains": [
+      "macOS Forensics",
+      "Linux Forensics",
+      "Unix Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "macOS",
+      "Linux",
+      "Unix / BSD"
+    ],
+    "analyses": [
+      "macOS",
+      "Linux",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Filesystem Metadata",
+      "File Metadata"
+    ],
+    "keywords": [
+      "MAC Times",
+      "Timestamps",
+      "Bodyfile",
+      "mactime",
+      "The Sleuth Kit",
+      "Timeline",
+      "Mounted Filesystems"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "mac-robber"
+  },
+  {
+    "name": "macMRU Parser",
+    "type": [
+      "Script"
+    ],
+    "description": "Python utility for parsing macOS Most Recently Used property lists and embedded bookmark data to identify recently accessed files and other recorded user activities.",
+    "website": "https://github.com/mac4n6/macMRU-Parser",
+    "repository": "https://github.com/mac4n6/macMRU-Parser",
+    "author": "Sarah Edwards",
+    "domains": [
+      "macOS Forensics",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "macOS"
+    ],
+    "analyses": [
+      "macOS"
+    ],
+    "artefacts": [
+      "Property Lists (Plists)",
+      "Most Recently Used (MRU)"
+    ],
+    "keywords": [
+      "MRU",
+      "Recent Files",
+      "Recent Applications",
+      "Bookmark Data",
+      "Binary Plist",
+      "User Activity",
+      "Python"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "Not specified",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "macmru-parser"
+  },
+  {
+    "name": "macOS UnifiedLogs",
+    "type": [
+      "Library / Framework",
+      "Tool"
+    ],
+    "description": "Cross-platform Rust library and supporting utilities for parsing Apple Unified Log files and reconstructing recorded system and application events from collected log data.",
+    "website": "https://github.com/mandiant/macos-UnifiedLogs",
+    "repository": "https://github.com/mandiant/macos-UnifiedLogs",
+    "author": "Mandiant and contributors",
+    "domains": [
+      "macOS Forensics",
+      "Log Analysis",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "macOS"
+    ],
+    "artefacts": [
+      "Unified Logs",
+      "Application Logs"
+    ],
+    "keywords": [
+      "Unified Logging",
+      "tracev3",
+      "uuidtext",
+      "timesync",
+      "logarchive",
+      "System Events",
+      "User Activity",
+      "Rust",
+      "Timeline"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "macos-unifiedlogs"
+  },
+  {
+    "name": "MediaInfo",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "Open-source command-line and graphical utility for inspecting technical metadata and tags in audio and video files, including codecs, container formats, duration, bitrate and stream properties.",
+    "website": "https://mediaarea.net/MediaInfo",
+    "repository": "https://github.com/MediaArea/MediaInfo",
+    "author": "MediaArea",
+    "domains": [
+      "Multimedia Forensics",
+      "Audio Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Audio Metadata",
+      "Video Metadata",
+      "Embedded Metadata",
+      "File Metadata"
+    ],
+    "keywords": [
+      "MediaInfo",
+      "Video Metadata",
+      "Audio Metadata",
+      "Codecs",
+      "Media Containers",
+      "Bitrate",
+      "Video Examination",
+      "Audio Examination",
+      "Technical Metadata"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "BSD-2-Clause",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "mediainfo"
+  },
+  {
+    "name": "MemProcFS",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source physical memory analysis framework that exposes Windows memory contents and forensic artefacts through a virtual file system and programmatic APIs, supporting memory dump analysis and live memory investigation.",
+    "website": "https://github.com/ufrisk/MemProcFS/wiki",
+    "repository": "https://github.com/ufrisk/MemProcFS",
+    "author": "Ulf Frisk",
+    "domains": [
+      "Memory Forensics",
+      "Live Forensics",
+      "Windows Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Memory Dumps",
+      "Process Memory",
+      "Kernel Memory",
+      "Windows Registry"
+    ],
+    "keywords": [
+      "Memory Analysis",
+      "Virtual File System",
+      "Live Response",
+      "Volatile Data",
+      "YARA"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "AGPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "memprocfs"
+  },
+  {
+    "name": "MFTECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for NTFS filesystem metadata, including the Master File Table, USN Journal, transaction log, boot sector, security descriptors and directory indexes. Supports filesystem examination, historical file activity analysis and forensic timeline reconstruction.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/MFTECmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Master File Table (MFT)",
+      "USN Journal",
+      "Filesystem Metadata",
+      "Filesystem Journals",
+      "Deleted Files"
+    ],
+    "keywords": [
+      "NTFS",
+      "$MFT",
+      "$UsnJrnl",
+      "$LogFile",
+      "$Boot",
+      "$SDS",
+      "$I30",
+      "File Timestamps",
+      "Bodyfile",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "mftecmd"
+  },
+  {
+    "name": "MITRE ATT&CK",
+    "type": [
+      "Reference"
+    ],
+    "description": "Publicly accessible knowledge base of observed cyber adversary tactics, techniques and procedures, supporting threat hunting, incident response, detection development and threat intelligence analysis.",
+    "website": "https://attack.mitre.org/",
+    "repository": "https://github.com/mitre-attack/attack-stix-data",
+    "author": "The MITRE Corporation",
+    "domains": [
+      "Threat Hunting",
+      "Intelligence Analysis",
+      "Incident Response"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "MITRE ATT&CK",
+      "TTPs",
+      "Adversary Behaviour",
+      "Detection Engineering",
+      "Threat Intelligence",
+      "Adversary Emulation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": null,
+    "licence": "MITRE ATT&CK Terms of Use",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "mitre-attack"
+  },
+  {
+    "name": "Mobile Security Framework (MobSF)",
+    "type": [
+      "Tool Suite"
+    ],
+    "description": "Open-source mobile application security analysis framework supporting static and dynamic examination of Android and iOS applications, including application binaries, security configurations, runtime behaviour and network communications.",
+    "website": "https://mobsf.github.io/Mobile-Security-Framework-MobSF/",
+    "repository": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+    "author": "Ajin Abraham and contributors",
+    "domains": [
+      "Mobile Application Forensics",
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Container",
+      "Browser"
+    ],
+    "analyses": [
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [],
+    "keywords": [
+      "MobSF",
+      "Mobile Security Framework",
+      "Android APK",
+      "iOS IPA",
+      "Static Analysis",
+      "Dynamic Analysis",
+      "Application Security",
+      "Mobile Malware",
+      "Runtime Analysis",
+      "Network Traffic Analysis"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-3.0",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "mobsf"
+  },
+  {
+    "name": "Mobile Verification Toolkit (MVT)",
+    "type": [
+      "Tool Suite"
+    ],
+    "description": "Collection of forensic utilities for consensual examination of Android and iOS devices to identify potential signs of compromise, including analysis of device backups, application records, system logs and indicators of compromise.",
+    "website": "https://docs.mvt.re/en/latest/",
+    "repository": "https://github.com/mvt-project/mvt",
+    "author": "Amnesty International Security Lab and contributors",
+    "domains": [
+      "iOS Forensics",
+      "Android Forensics",
+      "Mobile Application Forensics",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Device Backups",
+      "Mobile App Data",
+      "Application Logs",
+      "SQLite Databases",
+      "SMS / Messages",
+      "Call Logs"
+    ],
+    "keywords": [
+      "Mobile Verification Toolkit",
+      "MVT",
+      "Mobile Spyware",
+      "Indicators of Compromise",
+      "Pegasus",
+      "STIX2",
+      "Mobile Threat Analysis"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": false,
+    "licence": "MVT License v1.1 (source-available; consensual-use restriction)",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "mobile-verification-toolkit"
+  },
+  {
+    "name": "NIST CFReDS",
+    "type": [
+      "Directory / Index"
+    ],
+    "description": "Portal providing access to documented digital forensic reference datasets for forensic tool testing, practitioner training, research and proficiency testing.",
+    "website": "https://cfreds.nist.gov/",
+    "repository": "",
+    "author": "National Institute of Standards and Technology (NIST)",
+    "domains": [
+      "Digital Forensics",
+      "Forensic Methodology"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Reference Datasets",
+      "Sample Evidence",
+      "Tool Testing",
+      "Training",
+      "Proficiency Testing"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "nist-cfreds"
+  },
+  {
+    "name": "NIST Computer Forensics Tool Testing (CFTT)",
+    "type": [
+      "Website",
+      "Reference"
+    ],
+    "description": "Publishes forensic tool testing methodologies, test specifications and evaluation reports to support the assessment of forensic software reliability and accuracy.\n",
+    "website": "https://www.nist.gov/itl/csd/secure-systems-and-applications/computer-forensics-tool-testing-program-cftt",
+    "repository": "",
+    "author": "National Institute of Standards and Technology (NIST)",
+    "domains": [
+      "Forensic Tool Validation",
+      "Forensic Methodology",
+      "Digital Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Tool Testing",
+      "Tool Validation",
+      "Test Methodology",
+      "Quality Assurance",
+      "Accuracy",
+      "Reliability",
+      "Research"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "nist-cftt"
+  },
+  {
+    "name": "NIST National Software Reference Library (NSRL)",
+    "type": [
+      "Dataset"
+    ],
+    "description": "Reference dataset of known file hashes and software metadata used to identify known files, reduce irrelevant data during forensic examinations and support hash-based file identification.\n",
+    "website": "https://www.nist.gov/itl/csd/secure-systems-and-applications/national-software-reference-library-nsrl/nsrl-download-0",
+    "repository": "",
+    "author": "National Institute of Standards and Technology (NIST)",
+    "domains": [
+      "Digital Forensics",
+      "Disk Forensics",
+      "Forensic Tool Validation",
+      "Triage"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [
+      "File Metadata"
+    ],
+    "keywords": [
+      "Hashing",
+      "Known Files",
+      "Hash Sets",
+      "File Identification",
+      "Reference Data",
+      "Data Reduction",
+      "MD5",
+      "SHA-1"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": null,
+    "licence": "Public Domain",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "nist-nsrl"
+  },
+  {
+    "name": "oledump.py",
+    "type": [
+      "Script"
+    ],
+    "description": "Python utility for examining OLE compound binary files, extracting embedded data streams and analysing VBA macros within Microsoft Office documents.\n",
+    "website": "https://blog.didierstevens.com/programs/oledump-py/",
+    "repository": "https://github.com/DidierStevens/DidierStevensSuite",
+    "author": "Didier Stevens",
+    "domains": [
+      "Application Forensics",
+      "Malware Analysis",
+      "Document Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Python",
+      "OLE",
+      "Compound Binary Files",
+      "Microsoft Office",
+      "Document Forensics",
+      "VBA Macros",
+      "Embedded Objects",
+      "YARA"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Public Domain",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "oledump"
+  },
+  {
+    "name": "PECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows Prefetch files, extracting executable information, execution timestamps, run counts, referenced files and volume information to support program execution analysis and timeline reconstruction.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/PECmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Prefetch"
+    ],
+    "keywords": [
+      "Program Execution",
+      "Execution History",
+      "Prefetch Parser",
+      "Timeline",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "pecmd"
+  },
+  {
+    "name": "PhotoRec",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source file carving and data recovery tool that uses file signatures to recover deleted or lost files from storage media and forensic disk images, including damaged or reformatted filesystems.",
+    "website": "https://www.cgsecurity.org/wiki/PhotoRec",
+    "repository": "https://github.com/cgsecurity/testdisk",
+    "author": "Christophe Grenier",
+    "domains": [
+      "File Carving",
+      "Disk Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Unix / BSD"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Deleted Files",
+      "Disk Images"
+    ],
+    "keywords": [
+      "File Signatures",
+      "Deleted Data Recovery",
+      "File Recovery",
+      "Data Carving",
+      "Data Recovery"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "photorec"
+  },
+  {
+    "name": "Plaso",
+    "type": [
+      "Tool Suite"
+    ],
+    "description": "Open-source digital forensic timeline analysis framework that extracts and correlates timestamped events from files, logs, databases and forensic images.",
+    "website": "https://plaso.readthedocs.io/en/latest/",
+    "repository": "https://github.com/log2timeline/plaso",
+    "author": "Log2Timeline project contributors",
+    "domains": [
+      "Timeline Analysis",
+      "Digital Forensics"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Container"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "artefacts": [
+      "Windows Registry",
+      "Browser History",
+      "SQLite Databases",
+      "File Metadata"
+    ],
+    "keywords": [
+      "Timeline",
+      "Super Timeline",
+      "Correlation",
+      "Event Reconstruction",
+      "log2timeline"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "plaso"
+  },
+  {
+    "name": "plistutils",
+    "type": [
+      "Library / Framework"
+    ],
+    "description": "A Python library for parsing Apple property lists, including binary and XML plists, embedded property lists, NSKeyedArchive structures, bookmarks and alias records.\n",
+    "website": "https://github.com/strozfriedberg/plistutils",
+    "repository": "https://github.com/strozfriedberg/plistutils",
+    "author": "Stroz Friedberg",
+    "domains": [
+      "macOS Forensics",
+      "iOS Forensics",
+      "Application Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "macOS",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "Property Lists (Plists)",
+      "Configuration Files",
+      "Mobile App Data"
+    ],
+    "keywords": [
+      "Plist",
+      "Binary Plist",
+      "NSKeyedArchiver",
+      "NSKeyedArchive",
+      "Bookmark Data",
+      "Alias Records",
+      "Apple"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "BSD-3-Clause",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-22",
+    "id": "plistutils"
+  },
+  {
+    "name": "qpdf",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "Command-line utility and C++ library for inspecting and manipulating PDF document structures, including objects, streams, cross-reference tables and encryption.\n",
+    "website": "https://qpdf.readthedocs.io/",
+    "repository": "https://github.com/qpdf/qpdf",
+    "author": "Jay Berkenbilt and contributors",
+    "domains": [
+      "Document Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "PDF",
+      "Document Analysis",
+      "PDF Objects",
+      "PDF Streams",
+      "Cross-Reference Tables",
+      "Encryption",
+      "Command Line"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "qpdf"
+  },
+  {
+    "name": "RBCmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for Windows Recycle Bin artefacts, including modern $I files and legacy INFO2 records. Extracts original file paths, file sizes and deletion timestamps to support examination of deleted file activity.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/RBCmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Recycle Bin",
+      "Deleted Files"
+    ],
+    "keywords": [
+      "File Deletion",
+      "$Recycle.Bin",
+      "$I Files",
+      "INFO2",
+      "Deletion Timestamps",
+      "User Activity",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "rbcmd"
+  },
+  {
+    "name": "RECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line Windows Registry analysis tool supporting hive searches, targeted extraction and batch processing of Registry artefacts for forensic examinations.",
+    "website": "https://github.com/EricZimmerman/RECmd",
+    "repository": "https://github.com/EricZimmerman/RECmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Registry"
+    ],
+    "keywords": [
+      "Registry Hives",
+      "Registry Analysis",
+      "Batch Processing",
+      "Automation"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "recmd"
+  },
+  {
+    "name": "Registry Explorer",
+    "type": [
+      "Tool"
+    ],
+    "description": "Graphical forensic examination tool for Windows Registry hives. Supports registry browsing, searching, multiple hive examination, transaction log processing and artefact interpretation through specialised plugins.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Registry",
+      "UserAssist",
+      "Amcache",
+      "Shimcache / AppCompatCache",
+      "Windows Services"
+    ],
+    "keywords": [
+      "Registry Analysis",
+      "Registry Hives",
+      "Registry Transaction Logs",
+      "NTUSER.dat",
+      "UsrClass.dat",
+      "SYSTEM Hive",
+      "SOFTWARE Hive",
+      "Registry Plugins",
+      "GUI",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": false,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "registry-explorer"
+  },
+  {
+    "name": "ROADtools",
+    "type": [
+      "Tool Suite",
+      "Library / Framework"
+    ],
+    "description": "Open-source framework for exploring Microsoft Entra ID and Azure Active Directory environments, collecting directory information into local databases and examining identities, groups, roles, applications and access relationships.",
+    "website": "https://github.com/dirkjanm/ROADtools",
+    "repository": "https://github.com/dirkjanm/ROADtools",
+    "author": "Dirk-jan Mollema and contributors",
+    "domains": [
+      "Cloud Forensics",
+      "Intelligence Analysis",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Cloud"
+    ],
+    "artefacts": [
+      "Identity / Sign-in Logs",
+      "Application Databases"
+    ],
+    "keywords": [
+      "ROADtools",
+      "ROADrecon",
+      "ROADlib",
+      "roadtx",
+      "Microsoft Entra ID",
+      "Azure Active Directory",
+      "Azure AD",
+      "Identity Investigation",
+      "Directory Enumeration",
+      "Conditional Access",
+      "Cloud Identity",
+      "Access Relationships"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "roadtools"
+  },
+  {
+    "name": "ShellBags Explorer",
+    "type": [
+      "Tool"
+    ],
+    "description": "Graphical forensic tool for examining Windows ShellBag artefacts stored in registry hives. Displays historical folder paths, shell item metadata and associated timestamps, supporting investigation of folder navigation, removable media and network locations.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "ShellBags",
+      "Windows Registry"
+    ],
+    "keywords": [
+      "BagMRU",
+      "Folder Navigation",
+      "User Activity",
+      "Removable Media",
+      "Network Shares",
+      "NTUSER.dat",
+      "UsrClass.dat",
+      "GUI",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": null,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "shellbags-explorer"
+  },
+  {
+    "name": "SQLite Dissect",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "A Python-based forensic tool for examining SQLite database structures, recovering deleted records and reconstructing historical database states from write-ahead logs.\n",
+    "website": "https://github.com/dod-cyber-crime-center/sqlite-dissect",
+    "repository": "https://github.com/dod-cyber-crime-center/sqlite-dissect",
+    "author": "DoD Cyber Crime Center (DC3)",
+    "domains": [
+      "Database Forensics",
+      "Application Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "SQLite Databases",
+      "SQLite Write-Ahead Logs (WAL)",
+      "SQLite Rollback Journals",
+      "Application Databases"
+    ],
+    "keywords": [
+      "SQLite",
+      "Database Structure",
+      "Deleted Records",
+      "Record Carving",
+      "B-Trees",
+      "WAL",
+      "Schema History"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "DC3 SQLite Dissect Open Source License",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-22",
+    "id": "sqlite-dissect"
+  },
+  {
+    "name": "SrumECmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Command-line forensic parser for the Windows System Resource Usage Monitor (SRUM) database. Extracts application resource usage, network activity, energy consumption and application timeline records, with optional SOFTWARE registry hive enrichment.\n",
+    "website": "https://ericzimmerman.github.io/",
+    "repository": "https://github.com/EricZimmerman/Srum",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Application Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "SRUM",
+      "Application Databases",
+      "Windows Registry"
+    ],
+    "keywords": [
+      "System Resource Usage Monitor",
+      "SRUDB.dat",
+      "ESE Database",
+      "Application Usage",
+      "Network Usage",
+      "User Activity",
+      "EZ Tools"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "srumecmd"
+  },
+  {
+    "name": "Suricata",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source network intrusion detection, intrusion prevention and security monitoring engine that analyses live traffic and PCAP files, applying detection rules and generating alerts and structured network activity logs for forensic investigations.",
+    "website": "https://suricata.io/",
+    "repository": "https://github.com/OISF/suricata",
+    "author": "Open Information Security Foundation (OISF)",
+    "domains": [
+      "Network Forensics",
+      "Threat Hunting",
+      "Incident Response",
+      "Log Analysis"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Unix / BSD"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "PCAP",
+      "Network Logs",
+      "DNS Logs",
+      "Network Flow Data"
+    ],
+    "keywords": [
+      "Suricata",
+      "Intrusion Detection",
+      "IDS",
+      "IPS",
+      "Network Security Monitoring",
+      "Network Traffic Analysis",
+      "Signature Detection",
+      "EVE JSON",
+      "PCAP Analysis",
+      "Threat Detection",
+      "Network Incident Response"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "suricata"
+  },
+  {
+    "name": "SWGDE Best Practices for Vehicle Infotainment and Telematics Systems",
+    "type": [
+      "Reference",
+      "Documentation"
+    ],
+    "description": "Technical best-practice guidance for identifying, collecting, preserving and acquiring digital evidence from vehicle infotainment and telematics systems, including connected devices, navigation records and vehicle event information.",
+    "website": "https://www.swgde.org/documents/published-complete-listing/12-f-004-best-practices-for-vehicle-infotainment-and-telematics-systems/",
+    "repository": "",
+    "author": "Scientific Working Group on Digital Evidence (SWGDE)",
+    "domains": [
+      "Vehicle Forensics",
+      "Forensic Methodology",
+      "Evidence Handling",
+      "Legal & Investigative Practice"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [
+      "Location Data",
+      "Contacts",
+      "Call Logs",
+      "SMS / Messages",
+      "Application Logs"
+    ],
+    "keywords": [
+      "SWGDE",
+      "Vehicle Infotainment",
+      "Vehicle Telematics",
+      "Automotive Forensics",
+      "Connected Vehicles",
+      "Navigation Data",
+      "Vehicle Events",
+      "Forensic Acquisition",
+      "Evidence Preservation",
+      "Best Practices"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "SWGDE document use and redistribution conditions",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "swgde-vehicle-infotainment"
+  },
+  {
+    "name": "SWGDE Published Documents",
+    "type": [
+      "Reference",
+      "Documentation"
+    ],
+    "description": "Collection of publicly accessible technical guidelines, best-practice documents and recommendations developed by the Scientific Working Group on Digital Evidence, covering digital evidence collection, acquisition, examination, validation and reporting.",
+    "website": "https://www.swgde.org/documents/current-documents/",
+    "repository": "",
+    "author": "Scientific Working Group on Digital Evidence (SWGDE)",
+    "domains": [
+      "Digital Forensics",
+      "Forensic Methodology",
+      "Evidence Handling",
+      "Legal & Investigative Practice",
+      "Mobile Application Forensics",
+      "Multimedia Forensics"
+    ],
+    "runs_on": [],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "SWGDE",
+      "Digital Evidence",
+      "Best Practices",
+      "Forensic Guidelines",
+      "Evidence Collection",
+      "Forensic Acquisition",
+      "Tool Validation",
+      "Chain of Custody",
+      "Forensic Reporting",
+      "Digital Evidence Standards"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": null
+    },
+    "open_source": null,
+    "licence": "SWGDE document use and redistribution conditions",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "swgde-published-documents"
+  },
+  {
+    "name": "TestDisk",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source data recovery utility for recovering lost partitions, examining damaged filesystem structures and recovering deleted files from supported filesystems.",
+    "website": "https://www.cgsecurity.org/wiki/TestDisk",
+    "repository": "https://git.cgsecurity.org/cgit/testdisk/",
+    "author": "Christophe Grenier",
+    "domains": [
+      "Disk Forensics",
+      "Filesystem Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Partition Tables",
+      "Filesystem Metadata",
+      "Deleted Files",
+      "Disk Images",
+      "Master File Table (MFT)"
+    ],
+    "keywords": [
+      "Data Recovery",
+      "Partition Recovery",
+      "NTFS",
+      "FAT",
+      "exFAT",
+      "ext2",
+      "ext3",
+      "ext4",
+      "Boot Sectors",
+      "Deleted Data Recovery"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "testdisk"
+  },
+  {
     "name": "The DFIR Report",
     "type": [
       "Website"
@@ -109,6 +4000,277 @@
     "status": "Active",
     "last_verified": "2026-11-03",
     "id": "the-dfir-report"
+  },
+  {
+    "name": "The Sleuth Kit (TSK)",
+    "type": [
+      "Tool Suite",
+      "Library / Framework"
+    ],
+    "description": "Open-source collection of command-line tools and libraries for forensic analysis of disk images, partitions and filesystem structures, including examination and recovery of allocated and deleted files and filesystem timestamps.\n",
+    "website": "https://www.sleuthkit.org/sleuthkit/",
+    "repository": "https://github.com/sleuthkit/sleuthkit",
+    "author": "Brian Carrier and contributors",
+    "domains": [
+      "Disk Forensics",
+      "Filesystem Forensics",
+      "Timeline Analysis"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Disk Images",
+      "Filesystem Metadata",
+      "Deleted Files",
+      "Partition Tables",
+      "Master File Table (MFT)",
+      "Alternate Data Streams",
+      "File Metadata"
+    ],
+    "keywords": [
+      "NTFS",
+      "FAT",
+      "exFAT",
+      "APFS",
+      "ext4",
+      "Disk Image Analysis",
+      "Deleted Data Recovery",
+      "Timeline",
+      "Command Line"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Multiple open-source licences",
+    "status": "Active",
+    "last_verified": "2026-11-22",
+    "id": "sleuth-kit"
+  },
+  {
+    "name": "Thumbcache Viewer",
+    "type": [
+      "Tool"
+    ],
+    "description": "Windows forensic utility for viewing and extracting cached thumbnail images and icons from Windows thumbnail and icon cache databases, with image preview and reporting capabilities.",
+    "website": "https://thumbcacheviewer.github.io/",
+    "repository": "https://github.com/thumbcacheviewer/thumbcacheviewer",
+    "author": "Eric Kutcher",
+    "domains": [
+      "Windows Forensics",
+      "Image Forensics"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Thumbnail Cache"
+    ],
+    "keywords": [
+      "Thumbcache",
+      "Iconcache",
+      "Cached Images",
+      "Thumbnail Extraction",
+      "User Activity"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-3.0-or-later",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-21",
+    "id": "thumbcache-viewer"
+  },
+  {
+    "name": "Timesketch",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source collaborative forensic timeline analysis platform for importing, searching, correlating and annotating timestamped events during digital forensic investigations.",
+    "website": "https://timesketch.org/",
+    "repository": "https://github.com/google/timesketch",
+    "author": "Timesketch development team",
+    "domains": [
+      "Timeline Analysis",
+      "DFIR",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Linux",
+      "Container"
+    ],
+    "analyses": [],
+    "artefacts": [],
+    "keywords": [
+      "Timeline",
+      "Correlation",
+      "Event Analysis",
+      "Collaboration",
+      "Plaso",
+      "Event Search"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-09",
+    "id": "timesketch"
+  },
+  {
+    "name": "UAC (Unix-like Artifacts Collector)",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source incident response and forensic collection tool for Unix-like systems that gathers system information, logs, configuration files, process details and other artefacts using configurable YAML profiles.",
+    "website": "https://tclahr.github.io/uac-docs/",
+    "repository": "https://github.com/tclahr/uac",
+    "author": "Thiago Canozzo Lahr and contributors",
+    "domains": [
+      "Linux Forensics",
+      "macOS Forensics",
+      "Live Forensics",
+      "Incident Response",
+      "Triage"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "analyses": [
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "artefacts": [
+      "Configuration Files",
+      "Application Logs",
+      "Filesystem Metadata"
+    ],
+    "keywords": [
+      "Forensic Acquisition",
+      "Live Response",
+      "Artefact Collection",
+      "Unix",
+      "Order of Volatility",
+      "Incident Response"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "Apache-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "uac"
+  },
+  {
+    "name": "Velociraptor",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source digital forensics and incident response platform for endpoint monitoring, forensic artefact collection, threat hunting and remote investigation using Velociraptor Query Language (VQL).",
+    "website": "https://docs.velociraptor.app/",
+    "repository": "https://github.com/Velocidex/velociraptor",
+    "author": "Rapid7 / Velocidex",
+    "domains": [
+      "DFIR",
+      "Live Forensics",
+      "Incident Response",
+      "Threat Hunting"
+    ],
+    "runs_on": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "analyses": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "artefacts": [
+      "Windows Registry",
+      "Windows Event Logs"
+    ],
+    "keywords": [
+      "Endpoint Collection",
+      "Endpoint Monitoring",
+      "Live Response",
+      "VQL",
+      "Triage"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "AGPL-3.0-or-later",
+    "status": "Active",
+    "last_verified": "2026-11-04",
+    "id": "velociraptor"
+  },
+  {
+    "name": "VLEAPP",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source vehicle forensic artefact parsing tool for examining supported vehicle logs, events, configuration information and protobuf data from infotainment systems and forensic extractions.",
+    "website": "https://leapps.org/",
+    "repository": "https://github.com/abrignoni/VLEAPP",
+    "author": "Alexis Brignoni and contributors",
+    "domains": [
+      "Vehicle Forensics",
+      "Application Forensics",
+      "Database Forensics"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "Application Logs",
+      "Application Databases",
+      "Configuration Files",
+      "SQLite Databases",
+      "Disk Images"
+    ],
+    "keywords": [
+      "VLEAPP",
+      "Vehicle Forensics",
+      "Vehicle Logs",
+      "Infotainment Forensics",
+      "Automotive Forensics",
+      "Protobuf",
+      "E01",
+      "QNX",
+      "Vehicle Artefacts"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "vleapp"
   },
   {
     "name": "Volatility 3",
@@ -149,5 +4311,223 @@
     "status": "Active",
     "last_verified": "2026-10-24",
     "id": "volatility-3"
+  },
+  {
+    "name": "VSCMount",
+    "type": [
+      "Tool"
+    ],
+    "description": "Windows utility that exposes Volume Shadow Copies through directory symbolic links, allowing forensic examiners to access historical filesystem snapshots and examine previous versions of files.",
+    "website": "https://github.com/EricZimmerman/VSCMount",
+    "repository": "https://github.com/EricZimmerman/VSCMount",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Filesystem Forensics",
+      "Disk Forensics"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Volume Shadow Copies"
+    ],
+    "keywords": [
+      "VSS",
+      "NTFS",
+      "Filesystem Snapshots",
+      "Historical Data",
+      "Deleted Data Recovery"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "vscmount"
+  },
+  {
+    "name": "Wireshark",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source network protocol analyser for capturing, inspecting and filtering live network traffic and saved packet captures to investigate network communications.",
+    "website": "https://www.wireshark.org/",
+    "repository": "https://gitlab.com/wireshark/wireshark",
+    "author": "Wireshark contributors",
+    "domains": [
+      "Network Forensics",
+      "Incident Response"
+    ],
+    "runs_on": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Unix / BSD"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "PCAP"
+    ],
+    "keywords": [
+      "Packet Capture",
+      "Packet Analysis",
+      "Network Traffic",
+      "Protocol Analysis",
+      "Traffic Inspection"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "GPL-2.0",
+    "status": "Active",
+    "last_verified": "2026-11-10",
+    "id": "wireshark"
+  },
+  {
+    "name": "WxTCmd",
+    "type": [
+      "Tool"
+    ],
+    "description": "Windows Timeline database parser that extracts recorded user activities, application usage, timestamps and associated content from ActivitiesCache.db for forensic timeline reconstruction.",
+    "website": "https://github.com/EricZimmerman/WxTCmd",
+    "repository": "https://github.com/EricZimmerman/WxTCmd",
+    "author": "Eric Zimmerman",
+    "domains": [
+      "Windows Forensics",
+      "Timeline Analysis",
+      "Database Forensics"
+    ],
+    "runs_on": [
+      "Windows"
+    ],
+    "analyses": [
+      "Windows"
+    ],
+    "artefacts": [
+      "Windows Timeline",
+      "SQLite Databases"
+    ],
+    "keywords": [
+      "ActivitiesCache.db",
+      "User Activity",
+      "Connected Devices Platform",
+      "Application Usage",
+      "Timeline"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Active",
+    "last_verified": "2026-11-21",
+    "id": "wxtcmd"
+  },
+  {
+    "name": "xsqlite",
+    "type": [
+      "Tool",
+      "Library / Framework"
+    ],
+    "description": "A Python package and command-line tool for forensic analysis of SQLite databases, specialising in deleted record recovery and examination of low-level database structures and associated write-ahead logs.\n",
+    "website": "https://github.com/NetherlandsForensicInstitute/xsqlite",
+    "repository": "https://github.com/NetherlandsForensicInstitute/xsqlite",
+    "author": "Netherlands Forensic Institute",
+    "domains": [
+      "Database Forensics",
+      "Application Forensics",
+      "Mobile Application Forensics"
+    ],
+    "runs_on": [
+      "Linux"
+    ],
+    "analyses": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Android",
+      "iOS / iPadOS"
+    ],
+    "artefacts": [
+      "SQLite Databases",
+      "SQLite Write-Ahead Logs (WAL)",
+      "Application Databases"
+    ],
+    "keywords": [
+      "SQLite",
+      "Deleted Records",
+      "Record Recovery",
+      "Record Carving",
+      "WAL",
+      "Database Structure"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "MIT",
+    "status": "Maintenance Uncertain",
+    "last_verified": "2026-11-22",
+    "id": "xsqlite"
+  },
+  {
+    "name": "Zeek",
+    "type": [
+      "Tool"
+    ],
+    "description": "Open-source network traffic analysis and security monitoring framework that processes live network traffic and packet captures to generate structured logs describing connections, protocols, DNS requests, HTTP transactions and other network activity.",
+    "website": "https://zeek.org/",
+    "repository": "https://github.com/zeek/zeek",
+    "author": "The Zeek Project",
+    "domains": [
+      "Network Forensics",
+      "Incident Response",
+      "Threat Hunting",
+      "Log Analysis"
+    ],
+    "runs_on": [
+      "Linux",
+      "macOS",
+      "Unix / BSD"
+    ],
+    "analyses": [],
+    "artefacts": [
+      "PCAP",
+      "Network Logs",
+      "DNS Logs",
+      "Network Flow Data"
+    ],
+    "keywords": [
+      "Zeek",
+      "Network Security Monitoring",
+      "Network Traffic Analysis",
+      "Packet Capture Analysis",
+      "PCAP Analysis",
+      "Connection Logs",
+      "DNS Analysis",
+      "HTTP Analysis",
+      "Threat Detection",
+      "Network Incident Response"
+    ],
+    "pricing": {
+      "model": "Free",
+      "commercial_use": true
+    },
+    "open_source": true,
+    "licence": "BSD-3-Clause",
+    "status": "Active",
+    "last_verified": "2026-11-13",
+    "id": "zeek"
   }
 ]

@@ -28,7 +28,8 @@ keywords:
   - Malware
 pricing:
   model: Free
-  commercial_use: null
+  commercial_use: true
+  
 open_source: true
 licence: GPL-3.0
 status: Active

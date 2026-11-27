@@ -37,7 +37,7 @@ keywords:
 
 pricing:
   model: Free
-  commercial_use: null
+  commercial_use: true
 
 open_source: true
 licence: Volatility Software License 1.0

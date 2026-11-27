@@ -38,6 +38,27 @@ def url_ok(value):
     parts = urlparse(value)
     return parts.scheme in ('http', 'https') and bool(parts.netloc) and ' ' not in value
 
+def normalize_name(value):
+    """Normalize resource names for duplicate detection."""
+    value = value.strip().casefold()
+    value = re.sub(r'\([^)]*\)', '', value)
+    value = re.sub(r'^the\s+', '', value)
+    return re.sub(r'[\W_]+', '', value)
+
+
+def normalize_url(value):
+    """Normalize resource URLs for duplicate detection."""
+    parts = urlparse(value.strip())
+    host = parts.netloc.casefold()
+    host = re.sub(r'^www\.', '', host)
+
+    path = parts.path.rstrip('/')
+    path = path.removesuffix('.git')
+
+    if host == 'github.com':
+        path = path.casefold()
+
+    return host + path
 
 def validate(path, vocab):
     errors = []
@@ -123,6 +144,8 @@ def main():
         return 1
 
     fail = 0
+    warnings = []
+    failures = []
     seen_names = {}
     seen_websites = {}
     seen_repositories = {}
@@ -133,7 +156,7 @@ def main():
 
         # Detect duplicate resource names.
         if isinstance(name, str) and name.strip():
-            key = name.strip().casefold()
+            key = normalize_name(name)
             if key in seen_names:
                 errors.append(
                     f'Duplicate resource name also used by {seen_names[key].name}'
@@ -141,7 +164,7 @@ def main():
             else:
                 seen_names[key] = path
 
-        # Detect duplicate website and repository URLs.
+                # Detect duplicate website and repository URLs.
         for field, seen in (
             ('website', seen_websites),
             ('repository', seen_repositories),
@@ -154,32 +177,54 @@ def main():
             if not url_ok(url):
                 continue
 
-            key = url.strip().rstrip('/')
+            key = normalize_url(url)
 
-            
             if key in seen:
                 message = (
                     f'Duplicate {field} URL also used by {seen[key].name}'
                 )
-
-                if field == 'website':
-                    print(f'WARN {path.relative_to(ROOT)}: {message}')
-                else:
-                    errors.append(message)
+                warnings.append(
+                    f'{path.relative_to(ROOT)}: {message}'
+                )
             else:
                 seen[key] = path
 
         # Report validation results.
         if errors:
             fail += 1
+            failures.append((path.relative_to(ROOT), errors))
             print(f'FAIL {path.relative_to(ROOT)}')
-            for error in errors:
-                print('  - ' + error)
         else:
             print(f'PASS {path.relative_to(ROOT)}')
 
-    print(f'\nChecked {len(paths)} resource(s); {fail} failed.')
+    # Report warnings.
+    print('\n--- Warnings ---')
+    if warnings:
+        for warning in warnings:
+            print(f'WARN {warning}')
+    else:
+        print('No warnings.')
+
+    # Report validation failures.
+    print('\n--- Validation Failures ---')
+    if failures:
+        for path, errors in failures:
+            print(f'FAIL {path}')
+            for error in errors:
+                print(f'  - {error}')
+    else:
+        print('No validation failures.')
+
+    # Final summary.
+    print('\n--- Validation Summary ---')
+    print(f'Resources checked: {len(paths)}')
+    print(f'Passed:            {len(paths) - fail}')
+    print(f'Failed:            {fail}')
+    print(f'Warnings:          {len(warnings)}')
+    print(f'Result:            {"FAILED" if fail else "PASSED"}')
+
     return 1 if fail else 0
+
 
 if __name__ == '__main__':
     sys.exit(main())

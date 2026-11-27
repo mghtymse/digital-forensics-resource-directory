@@ -1,0 +1,39 @@
+name: NIST National Software Reference Library (NSRL)
+type: [Dataset]
+description: >
+  Reference dataset of known file hashes and software
+  metadata used to identify known files, reduce irrelevant
+  data during forensic examinations and support hash-based
+  file identification.
+website: https://www.nist.gov/itl/csd/secure-systems-and-applications/national-software-reference-library-nsrl/nsrl-download-0
+repository: ""
+author: National Institute of Standards and Technology (NIST)
+
+domains:
+  - Digital Forensics
+  - Disk Forensics
+  - Forensic Tool Validation
+  - Triage
+runs_on: []
+analyses: []
+artefacts:
+  - File Metadata
+keywords:
+  - Hashing
+  - Known Files
+  - Hash Sets
+  - File Identification
+  - Reference Data
+  - Data Reduction
+  - MD5
+  - SHA-1
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: null
+licence: Public Domain
+
+status: Active
+last_verified: "2026-11-22"

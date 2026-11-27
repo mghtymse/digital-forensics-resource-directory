@@ -1,0 +1,36 @@
+name: qpdf
+type: [Tool, Library / Framework]
+description: >
+  Command-line utility and C++ library for inspecting
+  and manipulating PDF document structures, including
+  objects, streams, cross-reference tables and encryption.
+website: https://qpdf.readthedocs.io/
+repository: https://github.com/qpdf/qpdf
+author: Jay Berkenbilt and contributors
+
+domains:
+  - Document Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses: []
+artefacts: []
+keywords:
+  - PDF
+  - Document Analysis
+  - PDF Objects
+  - PDF Streams
+  - Cross-Reference Tables
+  - Encryption
+  - Command Line
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Apache-2.0
+
+status: Active
+last_verified: "2026-11-22"

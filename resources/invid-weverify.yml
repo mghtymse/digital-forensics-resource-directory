@@ -41,10 +41,10 @@ keywords:
 
 pricing:
   model: Free
-  commercial_use: null
+  commercial_use: true
 
 open_source: true
-licence: "MIT (plugin source; external services may have separate terms)"
+licence: MIT
 
 status: Active
 last_verified: "2026-11-13"

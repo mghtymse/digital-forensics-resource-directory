@@ -1,0 +1,42 @@
+name: libesedb
+type: [Library / Framework]
+description: >
+  Library and command-line utilities for accessing
+  and extracting records from Extensible Storage
+  Engine databases used by Microsoft Windows and
+  associated applications.
+website: https://github.com/libyal/libesedb
+repository: https://github.com/libyal/libesedb
+author: Joachim Metz and contributors
+
+domains:
+  - Windows Forensics
+  - Database Forensics
+  - Application Forensics
+runs_on:
+  - Windows
+  - Linux
+  - macOS
+analyses:
+  - Windows
+artefacts:
+  - Windows Search
+  - Application Databases
+keywords:
+  - ESE
+  - EDB
+  - ESENT
+  - Jet Blue
+  - Exchange
+  - Active Directory
+  - Database Parsing
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: LGPL-3.0-or-later
+
+status: Active
+last_verified: "2026-11-22"

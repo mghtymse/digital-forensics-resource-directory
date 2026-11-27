@@ -1,0 +1,47 @@
+name: Joshua Hickman's Mobile Forensic Images
+type: [Sample Evidence]
+description: >
+  Collection of publicly available iOS and Android forensic
+  acquisitions containing documented user activity and
+  application data for forensic training, research and
+  tool validation.
+website: https://thebinaryhick.blog/
+repository: ""
+author: Joshua Hickman
+
+domains:
+  - iOS Forensics
+  - Android Forensics
+  - Mobile Application Forensics
+  - Forensic Tool Validation
+runs_on: []
+analyses:
+  - Android
+  - iOS / iPadOS
+artefacts:
+  - Mobile App Data
+  - Mobile App Sandboxes
+  - SMS / Messages
+  - Call Logs
+  - Contacts
+  - Location Data
+  - Mobile Browser Data
+  - Device Backups
+  - SQLite Databases
+keywords:
+  - Test Data
+  - Ground Truth
+  - Mobile Extractions
+  - Training
+  - Research
+  - Tool Validation
+
+pricing:
+  model: Free
+  commercial_use: null
+
+open_source: null
+licence: ""
+
+status: Active
+last_verified: "2026-11-22"

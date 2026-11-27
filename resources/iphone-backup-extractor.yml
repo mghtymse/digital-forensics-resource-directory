@@ -32,7 +32,7 @@ keywords:
   - Data Recovery
 pricing:
   model: Freemium
-  commercial_use: null
+  commercial_use: true
 open_source: false
 licence: Proprietary
 status: Active

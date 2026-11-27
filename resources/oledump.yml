@@ -1,0 +1,39 @@
+name: oledump.py
+type: [Script]
+description: >
+  Python utility for examining OLE compound binary files,
+  extracting embedded data streams and analysing VBA macros
+  within Microsoft Office documents.
+website: https://blog.didierstevens.com/programs/oledump-py/
+repository: https://github.com/DidierStevens/DidierStevensSuite
+author: Didier Stevens
+
+domains:
+  - Application Forensics
+  - Malware Analysis
+  - Document Forensics
+runs_on:
+  - Windows
+  - macOS
+  - Linux
+analyses: []
+artefacts: []
+keywords:
+  - Python
+  - OLE
+  - Compound Binary Files
+  - Microsoft Office
+  - Document Forensics
+  - VBA Macros
+  - Embedded Objects
+  - YARA
+
+pricing:
+  model: Free
+  commercial_use: true
+
+open_source: true
+licence: Public Domain
+
+status: Active
+last_verified: "2026-11-22"
