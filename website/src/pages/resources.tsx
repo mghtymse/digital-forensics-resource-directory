@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {useHistory, useLocation} from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -78,6 +78,15 @@ function FilterSelect({
 export default function ResourcesPage() {
   const location = useLocation();
   const history = useHistory();
+  const filterToFocus = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (filterToFocus.current !== null) {
+      document.getElementById(`catalogue-filter-${filterToFocus.current}`)?.focus();
+      filterToFocus.current = null;
+    }
+  }, [location.search]);
+
   const [selectedResources, setSelectedResources] = useState<string[]>([]);
 const [savedSearches, setSavedSearches] = useState<SavedSearch[]>([]);
 const [savedSearchName, setSavedSearchName] = useState('');
@@ -636,7 +645,7 @@ async function copyFilterLink() {
                 className="button button--secondary button--sm"
                 onClick={(event) => {
                   if (event.detail === 0) {
-                    document.getElementById(`catalogue-filter-${filter.key}`)?.focus();
+                    filterToFocus.current = filter.key;
                   }
                   updateUrlFilter(filter.key, '');
                 }}
