@@ -255,20 +255,12 @@ test('resource detail pages display valid related resources', async ({page}) => 
 test('resources can be selected and compared', async ({page}) => {
   await page.goto('resources');
 
-  const autopsy = page.locator('.dfir-resource-card').filter({
-    has: page.getByRole('link', {name: 'Autopsy', exact: true}),
-  });
-
-  const volatility = page.locator('.dfir-resource-card').filter({
-    has: page.getByRole('link', {name: 'Volatility 3', exact: true}),
-  });
-
-  await autopsy.getByRole('checkbox', {name: 'Compare'}).check();
-  await volatility.getByRole('checkbox', {name: 'Compare'}).check();
+  await page.getByRole('checkbox', {name: 'Compare Autopsy', exact: true}).press('Space');
+  await page.getByRole('checkbox', {name: 'Compare Volatility 3', exact: true}).press('Space');
 
   await page.getByRole('link', {
     name: 'Compare Selected Resources',
-  }).click();
+  }).press('Enter');
 
   await expect(page).toHaveURL(/compare\?ids=/);
 
@@ -385,4 +377,21 @@ test('saved searches persist and restore filters', async ({page}) => {
   await page.reload();
 
   await expect(savedSearch).toHaveCount(0);
+});
+test('removing a filter by keyboard restores focus and exposes the result count', async ({page}) => {
+  await page.goto('resources?artefact=Prefetch');
+
+  const results = page.getByRole('status').filter({hasText: 'Showing'});
+  await expect(results).toHaveText(`Showing 1 of ${resourceData.length} resources`);
+
+  const search = page.getByRole('searchbox', {name: 'Search resources'});
+  await search.fill('no-match-audit-query');
+  await expect(results).toHaveText(`Showing 0 of ${resourceData.length} resources`);
+  await expect(search).toBeFocused();
+
+  const chip = page.getByRole('button', {name: 'Remove Artefact: Prefetch'});
+  await chip.press('Enter');
+  await expect(chip).toHaveCount(0);
+  await expect(page.getByRole('combobox', {name: 'Artefact', exact: true})).toBeFocused();
+  await expect(search).toHaveValue('no-match-audit-query');
 });
