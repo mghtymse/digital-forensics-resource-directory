@@ -39,11 +39,13 @@ function getOptions(field: FilterField): string[] {
 }
 
 function FilterSelect({
+  filterKey,
   label,
   value,
   options,
   onChange,
 }: {
+  filterKey: string;
   label: string;
   value: string;
   options: string[];
@@ -53,6 +55,7 @@ function FilterSelect({
     <label style={{display: 'block'}}>
       <strong>{label}</strong>
       <select
+        id={`catalogue-filter-${filterKey}`}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         style={{
@@ -345,6 +348,7 @@ async function copyFilterLink() {
           <label style={{display: 'block', marginBottom: '1rem'}}>
             <strong>Search resources</strong>
             <input
+              id="catalogue-filter-q"
               type="search"
               value={search}
               onChange={(event) =>
@@ -362,6 +366,7 @@ async function copyFilterLink() {
           <div className="row">
             <div className="col col--4 margin-bottom--md">
               <FilterSelect
+                filterKey="domain"
                 label="Forensic Domain"
                 value={domain}
                 options={getOptions('domains')}
@@ -371,6 +376,7 @@ async function copyFilterLink() {
 
             <div className="col col--4 margin-bottom--md">
               <FilterSelect
+                filterKey="type"
                 label="Resource Type"
                 value={resourceType}
                 options={getOptions('type')}
@@ -380,6 +386,7 @@ async function copyFilterLink() {
 
             <div className="col col--4 margin-bottom--md">
               <FilterSelect
+                filterKey="artefact"
                 label="Artefact"
                 value={artefact}
                 options={getOptions('artefacts')}
@@ -389,6 +396,7 @@ async function copyFilterLink() {
 
             <div className="col col--4 margin-bottom--md">
               <FilterSelect
+                filterKey="keyword"
                 label="Keyword"
                 value={keyword}
                 options={getOptions('keywords')}
@@ -398,6 +406,7 @@ async function copyFilterLink() {
 
             <div className="col col--6 margin-bottom--md">
               <FilterSelect
+                filterKey="runsOn"
                 label="Runs On"
                 value={runsOn}
                 options={getOptions('runs_on')}
@@ -407,6 +416,7 @@ async function copyFilterLink() {
 
             <div className="col col--6 margin-bottom--md">
               <FilterSelect
+                filterKey="analyses"
                 label="Analyses"
                 value={analyses}
                 options={getOptions('analyses')}
@@ -624,7 +634,12 @@ async function copyFilterLink() {
                 key={filter.key}
                 type="button"
                 className="button button--secondary button--sm"
-                onClick={() => updateUrlFilter(filter.key, '')}
+                onClick={(event) => {
+                  if (event.detail === 0) {
+                    document.getElementById(`catalogue-filter-${filter.key}`)?.focus();
+                  }
+                  updateUrlFilter(filter.key, '');
+                }}
                 aria-label={`Remove ${filter.label}: ${filter.value}`}
                 title={`Remove ${filter.label} filter`}
               >
@@ -634,7 +649,7 @@ async function copyFilterLink() {
           </div>
         )}
 
-        <p>
+        <p role="status" aria-atomic="true">
           <strong>
             Showing {results.length} of {resources.length} resources
           </strong>
@@ -714,6 +729,7 @@ async function copyFilterLink() {
 >
   <input
     type="checkbox"
+    aria-label={`Compare ${resource.name}`}
     checked={selectedResources.includes(resource.id)}
     disabled={
       selectedResources.length >= maxComparisonResources &&
