@@ -18,9 +18,9 @@ test('resource catalogue loads correctly', async ({page}) => {
 
   // Confirm the resource count is correct.
   await expect(
-    page.getByText(
-      `Showing ${resourceData.length} of ${resourceData.length} resources`
-    )
+    page.locator('strong').filter({
+      hasText: `Showing ${resourceData.length} of ${resourceData.length} resources`,
+    })
   ).toBeVisible();
 
   // Confirm a known resource is present.
