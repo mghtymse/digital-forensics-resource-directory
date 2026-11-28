@@ -73,7 +73,7 @@ export default function ComparePage() {
       title="Compare Resources"
       description="Compare digital forensics resources side by side"
     >
-      <main className="container margin-vert--lg">
+      <main className="container margin-vert--lg dfir-compare-page">
         <Link to="/resources">← Back to Browse Resources</Link>
 
         <h1 className="margin-top--md">Compare Resources</h1>
