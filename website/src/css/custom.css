@@ -65,6 +65,11 @@
   --ifm-heading-color: #f3f7fc;
 }
 
+[data-theme='dark'] .dfir-compare-page {
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-light);
+}
+
 /* Navigation */
 .navbar {
   border-bottom: 1px solid rgba(66, 219, 200, 0.2);
