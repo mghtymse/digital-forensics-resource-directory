@@ -2,6 +2,7 @@ import React from 'react';
 import {useLocation} from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import {BackToCatalogueLink} from '../components/CatalogueLink';
 import resourceData from '../data/resources.json';
 
 type Resource = {
@@ -74,7 +75,7 @@ export default function ComparePage() {
       description="Compare digital forensics resources side by side"
     >
       <main className="container margin-vert--lg dfir-compare-page">
-        <Link to="/resources">← Back to Browse Resources</Link>
+        <BackToCatalogueLink />
 
         <h1 className="margin-top--md">Compare Resources</h1>
 

@@ -289,6 +289,66 @@ test('resources can be selected and compared', async ({page}) => {
     page.getByRole('columnheader', {name: 'Volatility 3', exact: true})
   ).toBeVisible();
 });
+test('returning from resource details restores the catalogue query, filters and sort', async ({page, context}) => {
+  await page.goto('resources?q=Autopsy&domain=Disk+Forensics&runsOn=Windows&sort=name-desc');
+  const catalogueUrl = page.url();
+
+  const autopsyCard = page.locator('.dfir-resource-card').filter({
+    has: page.getByRole('link', {name: 'Autopsy', exact: true}),
+  });
+  await autopsyCard.getByRole('link', {name: 'View Details', exact: true}).click();
+  await expect(page).toHaveURL(/resource\/autopsy\/?$/);
+  const detailUrl = page.url();
+
+  await page.reload();
+  await page.getByRole('link', {name: 'Back to Browse Resources'}).click();
+  await expect(page).toHaveURL(catalogueUrl);
+  await expect(page.getByRole('searchbox', {name: 'Search resources'})).toHaveValue('Autopsy');
+  await expect(page.getByRole('combobox', {name: 'Forensic Domain'})).toHaveValue('Disk Forensics');
+  await expect(page.getByRole('combobox', {name: 'Sort resources by'})).toHaveValue('name-desc');
+
+  const directPage = await context.newPage();
+  await directPage.goto(detailUrl);
+  await directPage.getByRole('link', {name: 'Back to Browse Resources'}).click();
+  await expect(directPage).toHaveURL(/\/resources\/?$/);
+  await expect(directPage.getByRole('searchbox', {name: 'Search resources'})).toHaveValue('');
+});
+
+for (const names of [
+  ['DB Browser for SQLite', 'FQLite'],
+  ['DB Browser for SQLite', 'FQLite', 'ALEAPP'],
+]) {
+  test(`returning from comparison restores the catalogue with ${names.length} selected resources`, async ({page, context}) => {
+    await page.goto('resources?q=sqlite&artefact=SQLite+Databases&type=Tool&sort=name-desc');
+    const catalogueUrl = page.url();
+
+    for (const name of names) {
+      await page.getByRole('checkbox', {name: `Compare ${name}`, exact: true}).press('Space');
+    }
+
+    await page.getByRole('link', {name: 'Compare Selected Resources'}).press('Enter');
+    await expect(page).toHaveURL(/\/compare\?ids=[^&]+$/);
+    const comparisonUrl = page.url();
+
+    await page.reload();
+    await page.getByRole('link', {name: 'Back to Browse Resources'}).click();
+    await expect(page).toHaveURL(catalogueUrl);
+    await expect(page.getByRole('searchbox', {name: 'Search resources'})).toHaveValue('sqlite');
+    await expect(page.getByRole('combobox', {name: 'Artefact', exact: true})).toHaveValue('SQLite Databases');
+    await expect(page.getByRole('combobox', {name: 'Resource Type'})).toHaveValue('Tool');
+    await expect(page.getByRole('combobox', {name: 'Sort resources by'})).toHaveValue('name-desc');
+    for (const name of names) {
+      await expect(page.getByRole('checkbox', {name: `Compare ${name}`, exact: true})).toBeChecked();
+    }
+
+    const directPage = await context.newPage();
+    await directPage.goto(comparisonUrl);
+    await directPage.getByRole('link', {name: 'Back to Browse Resources'}).click();
+    await expect(directPage).toHaveURL(/\/resources\/?$/);
+    await expect(directPage.getByRole('checkbox', {checked: true})).toHaveCount(0);
+  });
+}
+
 test('artefact discovery and catalogue navigation work', async ({page}) => {
   await page.goto('artefacts');
 

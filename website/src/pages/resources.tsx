@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {useHistory, useLocation} from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import {CatalogueLink, type CatalogueNavigationState} from '../components/CatalogueLink';
 import resourceData from '../data/resources.json';
 
 type Resource = {
@@ -76,7 +77,7 @@ function FilterSelect({
 }
 
 export default function ResourcesPage() {
-  const location = useLocation();
+  const location = useLocation<CatalogueNavigationState>();
   const history = useHistory();
   const filterToFocus = useRef<string | null>(null);
 
@@ -88,6 +89,16 @@ export default function ResourcesPage() {
   }, [location.search]);
 
   const [selectedResources, setSelectedResources] = useState<string[]>([]);
+  const returnedSelection = location.state?.catalogueContext?.selectedResources;
+
+  useEffect(() => {
+    if (returnedSelection) {
+      setSelectedResources(returnedSelection);
+    }
+  }, [returnedSelection]);
+
+  const catalogueContext = {search: location.search, selectedResources};
+
 const [savedSearches, setSavedSearches] = useState<SavedSearch[]>([]);
 const [savedSearchName, setSavedSearchName] = useState('');
 const [shareMessage, setShareMessage] = useState('');
@@ -614,12 +625,13 @@ async function copyFilterLink() {
     </ul>
 
     {selectedResources.length >= 2 ? (
-      <Link
+      <CatalogueLink
         className="button button--primary"
         to={`/compare?ids=${selectedResources.join(',')}`}
+        catalogueContext={catalogueContext}
       >
         Compare Selected Resources
-      </Link>
+      </CatalogueLink>
     ) : (
       <p>Select at least two resources to compare.</p>
     )}
@@ -693,9 +705,12 @@ async function copyFilterLink() {
                 <div className="dfir-card-top">
                   <div>
                     <h2>
-                      <Link to={`/resource/${resource.id}`}>
+                      <CatalogueLink
+                        to={`/resource/${resource.id}`}
+                        catalogueContext={catalogueContext}
+                      >
                         {resource.name}
-                      </Link>
+                      </CatalogueLink>
                     </h2>
                     <div className="dfir-card-type">
                       {(resource.type ?? []).join(' · ') || 'Resource'}
@@ -721,8 +736,9 @@ async function copyFilterLink() {
                   ))}
 
                   {(resource.domains?.length ?? 0) > 3 && (
-                    <Link
+                    <CatalogueLink
                       to={`/resource/${resource.id}`}
+                      catalogueContext={catalogueContext}
                       className="dfir-resource-chip dfir-resource-chip--more"
                       title={(resource.domains ?? []).slice(3).join(', ')}
                     >
@@ -730,7 +746,7 @@ async function copyFilterLink() {
                       {resource.domains!.length - 3 === 1
                         ? 'more domain'
                         : 'more domains'}
-                    </Link>
+                    </CatalogueLink>
                   )}
                 </div>
 
@@ -768,12 +784,13 @@ async function copyFilterLink() {
   Compare
 </label>
                   <div className="dfir-card-actions">
-                    <Link
+                    <CatalogueLink
                       className="button button--primary"
                       to={`/resource/${resource.id}`}
+                      catalogueContext={catalogueContext}
                     >
                       View Details
-                    </Link>
+                    </CatalogueLink>
                     <a
                       className="button button--secondary"
                       href={resource.website}

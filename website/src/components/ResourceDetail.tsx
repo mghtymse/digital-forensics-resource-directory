@@ -2,6 +2,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import {BackToCatalogueLink} from './CatalogueLink';
 import resources from '../data/resources.json';
 
 type Resource = {
@@ -149,7 +150,7 @@ export default function ResourceDetail({
 
     <Layout title={resource.name} description={resource.description}>
       <main className="container margin-vert--lg">
-        <Link to="/resources">← Back to Browse Resources</Link>
+        <BackToCatalogueLink />
 
         <header className="margin-vert--lg">
           <h1>{resource.name}</h1>
