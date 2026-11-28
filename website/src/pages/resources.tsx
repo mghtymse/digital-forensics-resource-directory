@@ -293,6 +293,15 @@ async function copyFilterLink() {
     );
   });
 
+  const resultSummary = `Showing ${results.length} of ${resources.length} resources`;
+  const [announcedResultSummary, setAnnouncedResultSummary] = useState(resultSummary);
+
+  useEffect(() => {
+    // Let the list settle before announcing the count.
+    const timer = window.setTimeout(() => setAnnouncedResultSummary(resultSummary), 350);
+    return () => window.clearTimeout(timer);
+  }, [resultSummary]);
+
   const sortedResults = [...results].sort((a, b) => {
     const nameComparison = a.name.localeCompare(b.name);
 
@@ -658,11 +667,21 @@ async function copyFilterLink() {
           </div>
         )}
 
-        <p role="status" aria-atomic="true">
-          <strong>
-            Showing {results.length} of {resources.length} resources
-          </strong>
+        <p aria-hidden="true">
+          <strong>{resultSummary}</strong>
         </p>
+        <div
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          style={{
+            position: 'absolute',
+            insetInlineStart: '-10000px',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <span key={announcedResultSummary}>{announcedResultSummary}</span>
+        </div>
 
         <div className="row">
           {sortedResults.map((resource) => (
